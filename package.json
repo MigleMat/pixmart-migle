@@ -1,0 +1,46 @@
+{
+  "name": "binabox-build-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production gulp build",
+    "dev": "npx gulp serve --lint"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.3",
+    "chalk": "^5.4.1",
+    "cross-env": "^7.0.3",
+    "del": "^8.0.0",
+    "gulp": "^5.0.0",
+    "gulp-changed": "^5.0.2",
+    "gulp-data": "^1.3.1",
+    "gulp-html-lint": "^0.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sharp-responsive": "^0.4.1",
+    "gulp-size": "^5.0.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-svgo": "^2.2.1",
+    "gulp-util": "^3.0.8",
+    "postcss-csso": "^6.0.1",
+    "postcss-devtools": "^1.1.1",
+    "postcss-reporter": "^7.1.0",
+    "postcss-scss": "^4.0.9",
+    "postcss-svgo": "^7.0.1",
+    "sass": "^1.85.1",
+    "stylelint": "^16.16.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "text-table": "^0.2.0"
+  },
+  "volta": {
+    "node": "22.14.0"
+  }
+}
