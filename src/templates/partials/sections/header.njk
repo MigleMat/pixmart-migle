@@ -1,0 +1,20 @@
+<header>
+    <div class="header__container">
+        {% set logoClass = "header__logo" %}
+        {% include "partials/components/logo.njk" %}
+
+        {% set logoClass = "header__nav" %}
+        {% include "partials/components/nav.njk" %}
+
+        <div class="header__search">
+            <form class="header__search-form" action="#" method="get">
+                <label class="header__search-label" for="search-input"></label>
+                <input class="header__search-input" type="text" name="search" id="search-input" placeholder="Search for Digital Assets" minlength="1" maxlength="15" required>
+                <button class="header__search-button" type="submit"></button>
+            </form>
+
+            {% set btnClass = "header__button" %}
+            {% include "partials/components/button.njk" %}
+        </div>
+    </div>
+</header>

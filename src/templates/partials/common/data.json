@@ -1,0 +1,30 @@
+{
+    "site": {
+        "title": "PixMart"
+    },
+    "logo": {
+        "link": "/index.html"
+    },
+    "navItems": [
+        {
+            "link": "#",
+            "label": "About"
+        },
+        {
+            "link": "/catalog.html",
+            "label": "Products"
+        },
+        {
+            "link": "#",
+            "label": "Creators"
+        },
+        {
+            "link": "/blog-details.html",
+            "label": "Blog"
+        },
+        {
+            "link": "/contacts.html",
+            "label": "Contact"
+        }
+    ]
+}
