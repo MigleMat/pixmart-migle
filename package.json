@@ -42,5 +42,8 @@
   },
   "volta": {
     "node": "22.14.0"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2"
   }
 }
