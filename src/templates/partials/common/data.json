@@ -3,7 +3,8 @@
         "title": "PixMart"
     },
     "logo": {
-        "link": "/index.html"
+        "link": "/index.html",
+        "label": "<svg class=\"logo__icon\" aria-hidden=\"true\" focusable=\"false\"><use xlink:href=\"/img/sprite.svg#logo\"></use></svg>"
     },
     "navItems": [
         {
@@ -26,5 +27,9 @@
             "link": "/contacts.html",
             "label": "Contact"
         }
-    ]
+    ],
+    "btn": {
+        "link": "#",
+        "text": "<svg class=\"hero__button-icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#cart\"></use></svg>"
+    }
 }
