@@ -1,4 +1,16 @@
 {
-  "title": "test",
-  "h1": ""
+  "hero": {
+    "title": "Craft Your Success with Our Digital Assets",
+    "text": "From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources."
+  },
+  "buttons": [
+    {
+      "link": "#",
+      "text": "Shop Now"
+    },
+    {
+      "link": "#",
+      "text": "<svg class=\"icon icon--cart\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#play\"></use></svg> Watch About Us"
+    }
+  ]
 }
