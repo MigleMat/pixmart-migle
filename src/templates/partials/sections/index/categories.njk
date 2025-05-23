@@ -1,3 +1,14 @@
 <section class="main__categories categories">
-    <div class="categories__container"></div>
+    <div class="categories__container">
+        {% for category in categories %}
+            {% include "partials/components/category-card.njk" %}
+        {% endfor %}
+        <div class="categories__wrapper">
+            <h3 class="categories__subtitle">{{ categoriesHeader.subtitle }}</h3>
+            <h2 class="categories__title">{{ categoriesHeader.title }}</h2>
+            <p class="categories__description">{{ categoriesHeader.desc }}</p>
+            {% set btnClass = "categories__button" %}
+            {% include "partials/components/button.njk" %}
+        </div>
+    </div>
 </section>
