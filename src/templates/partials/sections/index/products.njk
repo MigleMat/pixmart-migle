@@ -1,0 +1,18 @@
+<section class="main__products products">
+    <div class="products__container">
+        <ul class="products__list">
+            {% for product in products %}
+                <li class="products__list-item">
+                    <a class="products__link" href="#">
+                        <div class="products__wrapper">
+                            <svg class="products__icon icon icon--{{ product.modifier }}">
+                                <use xlink:href="/img/sprite.svg#{{ product.icon }}"></use>
+                            </svg>
+                            <p class="products__label">{{ product.label }}</p>
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
