@@ -39,5 +39,40 @@
       "icon": "iliustration",
       "label": "Iliustrations"
     }
-  ]
+  ],
+  "categories": [
+    {
+      "modifier": "ui-kits",
+      "icon": "ui-kits",
+      "title": "Templates",
+      "desc": "For all needs ・ Modern"
+    },
+    {
+      "modifier": "presentation",
+      "icon": "presentation",
+      "title": "Slides",
+      "desc": "Pitch-ready ・ Creative"
+    },
+    {
+      "modifier": "social-media",
+      "icon": "social-media",
+      "title": "App Icons",
+      "desc": "High-quality ・ Elegant"
+    },
+    {
+      "modifier": "iliustration",
+      "icon": "iliustration",
+      "title": "Design Tools",
+      "desc": "Easy to use ・ Unique"
+    }
+  ],
+  "categoriesHeader": {
+    "subtitle": "CATEGORIES",
+    "title": "Discover Assets for Every Projects",
+    "desc": "From fonts and icons to mockups and templates, our comprehensive categories ensure that you find exactly what you need to your projects."
+  },
+  "btn": {
+    "link": "#",
+    "text": "Shop Now"
+  }
 }
