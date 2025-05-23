@@ -124,5 +124,93 @@
       "price": "€40.99",
       "desc": "Modern • Homes"
     }
+  ],
+  "pricingHeader": {
+    "subtitle": "PRICING PLAN",
+    "title": "Choose The Perfect Plan for Creative Potential"
+  },
+  "memberships": [
+    {
+      "membershipHeader": {
+        "label": "Standard Membership",
+        "price": {
+          "amount": "€14.99",
+          "unit": "/ Month"
+        }
+      },
+      "membershipContent": [
+        {
+          "item": "Enhanced Resource Access"
+        },
+        {
+          "item": "Monthly Credits"
+        },
+        {
+          "item": "Priority Customer Support"
+        },
+        {
+          "item": "Community Features Access"
+        }
+      ],
+      "membershipButton": {
+        "link": "#",
+        "text": "Subscribe"
+      }
+    },
+    {
+      "membershipHeader": {
+        "tag": "BEST SELLER",
+        "label": "Plus Membership",
+        "price": {
+          "amount": "€29.99",
+          "unit": "/ Month"
+        }
+      },
+      "membershipContent": [
+        {
+          "item": "All Standard Benefits"
+        },
+        {
+          "item": "Increased Monthly Credits"
+        },
+        {
+          "item": "Early Access to New Releases"
+        },
+        {
+          "item": "Member-Only Offers"
+        }
+      ],
+      "membershipButton": {
+        "link": "#",
+        "text": "Subscribe"
+      }
+    },
+    {
+      "membershipHeader": {
+        "label": "Pro Membership",
+        "price": {
+          "amount": "€49.99",
+          "unit": "/ Month"
+        }
+      },
+      "membershipContent": [
+        {
+          "item": "All Plus Benefits"
+        },
+        {
+          "item": "Unlimited Downloads"
+        },
+        {
+          "item": "Custom Licensing"
+        },
+        {
+          "item": "Direct Creator Collaboration"
+        }
+      ],
+      "membershipButton": {
+        "link": "#",
+        "text": "Subscribe"
+      }
+    }
   ]
 }
