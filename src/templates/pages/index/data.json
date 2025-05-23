@@ -45,25 +45,25 @@
       "modifier": "ui-kits",
       "icon": "ui-kits",
       "title": "Templates",
-      "desc": "For all needs ・ Modern"
+      "desc": "For all needs • Modern"
     },
     {
       "modifier": "presentation",
       "icon": "presentation",
       "title": "Slides",
-      "desc": "Pitch-ready ・ Creative"
+      "desc": "Pitch-ready • Creative"
     },
     {
       "modifier": "social-media",
       "icon": "social-media",
       "title": "App Icons",
-      "desc": "High-quality ・ Elegant"
+      "desc": "High-quality • Elegant"
     },
     {
       "modifier": "iliustration",
       "icon": "iliustration",
       "title": "Design Tools",
-      "desc": "Easy to use ・ Unique"
+      "desc": "Easy to use • Unique"
     }
   ],
   "categoriesHeader": {
@@ -71,8 +71,58 @@
     "title": "Discover Assets for Every Projects",
     "desc": "From fonts and icons to mockups and templates, our comprehensive categories ensure that you find exactly what you need to your projects."
   },
-  "btn": {
+  "categoriesButton": {
     "link": "#",
     "text": "Shop Now"
-  }
+  },
+  "trendingHeader": {
+    "subtitle": "TRENDING",
+    "title": "Popular Products"
+  },
+  "trendingButtons": [
+    {
+      "link": "#",
+      "text": "<svg class=\"icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#chevron\"></use></svg>",
+      "modifier": "prev"
+    },
+    {
+      "link": "#",
+      "text": "<svg class=\"icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#chevron\"></use></svg>",
+      "modifier": "next"
+    }
+  ],
+  "productCards": [
+    {
+      "base1x": "travel-hero-1x",
+      "base2x": "travel-hero-2x",
+      "alt": "Travel site template with testimonials",
+      "title": "Travel Hero",
+      "price": "€29.99",
+      "desc": "Adventure • Journey"
+    },
+    {
+      "base1x": "healthcare-1x",
+      "base2x": "healthcare-2x",
+      "alt": "Medical landing page design",
+      "title": "Healthcare Pro",
+      "price": "€15.99",
+      "desc": "Medical • Wellness"
+    },
+    {
+      "base1x": "foodish-delight-1x",
+      "base2x": "foodish-delight-2x",
+      "alt": "Catering website with food visuals",
+      "title": "Foodish Delight",
+      "price": "€31.99",
+      "desc": "Catering • Food"
+    },
+    {
+      "base1x": "real-estate-1x",
+      "base2x": "real-estate-2x",
+      "alt": "Real estate site layout",
+      "title": "Real Estate",
+      "price": "€40.99",
+      "desc": "Modern • Homes"
+    }
+  ]
 }

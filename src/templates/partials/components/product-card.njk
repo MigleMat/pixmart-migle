@@ -1,0 +1,37 @@
+<article class="product-card">
+    <div class="product-card__photo-content">
+        {% if product.title == "Travel Hero" or product.title == "Healthcare Pro" %}
+            <div class="product-card__badge">
+                <svg class="product-card__icon">
+                    <use xlink:href="/img/sprite.svg#trophy"></use>
+                </svg>
+            </div>
+        {% endif %}
+        <picture class="product-card__picture">
+            <source 
+                srcset="/img/{{ product.base1x }}.avif 1x, /img/{{ product.base2x }}.avif 2x" 
+                type="image/avif"
+            >
+            <source 
+                srcset="/img/{{ product.base1x }}.webp 1x, /img/{{ product.base2x }}.webp 2x" 
+                type="image/webp"
+            >
+            <img 
+                src="/img/{{ product.base1x }}.jpg" 
+                srcset="/img/{{ product.base1x }} 1x, {{ product.base2x }}.jpg 2x" 
+                width="305"
+                height="272" 
+                alt="{{ product.alt }}"
+            >
+        </picture>
+    </div>
+    <div class="product-card__content">
+        <h3 class="product-card__title">
+            {{ product.title }}
+        </h3>
+        <p class="product-card__price">{{ product.price }}</p>
+        <p class="product-card__description">
+            {{ product.desc }}
+        </p>
+    </div>
+</article>
