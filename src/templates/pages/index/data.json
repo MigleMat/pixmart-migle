@@ -212,5 +212,40 @@
         "text": "Subscribe"
       }
     }
+  ],
+  "faqHeader": {
+    "subtitle": "F.A.Q",
+    "title": "Answers to Your Questions",
+    "button": {
+      "text": "Ask Us A Question",
+      "link": "#ask"
+    }
+  },
+  "faqCard": [
+    {
+      "question": "Can I request a refund?",
+      "answer": "Please refer to our refund policy for eligibility and instructions.",
+      "open": false
+    },
+    {
+      "question": "How do I access my purchased products?",
+      "answer": "Accessing your purchased products is seamless and hassle-free on our digital design assets marketplace. Simply log in to your account, navigate to the 'My Purchases' section, and you'll find all your purchased products ready for download.",
+      "open": true
+    },
+    {
+      "question": "Are there any discounts for bulk purchases?",
+      "answer": "Yes, bulk purchase discounts are available for select plans and bundles.",
+      "open": false
+    },
+    {
+      "question": "What payment methods do you accept here?",
+      "answer": "We accept major credit cards, PayPal, and other regional payment options.",
+      "open": false
+    },
+    {
+      "question": "Can I sell my digital products on this marketplace?",
+      "answer": "Yes, you can apply to become a vendor through our contributor program.",
+      "open": false
+    }
   ]
 }

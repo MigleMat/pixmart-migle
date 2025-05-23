@@ -1,0 +1,23 @@
+<section class="main__faq faq">
+    <div class="faq__container">
+        <div class="faq__header">
+            <h3 class="faq__subtitle">{{ faqHeader.subtitle }}</h3>
+            <h2 class="faq__title">{{ faqHeader.title }}</h2>
+            {% set btnClass = 'faq__button button' %}
+            {% set btn = faqHeader.button %}
+            {% include "partials/components/button.njk" %}
+        </div>
+        <ul class="faq_list">
+            {% for faq in faqCard %}
+                <li class="faq_list-item">
+                    <details class="faq__item"{% if faq.open %} open{% endif %}>
+                        <summary class="faq__question{% if faq.open %} faq__question--open{% endif %}">{{ faq.question }}</summary>
+                        <p class="faq__answer">
+                            {{ faq.answer }}
+                        </p>
+                    </details>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
