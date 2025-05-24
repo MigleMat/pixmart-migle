@@ -247,5 +247,26 @@
       "answer": "Yes, you can apply to become a vendor through our contributor program.",
       "open": false
     }
+  ],
+  "blogHeader": {
+    "title": "Latest Expert"
+  },
+  "blogCards": [
+    {
+      "base1x": "creative-blog-1x",
+      "base2x": "creative-blog-2x",
+      "alt": "Futuristic blog thumbnails in dark layout",
+      "title": "Creative Blog",
+      "date": "2024-04-15",
+      "formattedDate": "15 April 2024"
+    },
+    {
+      "base1x": "best-dishes-1x",
+      "base2x": "best-dishes-2x",
+      "alt": "Gourmet food homepage preview",
+      "title": "Best Dishes",
+      "date": "2024-05-05",
+      "formattedDate": "5 May 2024"
+    }
   ]
 }

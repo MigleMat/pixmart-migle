@@ -1,0 +1,25 @@
+<article class="blog-card">
+    <figure class="blog-card__media">
+        <picture class="blog-card__picture">
+            <source 
+            srcset="/img/{{ blog.base1x }}.avif 1x, /img/{{ blog.base2x }}.avif 2x" 
+            type="image/avif"
+            >
+            <source 
+            srcset="/img/{{ blog.base1x }}.webp 1x, /img/{{ blog.base2x }}.webp 2x" 
+            type="image/webp"
+            >
+            <img 
+            src="/img/{{ blog.base1x }}.jpg" 
+            srcset="/img/{{ blog.base1x }} 1x, /img/{{ blog.base2x }}.jpg 2x" 
+            width="624"
+            height="702" 
+            alt="{{ blog.alt }}"
+            >
+        </picture>
+    </figure>
+    <div class="blog-card__content">
+        <h4 class="blog-card__title">{{ blog.title }}</h4>
+        <time class="blog-card__date" datetime="{{ blog.date }}">{{ blog.formattedDate }}</time>
+    </div>
+</article>

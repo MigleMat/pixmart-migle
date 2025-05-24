@@ -7,9 +7,9 @@
             {% set btn = faqHeader.button %}
             {% include "partials/components/button.njk" %}
         </div>
-        <ul class="faq_list">
+        <ul class="faq__list">
             {% for faq in faqCard %}
-                <li class="faq_list-item">
+                <li class="faq__list-item">
                     <details class="faq__item"{% if faq.open %} open{% endif %}>
                         <summary class="faq__question{% if faq.open %} faq__question--open{% endif %}">{{ faq.question }}</summary>
                         <p class="faq__answer">
