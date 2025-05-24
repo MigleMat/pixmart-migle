@@ -31,5 +31,123 @@
     "btn": {
         "link": "#",
         "text": "<svg class=\"hero__button-icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#cart\"></use></svg>"
-    }
+    },
+    "footerDesc": "Your premium digital assets solution with high quality and comprehensive range of products and services.",
+    "navSections": [
+        {
+            "title": "Company",
+            "links": [
+                {
+                    "label": "Homepage v1",
+                    "link": "#"
+                },
+                {
+                    "label": "Homepage v2",
+                    "link": "#"
+                },
+                {
+                    "label": "Homepage v3",
+                    "link": "#"
+                },
+                {
+                    "label": "About us",
+                    "link": "#"
+                },
+                {
+                    "label": "About us",
+                    "link": "#"
+                },
+                {
+                    "label": "Blog Articles",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "title": "Products",
+            "links": [
+                {
+                    "label": "Website",
+                    "link": "#"
+                },
+                {
+                    "label": "Mobile App",
+                    "link": "#"
+                },
+                {
+                    "label": "Social Media Feeds",
+                    "link": "#"
+                },
+                {
+                    "label": "Presentation",
+                    "link": "#"
+                },
+                {
+                    "label": "Product Mockups",
+                    "link": "#"
+                },
+                {
+                    "label": "Illustrations",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "title": "Account",
+            "links": [
+                {
+                    "label": "Your Cart",
+                    "link": "#"
+                },
+                {
+                    "label": "Check Out",
+                    "link": "#"
+                },
+                {
+                    "label": "Refund Policy",
+                    "link": "#"
+                },
+                {
+                    "label": "Company Policy",
+                    "link": "#"
+                },
+                {
+                    "label": "Send A Message",
+                    "link": "#"
+                },
+                {
+                    "label": "Customer Support",
+                    "link": "#"
+                }
+            ]
+        }
+    ],
+    "footerSocials": [
+        {
+            "link": "#",
+            "text": "<svg class=\"footer__icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#twitter\"></use></svg>"
+        },
+        {
+            "link": "#",
+            "text": "<svg class=\"footer__icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#facebook\"></use></svg>"
+        },
+        {
+            "link": "#",
+            "text": "<svg class=\"footer__icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#telegram\"></use></svg>"
+        }
+    ],
+    "newsletterLabel": "Subscribe to Design Newsletter",
+    "newsletterBtn": "Subscribe",
+    "footerLegal": [
+        {
+            "link": "Privacy Policy"
+        },
+        {
+            "link": "Terms and Condition"
+        },
+        {
+            "link": "Site Map"
+        }
+    ],
+    "footerCredits": "Copyright © 2024 Pixmart. All rights reserved."
 }
