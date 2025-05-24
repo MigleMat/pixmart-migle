@@ -1,6 +1,12 @@
 <article class="product-card">
     <div class="product-card__photo-content">
-        {% if product.title == "Travel Hero" or product.title == "Healthcare Pro" %}
+        {% if product.label %}
+            <span class="product-card__label product-card__label--{{ product.label | lower }}">
+                {{ product.label }}
+            </span>
+        {% endif %}
+
+        {% if product.hasBadge %}
             <div class="product-card__badge">
                 <svg class="product-card__icon">
                     <use xlink:href="/img/sprite.svg#trophy"></use>
@@ -33,5 +39,19 @@
         <p class="product-card__description">
             {{ product.desc }}
         </p>
+        {% if showActions %}
+            <div class="product-card__actions">
+                <button class="product-card__btn product-card__btn--like">
+                    <svg>
+                        <use xlink:href="/img/sprite.svg#heart"></use>
+                    </svg>
+                </button>
+                <button class="product-card__btn product-card__btn--cart">
+                    <svg>
+                        <use xlink:href="/img/sprite.svg#cart"></use>
+                    </svg>
+                </button>
+            </div>
+        {% endif %}
     </div>
 </article>

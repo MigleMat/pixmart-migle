@@ -97,6 +97,7 @@
       "base2x": "travel-hero-2x",
       "alt": "Travel site template with testimonials",
       "title": "Travel Hero",
+      "hasBadge": true,
       "price": "€29.99",
       "desc": "Adventure • Journey"
     },
@@ -105,6 +106,7 @@
       "base2x": "healthcare-2x",
       "alt": "Medical landing page design",
       "title": "Healthcare Pro",
+      "hasBadge": true,
       "price": "€15.99",
       "desc": "Medical • Wellness"
     },
