@@ -1,0 +1,32 @@
+<form class="catalog__filters-form" method="GET" action="£">
+    <ul class="catalog__filters">
+        {% for item in filterMenu %}
+            <li class="catalog__filters-item">
+                <h4 class="catalog__filters-title">{{ item.name }}</h4>
+                <ul class="catalog__options">
+                    {% for option in filterItems[item.id] %}
+                        <li class="catalog__options-item">
+                            {% if item.id == "categories" %}
+                                <input type="checkbox" class="catalog__option-input" id="{{ item.id }}{{ loop.index }}">
+                            {% elif item.id == "format" %}
+                                <input type="radio" class="catalog__option-input" name="format" id="{{ item.id }}{{ loop.index }}">
+                            {% elif item.id == "style" %}
+                                <input type="checkbox" class="catalog__option-input catalog__option-input--toggle" id="{{ item.id }}{{ loop.index }}">
+                            {% elif item.id == "price" %}
+                                <input type="range" min="5" max="50" class="catalog__option-input catalog__option-input--range" id="{{ item.id }}{{ loop.index }}">
+                            {% endif %}
+                            <label class="catalog__option-label" for="{{ item.id }}{{ loop.index }}">{{ option.name }}</label>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="catalog__filters-actions">
+        <button type="reset" class="catalog__filters-reset">
+            <svg class="catalog__filters-icon" aria-hidden="true">
+                <use xlink:href="/img/sprite.svg#close"></use>
+            </svg>{{filterBtn}}</button>
+        <button type="submit" class="catalog__filters-submit"></button>
+    </div>
+</form>

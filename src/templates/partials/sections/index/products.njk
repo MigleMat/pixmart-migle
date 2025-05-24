@@ -2,6 +2,7 @@
     <div class="products__container">
         <ul class="products__list">
             {% for product in products %}
+                {% set showActions = false %}
                 <li class="products__list-item">
                     <a class="products__link" href="#">
                         <div class="products__wrapper">

@@ -1,0 +1,11 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    <main class="main">
+        <section class="catalog">
+            {% include "partials/sections/catalog/banner.njk" %}
+            {% include "partials/sections/catalog/filters.njk" %}
+            {% include "partials/sections/catalog/products.njk" %}
+        </section>
+    </main>
+{% endblock %}

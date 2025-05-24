@@ -35,7 +35,7 @@
                         name="email"
                         id="email"
                         placeholder="Enter your email address ..."
-                        required/>
+                        required>
                     <button class="footer__newsletter-button button button--secondary" type="submit">{{ newsletterBtn }}</button>
                 </form>
             </div>
@@ -44,7 +44,7 @@
             <ul class="footer__legal-list">
                 {% for legal in footerLegal %}
                     <li class="footer__legal-list-item">
-                        <a class="footer__legal-link "href="#">{{ legal.link }}</a>
+                        <a class="footer__legal-link" href="#">{{ legal.link }}</a>
                     </li>
                 {% endfor %}
             </ul>
