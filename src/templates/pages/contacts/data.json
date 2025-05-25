@@ -1,0 +1,83 @@
+{
+    "contactsSubtitle": "CONTACT",
+    "contactsTitle": "Get in Touch with Us",
+    "contactsDesc": "We are here to help you navigate your creative journey. Reach out for any questions, support, or feedback.",
+    "contactsBtn": {
+        "link": "#",
+        "text": "Shop Now"
+    },
+    "contactsInfo": [
+        {
+            "id": "phone",
+            "text": "+1 (555) 123-4567"
+        },
+        {
+            "id": "mail",
+            "text": "support@pixmart.com"
+        },
+        {
+            "id": "clock",
+            "text": "Monday to Friday : 9 AM - 5 PM EST"
+        }
+    ],
+    "contcIconId": "pin",
+    "contcAdress": "PixMart HQ 123 Creative Ave, Design City, 45678",
+    "costumerForm": [
+        {
+            "type": "text",
+            "label": "Full Name",
+            "id": "name",
+            "name": "name",
+            "placeholder": "Amelia Robert Johnson"
+        },
+        {
+            "type": "email",
+            "label": "Email Address",
+            "id": "customeremail",
+            "name": "customeremail",
+            "placeholder": "amelia.robertjohnson@pixmart.com"
+        },
+        {
+            "type": "select",
+            "label": "Subject",
+            "id": "subject",
+            "name": "subject",
+            "options": [
+                {
+                    "value": "general",
+                    "label": "General Inquiry"
+                },
+                {
+                    "value": "support",
+                    "label": "Support"
+                },
+                {
+                    "value": "sales",
+                    "label": "Sales"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "label": "Message",
+            "id": "message",
+            "name": "message",
+            "placeholder": "Enter your message ..."
+        }
+    ],
+    "formActions": [
+        {
+            "name": "newsletter",
+            "label": "Subscribe me to Newsletter",
+            "checked": false,
+            "required": false
+        },
+        {
+            "name": "privacy",
+            "label": "I have read the User & Privacy Policy",
+            "checked": true,
+            "required": true
+        }
+    ],
+    "formBtn": "Send Message"
+}
