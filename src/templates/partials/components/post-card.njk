@@ -1,0 +1,26 @@
+<article class="post-card">
+    <picture class="post-card__picture">
+        <source 
+            srcset="/img/{{ blog.base1x }}.avif 1x, /img/{{ blog.base2x }}.avif 2x" 
+            type="image/avif"
+            >
+        <source 
+            srcset="/img/{{ blog.base1x }}.webp 1x, /img/{{ blog.base2x }}.webp 2x" 
+            type="image/webp"
+            >
+        <img 
+            src="/img/{{ blog.base1x }}.jpg" 
+            srcset="/img/{{ blog.base1x }} 1x, /img/{{ blog.base2x }}.jpg 2x" 
+            width="{{ blog.width}}"
+            height="{{ blog.height }}"
+            alt="{{ blog.alt }}"
+            >
+    </picture>
+    <div class="post-card__content">
+        {% if blog.tag %}
+            <span class="post-card__tag">{{ blog.tag }}</span>
+        {% endif %}
+        <h4 class="post-card__title">{{ blog.title }}</h4>
+        <time class="post-card__date" datetime="{{ blog.date }}">{{ blog.formattedDate }}</time>
+    </div>
+</article>

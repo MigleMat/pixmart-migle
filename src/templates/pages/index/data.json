@@ -260,7 +260,9 @@
       "alt": "Futuristic blog thumbnails in dark layout",
       "title": "Creative Blog",
       "date": "2024-04-15",
-      "formattedDate": "15 April 2024"
+      "formattedDate": "15 April 2024",
+      "width": "624",
+      "height": "702"
     },
     {
       "base1x": "best-dishes-1x",
@@ -268,7 +270,9 @@
       "alt": "Gourmet food homepage preview",
       "title": "Best Dishes",
       "date": "2024-05-05",
-      "formattedDate": "5 May 2024"
+      "formattedDate": "5 May 2024",
+      "width": "624",
+      "height": "702"
     }
   ]
 }

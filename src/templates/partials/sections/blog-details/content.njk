@@ -1,0 +1,114 @@
+<section class="blog-details__content">
+    <div class="blog-details__container">
+        <picture class="blog-details__picture">
+            <source 
+                    srcset="/img/presentation-1x.avif 1x, /img/presentation-2x.avif 2x" 
+                    type="image/avif"
+                >
+            <source 
+                    srcset="/img/presentation-1x.webp 1x, /img/presentation-2x.webp 2x" 
+                    type="image/webp"
+                >
+            <img 
+                    src="/img/presentation-1x.jpg" 
+                    srcset="/img/presentation-1x.jpg 1x, /img/presentation-2x.jpg 2x" 
+                    width="1280"
+                    height="398" 
+                    alt=" Group of professionals in a meeting room watching a presenter explain graphs on a screen, promoting business plan presentation templates."
+                >
+        </picture>
+        <aside class="blog-details__sidebar sidebar">
+            <div class="sidebar__author">
+                <picture class="sidebar__picture">
+                    <source 
+                    srcset="/img/emma-1x.avif 1x, /img/emma-2x.avif 2x" 
+                    type="image/avif"
+                    >
+                    <source 
+                    srcset="/img/emma-1x.webp 1x, /img/emma-2x.webp 2x" 
+                    type="image/webp"
+                    >
+                    <img    
+                    class="sidebar__avatar"
+                    src="/img/emma-1x.jpg" 
+                    srcset="/img/emma-1x.jpg 1x, /img/emma-2x.jpg 2x" 
+                    width="60"
+                    height="60" 
+                    alt="Portrait of Emma Clarke, author of the article"
+                    >
+                </picture>
+                <div class="sidebar__author-info">
+                    <p class="sidebar__author-name">{{ author.name }}</p>
+                    <time class="sidebar__date" datetime="{{ author.date }}">{{ author.formattedDate }}</time>
+                </div>
+            </div>
+            {% for block in sidebarBlocks %}
+                <div class="sidebar__section">
+                    <h4 class="sidebar__title">{{ block.title }}</h4>
+                    <ul class="sidebar__list">
+                        {% for item in block.list %}
+                            <li class="sidebar__list-item">
+                                {{ item.name }}
+                                {% if item.subitems %}
+                                    <ul class="sidebar__sublist">
+                                        {% for sub in item.subitems %}
+                                            <li class="sidebar__subitem">
+                                                {{ sub }}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                                {% if item.date %}
+                                    <p class="sidebar__article-date">{{ item.date }}</p>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </aside>
+
+        <article class="blog-details__article article">
+            <div class="article__intro">
+                <p class="article__lead">{{ intro }}</p>
+            </div>
+            {% for tip in tips %}
+                <div class="article__main">
+                    <h2 class="article__heading">{{ loop.index }}. {{ tip.title }}</h2>
+                    <p class="article__text">{{ tip.description }}</p>
+                </div>
+
+                {% if tip.image %}
+                    <figure class="article__figure">
+                        <img
+                    class="article__image"
+                    src="{{ tip.image.src }}"
+                    alt="{{ tip.image.alt }}"
+                     width="{{ tip.image.width }}"
+                    height="{{ tip.image.height }}"
+                    loading="lazy"
+/>
+                        <figcaption class="article__caption">
+                            {{ tip.image.caption }}
+                            {% if tip.image.link %}
+                                <a class="article__link" href="{{ tip.image.link.href }}">
+                                    {{ tip.image.link.text }}
+                                </a>
+                            {% endif %}
+                        </figcaption>
+                    </figure>
+                {% endif %}
+            {% endfor %}
+
+            {% if quote %}
+                <blockquote class="article__quote">
+                    <p class="article__quote-text">{{ quote }}</p>
+                </blockquote>
+            {% endif %}
+            <div class="article__footer">
+                <p class="article__summary">{{ summary }}</p>
+            </div>
+        </article>
+
+    </div>
+</section>
