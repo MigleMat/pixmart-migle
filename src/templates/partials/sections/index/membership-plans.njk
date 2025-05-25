@@ -1,0 +1,21 @@
+<section class="membership-plans">
+    <div class="membership-plans__container layout-container">
+        <div class="membership-plans__header">
+            <p class="membership-plans__subtitle">{{ pricingHeader.subtitle }}</p>
+            <h2 class="membership-plans__title">{{ pricingHeader.title }}</h2>
+        </div>
+        <ul class="membership-plans__list">
+            {% for membership in memberships %}
+
+                {% set membershipHeader = membership.membershipHeader %}
+                {% set membershipContent = membership.membershipContent %}
+                {% set membershipButton = membership.membershipButton %}
+
+                <li class="membership-plans__list-item">
+                    {% include "partials/components/molecules/membership-card.njk" %}
+                </li>
+
+            {% endfor %}
+        </ul>
+    </div>
+</section>

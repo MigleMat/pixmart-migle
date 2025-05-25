@@ -1,0 +1,23 @@
+<section class="faq-section">
+    <div class="faq-section__container layout-container">
+        <div class="faq-section__header">
+            <p class="faq-section__subtitle">{{ faqHeader.subtitle }}</p>
+            <h2 class="faq-section__title">{{ faqHeader.title }}</h2>
+
+            {% set btnClass = 'faq-section__button button' %}
+            {% set btn = faqHeader %}
+
+            {% include "partials/components/atoms/button.njk" %}
+
+        </div>
+        <ul class="faq-section__list">
+            {% for faq in faqCard %}
+
+                <li class="faq-section__list-item">
+                    {% include "partials/components/molecules/accordion-item.njk" %}
+                </li>
+
+            {% endfor %}
+        </ul>
+    </div>
+</section>

@@ -1,40 +1,32 @@
 <section class="contacts">
-    <div class="contacts__container">
+    <div class="contacts__container layout-container">
         <div class="contacts__info">
             <p class="contacts__subtitle">{{ contactsSubtitle }}</p>
             <h1 class="contacts__title">{{ contactsTitle }}</h1>
             <p class="contacts__description">{{ contactsDesc }}</p>
             {% set btnClass = 'contacts__button button button--secondary' %}
             {% set btn = contactsBtn %}
-            {% include "partials/components/button.njk" %}
+            {% include "partials/components/atoms/button.njk" %}
             <ul class="contacts__list">
                 {% for item in contactsInfo %}
+
                     <li class="contacts__list-item">
                         <svg class="contacts__icon" aria-hidden="true">
                             <use xlink:href="/img/sprite.svg#{{ item.id }}"></use>
                         </svg>
                         <p class="contacts__text">{{ item.text }}</p>
                     </li>
+
                 {% endfor %}
             </ul>
         </div>
+
         <div class="contacts__location">
-            <img
-            class="contacts__map"
-            src="/img/location.jpg"
-            srcset="/img/location-1x.jpg 1x, /img/location-2x.jpg 2x"
-            alt="PixMart HQ Location on Map"
-            width="618"
-            height="314"/>
-            <div class="contacts__address-info">
-                <svg class="contacts__icon" aria-hidden="true">
-                    <use xlink:href="/img/sprite.svg#{{ contcIconId }}"></use>
-                </svg>
-                <p class="contacts__address">{{ contcAdress }}</p>
-            </div>
+            {% include "partials/components/organisms/location.njk" %}
         </div>
+
         <div class="contacts__form">
-            {% include "partials/components/customer-form.njk" %}
+            {% include "partials/components/organisms/customer-form.njk" %}
         </div>
     </div>
 </section>

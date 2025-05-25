@@ -1,66 +1,82 @@
 {
   "hero": {
-    "title": "Craft Your Success with Our Digital Assets",
-    "text": "From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources."
+    "title": "Craft Your Success with Our <span class='hero__highlight'>Digital</span> Assets",
+    "text": "From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources.",
+    "icons": [
+      "pen",
+      "palette"
+    ],
+    "images": [
+      {
+        "name": "event-landing-main",
+        "width": 281,
+        "height": 422,
+        "alt": "Landing screen of the event website"
+      },
+      {
+        "name": "event-kit-overview",
+        "width": 291,
+        "height": 164,
+        "alt": "Speaker cards and schedule design for an event"
+      },
+      {
+        "name": "event-schedule-cards",
+        "width": 514,
+        "height": 299,
+        "alt": "Preview with 12 event and conference website screens"
+      }
+    ]
   },
-  "buttons": [
+  "heroButtons": [
     {
       "link": "#",
       "text": "Shop Now"
     },
     {
       "link": "#",
-      "text": "<svg class=\"icon icon--cart\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#play\"></use></svg> Watch About Us"
+      "iconId": "play",
+      "text": "Watch About Us"
     }
   ],
-  "products": [
+  "productCategories": [
     {
-      "modifier": "ui-kits",
       "icon": "ui-kits",
       "label": "UI Kits"
     },
     {
-      "modifier": "social-media",
       "icon": "social-media",
       "label": "Social Media"
     },
     {
-      "modifier": "presentation",
       "icon": "presentation",
       "label": "Presentation"
     },
     {
-      "modifier": "fonts",
       "icon": "fonts",
       "label": "Fonts"
     },
     {
-      "modifier": "iliustration",
       "icon": "iliustration",
       "label": "Iliustrations"
     }
   ],
   "categories": [
     {
-      "modifier": "ui-kits",
       "icon": "ui-kits",
       "title": "Templates",
       "desc": "For all needs • Modern"
     },
     {
-      "modifier": "presentation",
       "icon": "presentation",
       "title": "Slides",
       "desc": "Pitch-ready • Creative"
     },
     {
-      "modifier": "social-media",
       "icon": "social-media",
       "title": "App Icons",
       "desc": "High-quality • Elegant"
     },
     {
-      "modifier": "iliustration",
       "icon": "iliustration",
       "title": "Design Tools",
       "desc": "Easy to use • Unique"
@@ -75,19 +91,19 @@
     "link": "#",
     "text": "Shop Now"
   },
-  "trendingHeader": {
+  "productHeader": {
     "subtitle": "TRENDING",
     "title": "Popular Products"
   },
-  "trendingButtons": [
+  "productCarouselButtons": [
     {
       "link": "#",
-      "text": "<svg class=\"icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#chevron\"></use></svg>",
+      "iconId": "chevron",
       "modifier": "prev"
     },
     {
       "link": "#",
-      "text": "<svg class=\"icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#chevron\"></use></svg>",
+      "text": "chevron",
       "modifier": "next"
     }
   ],
@@ -163,6 +179,7 @@
       "membershipHeader": {
         "tag": "BEST SELLER",
         "label": "Plus Membership",
+        "modifier": "secondary",
         "price": {
           "amount": "€29.99",
           "unit": "/ Month"
@@ -251,9 +268,10 @@
     }
   ],
   "blogHeader": {
-    "title": "Latest Expert"
+    "title": "Latest Expert",
+    "link": "Explore All Articles"
   },
-  "blogCards": [
+  "articleCards": [
     {
       "base1x": "creative-blog-1x",
       "base2x": "creative-blog-2x",

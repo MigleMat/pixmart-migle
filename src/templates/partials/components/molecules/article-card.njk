@@ -1,0 +1,42 @@
+<article class="article-card">
+    <picture class="article-card__picture">
+        <source 
+            srcset="
+             /img/{{ blog.base1x }}.avif 1x, 
+             /img/{{ blog.base2x }}.avif 2x
+            " 
+            type="image/avif"
+            >
+        <source 
+            srcset="
+             /img/{{ blog.base1x }}.webp 1x, 
+             /img/{{ blog.base2x }}.webp 2x
+            " 
+            type="image/webp"
+            >
+        <img 
+            src="/img/{{ blog.base1x }}.jpg" 
+            srcset="
+             /img/{{ blog.base1x }}.jpg 1x, 
+             /img/{{ blog.base2x }}.jpg 2x
+            " 
+            width="{{ blog.width }}"
+            height="{{ blog.height }}"
+            alt="{{ blog.alt }}"
+            >
+    </picture>
+    <div class="article-card__content">
+
+        {% if blog.tag %}
+            <span class="article-card__tag">{{ blog.tag }}</span>
+        {% endif %}
+
+        <h3 class="article-card__title">{{ blog.title }}</h3>
+        <time 
+         class="article-card__date" 
+         datetime="{{ blog.date }}"
+        >
+            {{ blog.formattedDate }}
+        </time>
+    </div>
+</article>

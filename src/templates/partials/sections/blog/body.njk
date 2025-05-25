@@ -1,0 +1,61 @@
+<div class="blog__content">
+    <picture class="blog__picture">
+        <source 
+         srcset="/img/presentation-1x.avif 1x, /img/presentation-2x.avif 2x" 
+         type="image/avif">
+        <source 
+         srcset="/img/presentation-1x.webp 1x, /img/presentation-2x.webp 2x" 
+         type="image/webp">
+        <img 
+         src="/img/presentation-1x.jpg" 
+         srcset="/img/presentation-1x.jpg 1x, /img/presentation-2x.jpg 2x" 
+         width="1280"
+         height="398" 
+         alt=" Group of professionals in a meeting room watching a presenter explain graphs on a screen, promoting business plan presentation templates.">
+    </picture>
+
+    <article class="blog__article article">
+        <div class="article__intro">
+            <p class="article__lead">{{ intro }}</p>
+        </div>
+        {% for tip in tips %}
+            <div class="article__main">
+                <h4 class="article__heading">{{ loop.index }}. {{ tip.title }}</h4>
+                <p class="article__text">{{ tip.description }}</p>
+            </div>
+
+            {% if quote %}
+                <blockquote class="article__quote">
+                    <p class="article__quote-text">{{ tip.quote }}</p>
+                </blockquote>
+            {% endif %}
+
+            {% if tip.image %}
+
+                <figure class="article__figure">
+                    <img
+                     class="article__image"
+                     src="{{ tip.image.src }}"
+                     alt="{{ tip.image.alt }}"
+                     width="{{ tip.image.width }}"
+                     height="{{ tip.image.height }}"
+                     loading="lazy"/>
+                    <figcaption class="article__caption">
+                        {{ tip.image.caption }}
+                        {% if tip.image.link %}
+
+                            <a class="article__link" href="{{ tip.image.link.href }}">
+                                {{ tip.image.link.text }}
+                            </a>
+
+                        {% endif %}
+                    </figcaption>
+                </figure>
+
+            {% endif %}
+        {% endfor %}
+        <div class="article__footer">
+            <p class="article__summary">{{ summary }}</p>
+        </div>
+    </article>
+</div>

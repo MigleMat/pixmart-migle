@@ -1,18 +1,22 @@
-<section class="blog-details__featured-articles featured-articles">
-    <div class="featured-articles__container">
+<section class="featured-articles">
+    <div class="featured-articles__container layout-container">
         <div class="featured-articles__header">
-            <h3 class="featured-articles__heading">{{ articlesHeader }}</h3>
+            <h2 class="featured-articles__heading">{{ blogHeader.title }}</h2>
             <a class="featured-articles__link" href="#">
+                {{ blogHeader.link }}
                 <svg class="featured-articles__icon">
                     <use xlink:href="/img/sprite.svg#chevron"></use>
                 </svg>
             </a>
         </div>
+
         <ul class="featured-articles__list">
-            {% for blog in articlesCards %}
+            {% for blog in blogCards %}
+
                 <li class="featured-articles__list-item">
-                    {% include "partials/components/post-card.njk" %}
+                    {% include "partials/components/molecules/article-card.njk" %}
                 </li>
+
             {% endfor %}
         </ul>
     </div>

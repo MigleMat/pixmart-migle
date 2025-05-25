@@ -7,8 +7,8 @@
     <title>{{ site.title }}</title>
   </head>
   <body>
-    {% include "partials/sections/header.njk" %}
+    {% include "partials/sections/shared/header.njk" %}
     {% block content %}{% endblock %}
-    {% include "partials/sections/footer.njk" %}
+    {% include "partials/sections/shared/footer.njk" %}
   </body>
 </html>

@@ -3,9 +3,10 @@
         "title": "PixMart"
     },
     "logo": {
-        "link": "/index.html",
-        "label": "<svg class=\"logo__icon\" aria-hidden=\"true\" focusable=\"false\"><use xlink:href=\"/img/sprite.svg#logo\"></use></svg>"
+        "link": "/index.html"
     },
+    "headerLabel": "Search",
+    "headerFormBtn": "Search",
     "navItems": [
         {
             "link": "#",
@@ -20,7 +21,7 @@
             "label": "Creators"
         },
         {
-            "link": "/blog-details.html",
+            "link": "/blog.html",
             "label": "Blog"
         },
         {
@@ -30,7 +31,7 @@
     ],
     "btn": {
         "link": "#",
-        "text": "<svg class=\"header__button-icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#cart\"></use></svg>"
+        "iconId": "cart"
     },
     "footerDesc": "Your premium digital assets solution with high quality and comprehensive range of products and services.",
     "navSections": [
@@ -125,15 +126,15 @@
     "footerSocials": [
         {
             "link": "#",
-            "text": "<svg class=\"footer__icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#twitter\"></use></svg>"
+            "iconId": "twitter"
         },
         {
             "link": "#",
-            "text": "<svg class=\"footer__icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#facebook\"></use></svg>"
+            "iconId": "facebook"
         },
         {
             "link": "#",
-            "text": "<svg class=\"footer__icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#telegram\"></use></svg>"
+            "iconId": "telegram"
         }
     ],
     "newsletterLabel": "Subscribe to Design Newsletter",

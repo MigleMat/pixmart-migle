@@ -1,0 +1,68 @@
+<section class="catalog">
+    <div class="catalog__sorting-controls">
+        <form class="sorting-controls__form">
+            <fieldset class="sorting-controls__fieldset">
+                <legend class="visually-hidden">{{ sortingLegend }}</legend>
+                <div class="sorting-controls__categories-dropdown">
+                    <label class="sorting-controls__label" for="sort">
+                        {{ sortingLabel }}
+                    </label>
+                    <select class="sorting-controls__dropdown" name="sort" id="sort">
+                        {% for option in sortingOptions %}
+
+                            <option value="{{ option.value }}" {% if option.selected %} selected{% endif %}>
+                                {{ option.label }}
+                            </option>
+
+                        {% endfor %}
+                    </select>
+                </div>
+            </fieldset>
+            <button class="visually-hidden"type="submit">{{ sortingBtn }}</button>
+        </form>
+
+        <div class="sorting-controls__wrapper">
+            <p class="sorting-controls__result-count">{{ sortingResults }}</p>
+            <ul class="sorting-controls__buttons-list">
+                {% for btn in sortingBtns %}
+                    <li class="sorting-controls__buttons-list-item">
+
+                        {% set btnClass = 'sorting-controls__button' %}
+                        {% if btn.iconId == 'grid' %}
+                            {% set btnClass = btnClass + ' sorting-controls__button--secondary' %}
+                        {% endif %}
+
+                        {% include "partials/components/atoms/button.njk" %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="sorting-controls__tags">
+            {% for tag in selectedTags %}
+
+                <button class="sorting-controls__tag" type="button">
+                    {{ tag }}
+                    <svg class="sorting-controls__icon">
+                        <use xlink:href="/img/sprite.svg#close"></use>
+                    </svg>
+                </button>
+
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="catalog__products">
+        {% for product in catalogProducts %}
+
+            {% set showActions = true %}
+            {% include "partials/components/molecules/product-card.njk" %}
+
+        {% endfor %}
+    </div>
+
+    {% set btnClass = 'catalog__button button' %}
+    {% set btn = catalogBtn %}
+    {% include "partials/components/atoms/button.njk" %}
+
+</section>
