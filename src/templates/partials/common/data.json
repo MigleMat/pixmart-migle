@@ -30,7 +30,7 @@
     ],
     "btn": {
         "link": "#",
-        "text": "<svg class=\"hero__button-icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#cart\"></use></svg>"
+        "text": "<svg class=\"header__button-icon\" aria-hidden=\"true\"><use xlink:href=\"/img/sprite.svg#cart\"></use></svg>"
     },
     "footerDesc": "Your premium digital assets solution with high quality and comprehensive range of products and services.",
     "navSections": [
