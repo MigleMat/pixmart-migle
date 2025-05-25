@@ -1,0 +1,32 @@
+<aside class="blog__sidebar sidebar">
+    {% for block in sidebarBlocks %}
+
+        <div class="sidebar__section">
+            <h4 class="sidebar__title">{{ block.title }}</h4>
+            <ul class="sidebar__list">
+                {% for item in block.list %}
+
+                    <li class="sidebar__list-item">
+                        {{ item.name }}
+                        {% if item.subitems %}
+                            <ul class="sidebar__sublist">
+                                {% for sub in item.subitems %}
+
+                                    <li class="sidebar__subitem">
+                                        {{ sub }}
+                                    </li>
+
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        {% if item.date %}
+                            <p class="sidebar__article-date">{{ item.date }}</p>
+                        {% endif %}
+                    </li>
+
+                {% endfor %}
+            </ul>
+        </div>
+
+    {% endfor %}
+</aside>

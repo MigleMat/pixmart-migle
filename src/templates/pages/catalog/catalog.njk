@@ -2,10 +2,15 @@
 
 {% block content %}
     <main class="main">
-        <section class="catalog">
-            {% include "partials/sections/catalog/banner.njk" %}
-            {% include "partials/sections/catalog/filters.njk" %}
-            {% include "partials/sections/catalog/products.njk" %}
+
+        {% include "partials/sections/catalog/banner.njk" %}
+
+        <section class="catalog-grid">
+            <div class="catalog-grid__container layout-container">
+                {% include "partials/sections/catalog/filters.njk" %}
+                {% include "partials/sections/catalog/catalog.njk" %}
+            </div>
         </section>
+
     </main>
 {% endblock %}

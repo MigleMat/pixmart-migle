@@ -1,5 +1,5 @@
 {
-    "title": "Explore Top UI Kits Design Assets",
+    "title": "Explore Top <span class='catalog-banner__highlight'>UI Kits</span> Design Assets",
     "filterMenu": [
         {
             "id": "categories",
@@ -90,6 +90,18 @@
     },
     "filterBtn": "Clear all filter",
     "sortingLabel": "Sort by:",
+    "sortingLegend": "Sorting Options",
+    "sortingBtn": "Submit",
+    "sortingBtns": [
+        {
+            "link": "#",
+            "iconID": "grid"
+        },
+        {
+            "link": "#",
+            "iconID": "list"
+        }
+    ],
     "sortingOptions": [
         {
             "value": "bestseller",
@@ -227,5 +239,6 @@
             "price": "€00.00",
             "label": "SOLD OUT"
         }
-    ]
+    ],
+    "catalogBtn": "Load more"
 }

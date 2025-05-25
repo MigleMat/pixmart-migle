@@ -1,0 +1,41 @@
+<header>
+    <div class="header__container">
+        {% set logoClass = "header__logo" %}
+        {% include "partials/components/atoms/logo.njk" %}
+
+        {% set navClass = "header__nav" %}
+        {% include "partials/components/atoms/nav.njk" %}
+
+        <div class="header__search">
+            <form class="header__search-form" action="#" method="get">
+                <label 
+                 class="header__search-label visually-hidden" 
+                 for="search"
+                >
+                    {{ headerLabel }}
+                </label>
+                <input 
+                 class="header__search-input" 
+                 type="text" 
+                 name="search" 
+                 id="search" 
+                 placeholder="Search for Digital Assets" 
+                 minlength="1" 
+                 maxlength="15" 
+                 required
+                >
+                <button 
+                 class="header__search-button visually-hidden" 
+                 type="submit"
+                 aria-label="Submit Search"
+                >
+                    {{ headerFormBtn }}
+                </button>
+            </form>
+
+            {% set btnClass = "header__button button button--secondary" %}
+            {% set iconClass = "header__button-icon" %}
+            {% include "partials/components/atoms/button.njk" %}
+        </div>
+    </div>
+</header>

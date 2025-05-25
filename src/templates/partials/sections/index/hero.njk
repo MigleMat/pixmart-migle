@@ -1,77 +1,57 @@
 <section class="hero">
-    <div class="hero__container">
-        <h1 class="hero__title">{{ hero.title }}</h1>
-        <p class="hero__description">{{ hero.text }}</p>
-        <div class="hero__actions">
+    <div class="hero__container layout-container">
+        <div class="hero__content">
+            <h1 class="hero__title">{{ hero.title | safe }}</h1>
+            <p class="hero__description">{{ hero.text }}</p>
+            <div class="hero__actions">
 
-            {% for btn in buttons %}
-                {% if btn.text == "Shop Now" %}
-                    {% set btnClass = "hero__button button button--secondary" %}
-                {%else %}
-                    {% set btnClass = "hero__button button" %}
-                {% endif %}
-                {% include "partials/components/button.njk" %}
-            {% endfor %}
+                {% for btn in heroButtons %}
+                    {% if btn.text == "Shop Now" %}
+                        {% set btnClass = "hero__button button button--secondary" %}
+                    {%else %}
+                        {% set btnClass = "hero__button button" %}
+                    {% endif %}
+                    {% include "partials/components/atoms/button.njk" %}
+                {% endfor %}
+            </div>
         </div>
-        <div class="hero__images">
-            <svg class="hero__icon" aria-hidden="true">
-                <use xlink:href="/img/sprite.svg#pen"></use>
-            </svg>
-            <svg class="hero__icon" aria-hidden="true">
-                <use xlink:href="/img/sprite.svg#palette"></use>
-            </svg>
-            <picture class="hero__picture">
-                <source 
-                    srcset="/img/event-landing-main-1x.avif 1x, /img/event-landing-main-2x.avif 2x" 
-                    type="image/avif"
-                >
-                <source 
-                    srcset="/img/event-landing-main-1x.webp 1x, /img/event-landing-main-2x.webp 2x" 
-                    type="image/webp"
-                >
-                <img 
-                    src="/img/event-landing-main-1x.jpg" 
-                    srcset="/img/event-landing-main-1x.jpg 1x, /img/event-landing-main-2x.jpg 2x" 
-                    width="281"
-                    height="422" 
-                    alt="Landing screen of the event website"
-                >
-            </picture>
-            <picture class="hero__picture">
-                <source 
-                    srcset="/img/event-kit-overview-1x.avif 1x, /img/event-kit-overview-2x.avif 2x" 
-                    type="image/avif"
-                >
-                <source 
-                    srcset="/img/event-kit-overview-1x.webp 1x, /img/event-kit-overview-2x.webp 2x" 
-                    type="image/webp"
-                >
-                <img 
-                    src="/img/event-kit-overview-1x.jpg" 
-                    srcset="/img/event-kit-overview-1x.jpg 1x, /img/event-kit-overview-2x.jpg 2x" 
-                    width="291"
-                    height="164" 
-                    alt="Speaker cards and schedule design for an event"
-                >
-            </picture>
-            <picture class="hero__picture">
-                <source 
-                    srcset="/img/event-schedule-cards-1x.avif 1x, /img/event-schedule-cards-2x.avif 2x" 
-                    type="image/avif"
-                >
-                <source 
-                    srcset="/img/event-schedule-cards-1x.webp 1x, /img/event-schedule-cards-2x.webp 2x" 
-                    type="image/webp"
-                >
-                <img 
-                    src="/img/event-schedule-cards-1x.jpg" 
-                    srcset="/img/event-schedule-cards-1x.jpg 1x, /img\event-schedule-cards-2x.jpg 2x" 
-                    width="514"
-                    height="299" 
-                    alt="Preview with 12 event and conference website screens"
-                >
-            </picture>
+        <div class="hero__media">
+            {% for icon in hero.icons %}
+                <svg class="hero__icon" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#{{ icon }}"></use>
+                </svg>
+            {% endfor %}
 
+            {% for img in hero.images %}
+                <picture class="hero__picture">
+                    <source 
+                     srcset="
+                      /img/{{ img.name }}-1x.avif 1x,
+                      /img/{{ img.name }}-2x.avif 2x
+                    " 
+                     type="image/avif"
+                    >
+                    <source 
+                     srcset="
+                      /img/{{ img.name }}-1x.webp 1x, 
+                      /img/{{ img.name }}-2x.webp 2x
+                    " 
+                     type="image/webp"
+                    >
+                    <img 
+                     src="/img/{{ img.name }}-1x.jpg" 
+                     srcset="
+                      /img/{{ img.name }}-1x.jpg 1x, 
+                      /img/{{ img.name }}-2x.jpg 2x
+                    " 
+                     width="{{ img.width }}"
+                     height="{{ img.height }}"
+                     loading="lazy"
+                     alt="{{ img.alt }}"
+                     class="hero__image"
+                    >
+                </picture>
+            {% endfor %}
         </div>
     </div>
 </section>
