@@ -392,7 +392,7 @@ export const liveReload = () =>
         }
       : false,
     ghostMode: false,
-    logPrefix: "binabox",
+    logPrefix: "pixmart",
     logLevel: args.debug ? "debug" : "info",
     logConnections: args.debug,
     logSnippet: false,
