@@ -11,6 +11,18 @@ a {
   text-decoration: none;
 }
 
+body {
+  font-family: "Libre Franklin", sans-serif;
+  color: rgb(13 13 21);
+  background-color: rgb(255 255 255);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 ul,
 ol,
 body,
