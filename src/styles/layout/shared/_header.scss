@@ -1,0 +1,9 @@
+.header {
+  &__container {
+    display: flex;
+  }
+  &__search {
+    display: flex;
+    flex: 1 1 auto;
+  }
+}

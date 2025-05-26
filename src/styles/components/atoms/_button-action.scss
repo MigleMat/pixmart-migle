@@ -1,0 +1,19 @@
+@use "../../base/mixins" as mixins;
+
+.button {
+  @include mixins.button-reset;
+  border-radius: 8px;
+  &:focus-visible {
+    outline: none;
+  }
+  &__icon {
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+  }
+
+  &--secondary {
+    background-color: rgb(2 101 220);
+    color: rgb(248 247 255);
+  }
+}
