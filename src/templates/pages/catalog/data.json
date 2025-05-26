@@ -95,11 +95,11 @@
     "sortingBtns": [
         {
             "link": "#",
-            "iconID": "grid"
+            "iconId": "grid"
         },
         {
             "link": "#",
-            "iconID": "list"
+            "iconId": "list"
         }
     ],
     "sortingOptions": [

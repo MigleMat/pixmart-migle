@@ -20,11 +20,12 @@
         </ul>
 
         {% set btnClass = 'membership-card__button button' %}
+        {% set btnTextClass = 'membership-card__button-text' %}
         {% if membershipHeader.modifier %}
             {% set btnClass = btnClass + ' button--' + membershipHeader.modifier %}
         {% endif %}
 
         {% set btn = membershipButton %}
-        {% include "partials/components/atoms/button.njk" %}
+        {% include "partials/components/atoms/button-link.njk" %}
     </div>
 </article>

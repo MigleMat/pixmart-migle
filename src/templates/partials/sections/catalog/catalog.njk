@@ -27,12 +27,13 @@
                 {% for btn in sortingBtns %}
                     <li class="sorting-controls__buttons-list-item">
 
+                        {% set iconClass = 'catalog__button-text' %}
                         {% set btnClass = 'sorting-controls__button' %}
                         {% if btn.iconId == 'grid' %}
                             {% set btnClass = btnClass + ' sorting-controls__button--secondary' %}
                         {% endif %}
 
-                        {% include "partials/components/atoms/button.njk" %}
+                        {% include "partials/components/atoms/button-action.njk" %}
                     </li>
                 {% endfor %}
             </ul>
@@ -62,7 +63,9 @@
     </div>
 
     {% set btnClass = 'catalog__button button' %}
+    {% set btnTextClass = 'catalog__button-text' %}
     {% set btn = catalogBtn %}
-    {% include "partials/components/atoms/button.njk" %}
+
+    {% include "partials/components/atoms/button-link.njk" %}
 
 </section>

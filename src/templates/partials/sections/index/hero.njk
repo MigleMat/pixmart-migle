@@ -7,12 +7,14 @@
 
                 {% for btn in heroButtons %}
                     {% if btn.text == "Shop Now" %}
+                        {% set btnTextClass = 'hero__button-text' %}
                         {% set btnClass = "hero__button button button--secondary" %}
                     {%else %}
                         {% set btnClass = "hero__button button" %}
                         {% set iconClass = "hero__icon" %}
+                        {% set btnTextClass = 'hero__button-text' %}
                     {% endif %}
-                    {% include "partials/components/atoms/button.njk" %}
+                    {% include "partials/components/atoms/button-link.njk" %}
                 {% endfor %}
             </div>
         </div>

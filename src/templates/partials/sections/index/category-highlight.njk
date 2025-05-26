@@ -10,8 +10,9 @@
             <p class="category-highlight__description">{{ categoriesHeader.desc }}</p>
 
             {% set btnClass = "categories__button button button--secondary" %}
+            {% set btnTextClass = 'categories__button-text' %}
             {% set btn = categoriesButton %}
-            {% include "partials/components/atoms/button.njk" %}
+            {% include "partials/components/atoms/button-link.njk" %}
         </div>
     </div>
 </section>
