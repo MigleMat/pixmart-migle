@@ -8,7 +8,14 @@
                     id="{{ field.id }}"
                     name="{{ field.name }}"
                     class="customer-form__select"
-                    required>
+                    {% if field.required %}required{% endif %}>
+
+                    {% if field.required %}
+                        <option value="" disabled selected hidden>
+                            {{ field.placeholder or 'Select an option' }}
+                        </option>
+                    {% endif %}
+
                     {% for option in field.options %}
                         <option value="{{ option.value }}">{{ option.label }}</option>
                     {% endfor %}
@@ -30,7 +37,7 @@
                     type="{{ field.type }}" id="{{ field.id }}" 
                     name="{{ field.name }}" 
                     placeholder="{{ field.placeholder }}" 
-                    required/>
+                    required>
 
             {% endif %}
         </div>
@@ -45,7 +52,7 @@
                         id="checkbox{{ loop.index }}"
                         name="{{ item.name }}"
                         {% if item.checked %}checked{% endif %}
-                        {% if item.required %}required{% endif %}/>
+                        {% if item.required %}required{% endif %}>
                     <label 
                         class="customer-form__checkbox-label" 
                         for="checkbox{{ loop.index }}">

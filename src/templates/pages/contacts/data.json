@@ -42,6 +42,8 @@
             "label": "Subject",
             "id": "subject",
             "name": "subject",
+            "required": true,
+            "placeholder": "Choose a reason",
             "options": [
                 {
                     "value": "general",
