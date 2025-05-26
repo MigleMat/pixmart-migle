@@ -1,0 +1,35 @@
+<section class="contacts">
+    <div class="contacts__container layout-container">
+        <div class="contacts__info">
+            <p class="contacts__subtitle">{{ contactsSubtitle }}</p>
+            <h1 class="contacts__title">{{ contactsTitle }}</h1>
+            <p class="contacts__description">{{ contactsDesc }}</p>
+
+            {% set btnTextClass = 'contacts__button-text' %}
+            {% set btnClass = 'contacts__button button button--secondary' %}
+            {% set btn = contactsBtn %}
+
+            {% include "partials/components/atoms/button-link.njk" %}
+            <ul class="contacts__list">
+                {% for item in contactsInfo %}
+
+                    <li class="contacts__list-item">
+                        <svg class="contacts__icon" aria-hidden="true">
+                            <use xlink:href="/img/sprite.svg#{{ item.id }}"></use>
+                        </svg>
+                        <p class="contacts__text">{{ item.text }}</p>
+                    </li>
+
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="contacts__location">
+            {% include "partials/components/organisms/location.njk" %}
+        </div>
+
+        <div class="contacts__form">
+            {% include "partials/components/organisms/customer-form.njk" %}
+        </div>
+    </div>
+</section>

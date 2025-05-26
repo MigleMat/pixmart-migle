@@ -1,0 +1,31 @@
+<article class="membership-card">
+    <div class="membership-card__header">
+        {% if membershipHeader.tag %}
+            <span class="membership-card__tag">{{ membershipHeader.tag }}</span>
+        {% endif %}
+
+        <h5 class="membership-card__label">{{ membershipHeader.label }}</h5>
+        <div class="membership-card__price">
+            <span class="membership-card__value">{{ membershipHeader.price.amount }}</span>
+            <span class="membership-card__unit">{{ membershipHeader.price.unit }}</span>
+        </div>
+    </div>
+    <div class="membership-card__content">
+        <ul class="membership-card__list">
+
+            {% for feature in membershipContent %}
+                <li class="membership-card__list-item">{{ feature.item }}</li>
+            {% endfor %}
+
+        </ul>
+
+        {% set btnClass = 'membership-card__button button' %}
+        {% set btnTextClass = 'membership-card__button-text' %}
+        {% if membershipHeader.modifier %}
+            {% set btnClass = btnClass + ' button--' + membershipHeader.modifier %}
+        {% endif %}
+
+        {% set btn = membershipButton %}
+        {% include "partials/components/atoms/button-link.njk" %}
+    </div>
+</article>

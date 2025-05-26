@@ -1,0 +1,24 @@
+<section class="featured-articles">
+    <div class="featured-articles__container layout-container">
+        <div class="featured-articles__header">
+            <h2 class="featured-articles__heading">{{ blogHeader.title }}</h2>
+
+            {% set btnClass = 'featured-articles__link' %}
+            {% set iconClass = 'featured-articles__icon' %}
+            {% set btnTextClass = 'featured-articles__button-text' %}
+            {% set btn = articleHeaderBtn %}
+            {% include "partials/components/atoms/button-link.njk" %}
+
+        </div>
+
+        <ul class="featured-articles__list">
+            {% for blog in articleCards %}
+
+                <li class="featured-articles__list-item">
+                    {% include "partials/components/molecules/article-card.njk" %}
+                </li>
+
+            {% endfor %}
+        </ul>
+    </div>
+</section>

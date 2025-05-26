@@ -1,0 +1,64 @@
+<article class="product-card">
+    <div class="product-card__photo-content">
+        {% if product.label %}
+            <span class="product-card__label product-card__label--{{ product.label | lower }}">
+                {{ product.label }}
+            </span>
+        {% endif %}
+
+        {% if product.hasBadge %}
+            <div class="product-card__badge">
+                <svg class="product-card__icon" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#trophy"></use>
+                </svg>
+            </div>
+        {% endif %}
+
+        <picture class="product-card__picture">
+            <source 
+                srcset="/img/{{ product.base1x }}.avif 1x, /img/{{ product.base2x }}.avif 2x" 
+                type="image/avif"
+            >
+            <source 
+                srcset="/img/{{ product.base1x }}.webp 1x, /img/{{ product.base2x }}.webp 2x" 
+                type="image/webp"
+            >
+            <img 
+                src="/img/{{ product.base1x }}.jpg" 
+                srcset="/img/{{ product.base1x }}.jpg 1x, /img/{{ product.base2x }}.jpg 2x" 
+                width="305"
+                height="272" 
+                alt="{{ product.alt }}"
+            >
+        </picture>
+    </div>
+    <div class="product-card__content">
+        <h3 class="product-card__title">
+            {{ product.title }}
+        </h3>
+        <p class="product-card__price">{{ product.price }}</p>
+        <p class="product-card__description">
+            {{ product.desc }}
+        </p>
+        {% if showActions %}
+            <div class="product-card__actions">
+                <button 
+                 class="product-card__btn product-card__btn--like" 
+                 aria-label="Add to favorites"
+                >
+                    <svg aria-hidden="true">
+                        <use xlink:href="/img/sprite.svg#heart"></use>
+                    </svg>
+                </button>
+                <button 
+                 class="product-card__btn product-card__btn--cart" 
+                 aria-label="Add to cart"
+                 >
+                    <svg>
+                        <use xlink:href="/img/sprite.svg#cart"></use>
+                    </svg>
+                </button>
+            </div>
+        {% endif %}
+    </div>
+</article>

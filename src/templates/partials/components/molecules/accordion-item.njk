@@ -1,0 +1,11 @@
+<details class="accordion"{% if faq.open %} open{% endif %}>
+    <summary class="accordion__question">
+        {{ faq.question }}
+        <svg class="accordion__icon" aria-hidden="true">
+            <use xlink:href="/img/sprite.svg#chevron"></use>
+        </svg>
+    </summary>
+    <p class="accordion__answer">
+        {{ faq.answer }}
+    </p>
+</details>

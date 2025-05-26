@@ -1,0 +1,66 @@
+<form class="customer-form" action="#" method="post">
+    {% for field in customerForm %}
+        <div class="customer-form__group">
+            <label class="customer-form__label" for="{{ field.id }}">{{ field.label }}</label>
+
+            {% if field.type == "select" %}
+                <select
+                    id="{{ field.id }}"
+                    name="{{ field.name }}"
+                    class="customer-form__select"
+                    {% if field.required %}required{% endif %}>
+
+                    {% if field.required %}
+                        <option value="" disabled selected hidden>
+                            {{ field.placeholder or 'Select an option' }}
+                        </option>
+                    {% endif %}
+
+                    {% for option in field.options %}
+                        <option value="{{ option.value }}">{{ option.label }}</option>
+                    {% endfor %}
+                </select>
+
+            {% elseif field.type == "textarea" %}
+
+                <textarea
+                    id="{{ field.id }}"
+                    name="{{ field.name }}"
+                    class="customer-form__textarea"
+                    placeholder="{{ field.placeholder }}"
+                    required></textarea>
+
+            {% else %}
+
+                <input 
+                    class="customer-form__input" 
+                    type="{{ field.type }}" id="{{ field.id }}" 
+                    name="{{ field.name }}" 
+                    placeholder="{{ field.placeholder }}" 
+                    required>
+
+            {% endif %}
+        </div>
+    {% endfor %}
+    <div class="customer-form__actions">
+        <ul class="customer-form__checkbox-list">
+            {% for item in formActions %}
+                <li class="customer-form__checkbox-item">
+                    <input
+                        class="customer-form__checkbox-input"
+                        type="checkbox"
+                        id="checkbox{{ loop.index }}"
+                        name="{{ item.name }}"
+                        {% if item.checked %}checked{% endif %}
+                        {% if item.required %}required{% endif %}>
+                    <label 
+                        class="customer-form__checkbox-label" 
+                        for="checkbox{{ loop.index }}">
+                        {{ item.label }}
+                    </label>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <button type="submit" class="customer-form__button button button--secondary">{{ formBtn }}</button>
+</form>

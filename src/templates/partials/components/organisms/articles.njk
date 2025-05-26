@@ -1,0 +1,23 @@
+<div class="blog__featured-articles featured-articles">
+    <div class="featured-articles__container">
+        <div class="featured-articles__header">
+            <h2 class="featured-articles__heading">{{ articlesHeader }}</h2>
+            <a class="featured-articles__link" href="#">
+                <span class="featured-articles__text">{{ articlesText }}</span>
+                <svg class="featured-articles__icon">
+                    <use xlink:href="/img/sprite.svg#chevron"></use>
+                </svg>
+            </a>
+        </div>
+
+        <ul class="featured-articles__list">
+            {% for blog in articlesCards %}
+
+                <li class="featured-articles__list-item">
+                    {% include "partials/components/molecules/article-card.njk" %}
+                </li>
+
+            {% endfor %}
+        </ul>
+    </div>
+</div>

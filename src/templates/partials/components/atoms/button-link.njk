@@ -1,0 +1,10 @@
+<a class="{{ btnClass }}" href="{{ btn.link }}">
+    {% if btn.iconId %}
+        <svg class="{{ iconClass }}" aria-hidden="true" focusable="false">
+            <use xlink:href="/img/sprite.svg#{{ btn.iconId }}"></use>
+        </svg>
+    {% endif %}
+    {% if btn.text %}
+        <span class="{{ btnTextClass }}">{{ btn.text }}</span>
+    {% endif %}
+</a>
