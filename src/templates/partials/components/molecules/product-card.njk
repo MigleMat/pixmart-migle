@@ -16,25 +16,16 @@
 
         <picture class="product-card__picture">
             <source 
-                srcset="
-                 /img/{{ product.base1x }}.avif 1x, 
-                 /img/{{ product.base2x }}.avif 2x
-                " 
+                srcset="/img/{{ product.base1x }}.avif 1x, /img/{{ product.base2x }}.avif 2x" 
                 type="image/avif"
             >
             <source 
-                srcset="
-                 /img/{{ product.base1x }}.webp 1x, 
-                 /img/{{ product.base2x }}.webp 2x
-                  " 
+                srcset="/img/{{ product.base1x }}.webp 1x, /img/{{ product.base2x }}.webp 2x" 
                 type="image/webp"
             >
             <img 
                 src="/img/{{ product.base1x }}.jpg" 
-                srcset="
-                 /img/{{ product.base1x }}.jpg 1x, 
-                 /img/{{ product.base2x }}.jpg 2x
-                " 
+                srcset="/img/{{ product.base1x }}.jpg 1x, /img/{{ product.base2x }}.jpg 2x" 
                 width="305"
                 height="272" 
                 alt="{{ product.alt }}"

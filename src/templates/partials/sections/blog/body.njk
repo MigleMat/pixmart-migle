@@ -23,13 +23,6 @@
                 <h4 class="article__heading">{{ loop.index }}. {{ tip.title }}</h4>
                 <p class="article__text">{{ tip.description }}</p>
             </div>
-
-            {% if quote %}
-                <blockquote class="article__quote">
-                    <p class="article__quote-text">{{ tip.quote }}</p>
-                </blockquote>
-            {% endif %}
-
             {% if tip.image %}
 
                 <figure class="article__figure">
@@ -51,9 +44,14 @@
                         {% endif %}
                     </figcaption>
                 </figure>
-
             {% endif %}
+
         {% endfor %}
+        {% if quote %}
+            <blockquote class="article__quote">
+                <p class="article__quote-text">{{ quote }}</p>
+            </blockquote>
+        {% endif %}
         <div class="article__footer">
             <p class="article__summary">{{ summary }}</p>
         </div>
