@@ -10,6 +10,7 @@
                         {% set btnClass = "hero__button button button--secondary" %}
                     {%else %}
                         {% set btnClass = "hero__button button" %}
+                        {% set iconClass = "hero__icon" %}
                     {% endif %}
                     {% include "partials/components/atoms/button.njk" %}
                 {% endfor %}
@@ -25,25 +26,16 @@
             {% for img in hero.images %}
                 <picture class="hero__picture">
                     <source 
-                     srcset="
-                      /img/{{ img.name }}-1x.avif 1x,
-                      /img/{{ img.name }}-2x.avif 2x
-                    " 
+                     srcset="/img/{{ img.name }}-1x.avif 1x, /img/{{ img.name }}-2x.avif 2x" 
                      type="image/avif"
                     >
                     <source 
-                     srcset="
-                      /img/{{ img.name }}-1x.webp 1x, 
-                      /img/{{ img.name }}-2x.webp 2x
-                    " 
+                     srcset="/img/{{ img.name }}-1x.webp 1x, /img/{{ img.name }}-2x.webp 2x" 
                      type="image/webp"
                     >
                     <img 
                      src="/img/{{ img.name }}-1x.jpg" 
-                     srcset="
-                      /img/{{ img.name }}-1x.jpg 1x, 
-                      /img/{{ img.name }}-2x.jpg 2x
-                    " 
+                     srcset="/img/{{ img.name }}-1x.jpg 1x, /img/{{ img.name }}-2x.jpg 2x" 
                      width="{{ img.width }}"
                      height="{{ img.height }}"
                      loading="lazy"
