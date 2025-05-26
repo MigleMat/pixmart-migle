@@ -4,9 +4,12 @@
             <p class="contacts__subtitle">{{ contactsSubtitle }}</p>
             <h1 class="contacts__title">{{ contactsTitle }}</h1>
             <p class="contacts__description">{{ contactsDesc }}</p>
+
+            {% set btnTextClass = 'contacts__button-text' %}
             {% set btnClass = 'contacts__button button button--secondary' %}
             {% set btn = contactsBtn %}
-            {% include "partials/components/atoms/button.njk" %}
+
+            {% include "partials/components/atoms/button-link.njk" %}
             <ul class="contacts__list">
                 {% for item in contactsInfo %}
 

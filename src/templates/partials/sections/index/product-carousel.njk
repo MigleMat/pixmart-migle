@@ -7,10 +7,11 @@
                 {% for item in productCarouselButtons %}
 
                     {% set btn = item %}
+                    {% set btnTextClass = 'catalog__button-text' %}
                     {% set btnClass = "product-carousel__button button button--" + item.modifier %}
                     {% set iconClass= 'product-carousel__icon' %}
 
-                    {% include "partials/components/atoms/button.njk" %}
+                    {% include "partials/components/atoms/button-action.njk" %}
 
                 {% endfor %}
 
