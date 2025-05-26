@@ -1,4 +1,4 @@
-<header>
+<header class="header">
     <div class="header__container">
         {% set logoClass = "header__logo" %}
         {% include "partials/components/atoms/logo.njk" %}
@@ -6,16 +6,16 @@
         {% set navClass = "header__nav" %}
         {% include "partials/components/atoms/nav.njk" %}
 
-        <div class="header__search">
-            <form class="header__search-form" action="#" method="get">
+        <div class="header__search search">
+            <form class="search__form" action="#" method="get">
                 <label 
-                 class="header__search-label visually-hidden" 
+                 class="search__label visually-hidden" 
                  for="search"
                 >
                     {{ headerLabel }}
                 </label>
                 <input 
-                 class="header__search-input" 
+                 class="search__input" 
                  type="text" 
                  name="search" 
                  id="search" 
@@ -25,16 +25,15 @@
                  required
                 >
                 <button 
-                 class="header__search-button visually-hidden" 
+                 class="search__button visually-hidden" 
                  type="submit"
                  aria-label="Submit Search"
                 >
                     {{ headerFormBtn }}
                 </button>
             </form>
-
-            {% set btnClass = "header__button button button--secondary" %}
-            {% set iconClass = "header__button-icon" %}
+            {% set btnClass = "button button--secondary" %}
+            {% set iconClass = "button-icon" %}
             {% include "partials/components/atoms/button-action.njk" %}
         </div>
     </div>
