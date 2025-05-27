@@ -1,0 +1,45 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.hero {
+  &__container {
+    background: linear-gradient(
+      180deg,
+      rgba(240 246 253) 0%,
+      rgba(255 255 255) 100%
+    );
+  }
+
+  &__content {
+    @include mixins.flex(
+      $justify: center,
+      $align: flex-start,
+      $direction: column,
+      $gap: 32px
+    );
+  }
+
+  &__title {
+    @include mixins.font(
+      var.$font-size-h1,
+      var.$font-weight-bold,
+      var.$line-height-h1
+    );
+    letter-spacing: var.$spacing-minus;
+    margin-block: 0;
+  }
+
+  &__highlight {
+    color: var.$color-icon;
+  }
+
+  &__description {
+    @include mixins.font(
+      var.$font-size-h5,
+      var.$font-weight-medium,
+      var.$line-height-h5
+    );
+    margin-block: 0;
+    color: var.$color-secondary;
+  }
+}

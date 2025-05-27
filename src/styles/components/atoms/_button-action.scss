@@ -1,6 +1,6 @@
 @use "../../base/mixins" as mixins;
 
-.button {
+.button-action {
   @include mixins.button-reset;
   border-radius: 8px;
   &:focus-visible {

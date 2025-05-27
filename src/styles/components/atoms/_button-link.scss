@@ -1,0 +1,27 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.button-link {
+  display: inline-flex;
+  @include mixins.font(
+    var.$font-size-xl,
+    var.$font-weight-large,
+    var.$line-height-h5
+  );
+  background-color: var.$color-bg-base;
+  padding: 18px 32px;
+  border-radius: 8px;
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    stroke: var.$color-icon;
+    fill: none;
+  }
+
+  &--secondary {
+    color: var.$color-primary-white;
+    background-color: var.$color-icon;
+    font-family: var.$font-family-secondary;
+  }
+}
