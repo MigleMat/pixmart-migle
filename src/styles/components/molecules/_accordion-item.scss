@@ -1,0 +1,40 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.accordion {
+  &__icon {
+    background-color: transparent;
+    border: 2px solid var.$color-line;
+    border-radius: 8px;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+
+  &[open] .accordion__icon {
+    transform: rotate(-90deg);
+  }
+
+  &__question {
+    list-style: none;
+    &::-webkit-details-marker {
+      display: none;
+    }
+    @include mixins.font(
+      var.$font-size-h5,
+      var.$font-weight-bold,
+      var.$line-height-medium
+    );
+  }
+
+  &__answer {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+  }
+}
