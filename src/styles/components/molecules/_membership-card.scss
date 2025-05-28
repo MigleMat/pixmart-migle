@@ -1,0 +1,76 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.membership-card {
+  position: relative;
+  background-color: transparent;
+  box-shadow: 0 4px 40px rgb(29 57 95 / 0.08);
+  padding: 32px;
+  border-radius: 20px;
+
+  &--highlighted {
+    border: 2px solid var.$color-icon;
+  }
+
+  &__tag {
+    position: absolute;
+    background-color: var.$color-icon;
+    color: var.$color-bg-base;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 7px 24px;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__label {
+    @include mixins.font(
+      var.$font-size-h5,
+      var.$font-weight-bold,
+      var.$line-height-medium
+    );
+    margin: 0;
+  }
+
+  &__value {
+    @include mixins.font(
+      var.$font-size-h2,
+      var.$font-weight-bold,
+      var.$line-height-h2
+    );
+    letter-spacing: var.$spacing-minus;
+  }
+
+  &__unit {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    letter-spacing: var.$spacing-minus;
+    color: rgb(13 13 21 / 0.5);
+  }
+
+  &__list {
+    border-top: 1px solid var.$color-line;
+  }
+
+  &__list-item {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+  }
+
+  &__button-link {
+    padding-block: 16px;
+    display: block;
+    border: 2px solid var.$color-line;
+    border-radius: 8px;
+  }
+}
