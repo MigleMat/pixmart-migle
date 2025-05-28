@@ -1,0 +1,22 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.article-card {
+  &__title {
+    @include mixins.font(
+      var.$font-size-h3,
+      var.$font-weight-bold,
+      var.$line-height-h3
+    );
+  }
+
+  &__date {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    color: var.$color-secondary2;
+  }
+}

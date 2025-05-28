@@ -268,10 +268,7 @@
     }
   ],
   "blogHeader": {
-    "title": "Latest Expert"
-  },
-  "articleHeaderBtn": {
-    "link": "#",
+    "title": "Latest Expert",
     "text": "Explore All Articles",
     "iconId": "chevron"
   },
