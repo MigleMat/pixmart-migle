@@ -1,7 +1,7 @@
 <article class="product-card">
     <div class="product-card__photo-content">
         {% if product.label %}
-            <span class="product-card__label product-card__label--{{ product.label | lower }}">
+            <span class="product-card__label product-card__label--{{ product.label }}">
                 {{ product.label }}
             </span>
         {% endif %}
