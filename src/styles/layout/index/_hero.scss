@@ -42,4 +42,26 @@
     margin-block: 0;
     color: var.$color-secondary;
   }
+
+  &__icon-card {
+    display: inline-block;
+    background-color: var.$color-bg-base;
+    border-radius: 10px;
+    padding: 12px;
+    color: var.$color-icon;
+  }
+
+  &__icon-svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+  }
+
+  &__image {
+    object-fit: cover;
+
+    &:first-child {
+      border-radius: 10px;
+    }
+  }
 }

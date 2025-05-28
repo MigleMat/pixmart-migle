@@ -1,4 +1,5 @@
 @use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
 
 .button-action {
   @include mixins.button-reset;
@@ -6,10 +7,32 @@
   &:focus-visible {
     outline: none;
   }
+
+  &--prev {
+    background-color: transparent;
+    display: inline-flex;
+    border: 2px solid var.$color-separator-bold;
+    border-radius: 8px;
+    padding: 18px;
+    transform: scaleX(-1);
+  }
+
+  &--next {
+    background-color: transparent;
+    display: inline-flex;
+    border: 2px solid var.$color-separator-bold;
+    border-radius: 8px;
+    padding: 18px;
+  }
+
   &__icon {
-    fill: currentColor;
+    color: var.$color-primary-invert;
     width: 24px;
     height: 24px;
+
+    &--nav {
+      color: var.$color-primary;
+    }
   }
 
   &--secondary {

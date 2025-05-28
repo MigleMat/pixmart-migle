@@ -20,9 +20,11 @@
         </div>
         <div class="hero__media">
             {% for icon in hero.icons %}
-                <svg class="hero__icon" aria-hidden="true">
-                    <use xlink:href="/img/sprite.svg#{{ icon }}"></use>
-                </svg>
+                <div class="hero__icon-card">
+                    <svg class="hero__icon-svg" aria-hidden="true">
+                        <use xlink:href="/img/sprite.svg#{{ icon }}"></use>
+                    </svg>
+                </div>
             {% endfor %}
 
             {% for img in hero.images %}

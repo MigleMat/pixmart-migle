@@ -25,8 +25,8 @@
   --color-gray-800: rgb(60 64 67);
   --color-gray-900: rgb(32 33 36);
 
-  --font-primary: "Libre Franklin", arial, sans-serif;
-  --font-secondary: "Plus Jakarta Sans", arial, sans-serif;
+  --font-primary: "Plus Jakarta Sans", arial, sans-serif;
+  --font-secondary: "Libre Franklin", arial, sans-serif;
 
   --font-size-h1: 48px;
   --font-size-h2: 40px;
@@ -77,6 +77,12 @@
   width: 1px;
 }
 
+.layout-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 80px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -88,11 +94,6 @@ body {
   background-color: var(--color-white);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 *,
 *::before,
 *::after {
@@ -100,8 +101,12 @@ img {
 }
 
 ul,
+h1,
+h2,
+h3,
 ol,
 body,
+p,
 img {
   margin: 0;
   padding: 0;

@@ -15,7 +15,7 @@
 
     &::placeholder {
       color: rgb(42 53 65 / 0.7);
-      @include font($font-size-small, $font-weight-small, $line-height-small);
+      @include font($font-size-sm, $font-weight-small, $line-height-small);
     }
   }
 }
