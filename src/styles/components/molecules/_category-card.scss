@@ -1,0 +1,44 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.category-card {
+  background-color: var.$color-bg-alternative2;
+  cursor: pointer;
+
+  &--highlighted {
+    background-color: var.$color-icon;
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+
+    &--highlighted {
+      color: var.$color-bg-base;
+    }
+  }
+
+  &__title {
+    @include mixins.font(
+      var.$font-size-h3,
+      var.$font-weight-bold,
+      var.$line-height-h3
+    );
+    &--highlighted {
+      color: var.$color-primary-invert;
+    }
+  }
+
+  &__description {
+    font-family: var.$font-family-secondary;
+    color: var.$color-secondary2;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    &--highlighted {
+      color: var.$color-secondary-invert;
+    }
+  }
+}
