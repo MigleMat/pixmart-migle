@@ -255,6 +255,18 @@ export const copyImages = () =>
             avifOptions: { lossless: true },
             width: (metadata) => Math.round(metadata.width * 0.5),
           },
+          {
+            format: "jpeg",
+            rename: { suffix: "-1x" },
+            jpegOptions: { quality: 85 },
+            width: (metadata) => metadata.width,
+          },
+          {
+            format: "jpeg",
+            rename: { suffix: "-2x" },
+            jpegOptions: { quality: 90 },
+            width: (metadata) => metadata.width * 2,
+          },
         ],
       })
     )
@@ -308,7 +320,6 @@ export const optimizeRasterImages = () =>
         formats: [
           { format: "webp", rename: { suffix: "-2x" } },
           { format: "avif", rename: { suffix: "-2x" } },
-          { format: "jpeg", rename: { suffix: "-2x" } },
           {
             width: (metadata) => Math.round(metadata.width * 0.5),
             format: "webp",
@@ -317,11 +328,6 @@ export const optimizeRasterImages = () =>
           {
             width: (metadata) => Math.round(metadata.width * 0.5),
             format: "avif",
-            rename: { suffix: "-1x" },
-          },
-          {
-            width: (metadata) => Math.round(metadata.width * 0.5),
-            format: "jpeg",
             rename: { suffix: "-1x" },
           },
         ],
