@@ -49,4 +49,13 @@
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
   }
+
+  &__btn {
+    @include mixins.button-reset;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
 }

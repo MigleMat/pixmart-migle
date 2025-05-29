@@ -1,0 +1,41 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.sorting-controls {
+  &__fieldset {
+    border: 1px solid var.$color-separator-bold;
+    border-radius: 8px;
+    padding: 8px 20px;
+    display: inline-block;
+  }
+
+  &__dropdown {
+    border: none;
+  }
+
+  &__result-count {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+  }
+
+  &__buttons-list {
+    list-style-type: none;
+  }
+
+  &__tag {
+    @include mixins.button-reset;
+    border: 1px solid var.$color-separator-bold;
+    border-radius: 8px;
+    padding: 8px 20px;
+    display: inline-block;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

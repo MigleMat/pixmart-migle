@@ -1,0 +1,26 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.label {
+  font-family: var.$font-family-secondary;
+  @include mixins.font(
+    var.$font-size-l,
+    var.$font-weight-medium,
+    var.$line-height-body
+  );
+  color: var.$color-secondary;
+  display: inline-block;
+  background-color: var.$color-base-white;
+  border-radius: 100px;
+  padding: 8px 16px;
+
+  &--accent {
+    color: var.$color-primary-white;
+    background-color: var.$color-label1;
+  }
+
+  &--primary {
+    color: var.$color-primary-white;
+    background-color: var.$color-icon;
+  }
+}

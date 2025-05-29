@@ -241,6 +241,14 @@
             "label": "SOLD OUT"
         }
     ],
+    "catalogCardgBtns": [
+        {
+            "iconId": "heart"
+        },
+        {
+            "iconId": "cart"
+        }
+    ],
     "catalogBtn": {
         "text": "Load more",
         "link": "#0"

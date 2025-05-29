@@ -4,7 +4,7 @@
             <fieldset class="sorting-controls__fieldset">
                 <legend class="visually-hidden">{{ sortingLegend }}</legend>
                 <div class="sorting-controls__categories-dropdown">
-                    <label class="sorting-controls__label" for="sort">
+                    <label class="sorting-controls__label visually-hidden" for="sort" >
                         {{ sortingLabel }}
                     </label>
                     <select class="sorting-controls__dropdown" name="sort" id="sort">
@@ -21,16 +21,16 @@
             <button class="visually-hidden" type="submit">{{ sortingBtn }}</button>
         </form>
 
-        <div class="sorting-controls__wrapper">
+        <div class="sorting-controls__group">
             <p class="sorting-controls__result-count">{{ sortingResults }}</p>
             <ul class="sorting-controls__buttons-list">
                 {% for btn in sortingBtns %}
                     <li class="sorting-controls__buttons-list-item">
 
-                        {% set iconClass = 'catalog__button-text' %}
-                        {% set btnClass = 'sorting-controls__button' %}
+                        {% set iconClass = 'button-action__icon' %}
+                        {% set btnClass = 'sorting-controls__button-action button-action' %}
                         {% if btn.iconId == 'grid' %}
-                            {% set btnClass = btnClass + ' sorting-controls__button--secondary' %}
+                            {% set btnClass = 'button-action--secondary' %}
                         {% endif %}
 
                         {% include "partials/components/atoms/button-action.njk" %}
@@ -54,16 +54,19 @@
     </div>
 
     <div class="catalog__products">
-        {% for product in catalogProducts %}
+        <ul class="catalog__list">
+            {% for product in catalogProducts %}
+                <li class="catalog__list-item">
 
-            {% set showActions = true %}
-            {% include "partials/components/molecules/product-card.njk" %}
+                    {% include "partials/components/molecules/catalog-card.njk" %}
 
-        {% endfor %}
+                </li>
+            {% endfor %}
+        </ul>
     </div>
 
-    {% set btnClass = 'catalog__button button' %}
-    {% set btnTextClass = 'catalog__button-text' %}
+    {% set btnClass = 'catalog__button button-link' %}
+    {% set btnTextClass = 'button-link__text' %}
     {% set btn = catalogBtn %}
 
     {% include "partials/components/atoms/button-link.njk" %}
