@@ -9,25 +9,25 @@
                         <ul class="catalog-filters__options">
                             {% for option in filterItems[item.id] %}
 
-                                <li class="catalog-filters__options-item">
+                                <li class="catalog-filters__options-item catalog-filters__item--{{ item.id }}">
                                     {% if item.id == "categories" %}
                                         <input 
                                      type="checkbox" 
-                                     class="catalog-filters__option-input" 
+                                     class="catalog-filters__option-input visually-hidden" 
                                      id="{{ item.id }}{{ loop.index }}"
                                     >
 
                                     {% elif item.id == "format" %}
                                         <input 
                                      type="radio" 
-                                     class="catalog-filters__option-input" 
+                                     class="catalog-filters__option-input visually-hidden" 
                                      name="format" id="{{ item.id }}{{ loop.index }}"
                                     >
 
                                     {% elif item.id == "style" %}
                                         <input 
                                      type="checkbox" 
-                                     class="catalog-filters__option-input catalog-filters__option-input--toggle" 
+                                     class="catalog-filters__option-input visually-hidden" 
                                      id="{{ item.id }}{{ loop.index }}"
                                     >
 
@@ -43,10 +43,18 @@
                                     {% endif %}
 
                                     <label 
-                                 class="catalog-filters__option-label" 
+                                 class="catalog-filters__option-label catalog-filters__option-label--{{ item.id }}" 
                                  for="{{ item.id }}{{ loop.index }}"
                                 >
-                                        {{ option.name }}
+                                        {% if item.id == "price" %}
+                                            <div class="catalog-filters__range-values">
+                                                <span id="priceMin">{{ option.priceMin }}</span>
+                                                <span id="priceMax">{{ option.priceMax }}</span>
+                                            </div>
+                                        {% else %}
+
+                                            {{ option.name }}
+                                        {% endif %}
                                     </label>
                                 </li>
 
@@ -62,7 +70,7 @@
             <button type="reset" class="catalog-filters__reset">
                 <svg class="catalog-filters__icon" aria-hidden="true">
                     <use xlink:href="/img/sprite.svg#close"></use>
-                </svg>{{filterBtn}}</button>
+                </svg>{{ filterBtn }}</button>
             <button type="submit" class="catalog-filters__submit visually-hidden"></button>
         </div>
     </form>

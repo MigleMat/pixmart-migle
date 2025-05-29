@@ -84,7 +84,8 @@
         ],
         "price": [
             {
-                "name": "€5 - €50"
+                "priceMin": "€5",
+                "priceMax": "€50"
             }
         ]
     },
