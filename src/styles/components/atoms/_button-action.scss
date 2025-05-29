@@ -3,9 +3,19 @@
 
 .button-action {
   @include mixins.button-reset;
+  background-color: var.$color-base-white;
+  border: 1px solid var.$color-separator-bold;
   border-radius: 8px;
+
   &:focus-visible {
     outline: none;
+  }
+
+  &--secondary {
+    @include mixins.button-reset;
+    background-color: rgb(2 101 220);
+    color: rgb(248 247 255);
+    border-radius: 8px;
   }
 
   &--prev {
@@ -33,10 +43,5 @@
     &--nav {
       color: var.$color-primary;
     }
-  }
-
-  &--secondary {
-    background-color: rgb(2 101 220);
-    color: rgb(248 247 255);
   }
 }

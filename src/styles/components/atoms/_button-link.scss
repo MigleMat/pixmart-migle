@@ -10,6 +10,7 @@
   );
   background-color: var.$color-bg-base;
   padding: 18px 32px;
+  border: 2px solid var.$color-separator-bold;
   border-radius: 8px;
 
   &__icon {

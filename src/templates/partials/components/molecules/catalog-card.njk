@@ -1,9 +1,6 @@
 <div class="catalog-card">
     <div class="catalog-card__media">
-        <span class="catalog-card__label label
-        {% if product.label == 'NEW' %} label--accent
-        {% elif product.label == 'POPULAR' %} label--primary
-        {% endif %}">
+        <span class="catalog-card__label label{% if product.label == 'NEW' %} label--accent{% elif product.label == 'POPULAR' %} label--primary{% endif %}">
             {{ product.label }}
         </span>
         <picture class="catalog-card__picture">
