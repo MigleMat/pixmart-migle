@@ -1,0 +1,27 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.catalog-banner {
+  &__container {
+    background-color: var.$color-bg-base;
+    background-image: url("/img/catalog-bg-2x.webp");
+    height: 288px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    @include mixins.font(
+      var.$font-size-h1,
+      var.$font-weight-bold,
+      var.$line-height-h1
+    );
+    letter-spacing: var.$spacing-minus;
+  }
+
+  &__highlight {
+    color: var.$color-icon;
+  }
+}
