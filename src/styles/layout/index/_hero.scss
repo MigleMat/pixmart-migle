@@ -3,6 +3,10 @@
 
 .hero {
   &__container {
+    position: relative;
+    display: flex;
+    padding-block: 120px;
+    gap: 36px;
     background: linear-gradient(
       180deg,
       rgba(240 246 253) 0%,
@@ -10,7 +14,19 @@
     );
   }
 
+  &__ornament {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    max-width: 624px;
+    object-fit: cover;
+    padding-block: 47px;
+  }
+
   &__content {
+    max-width: 520px;
+    min-width: 300px;
+
     @include mixins.flex(
       $justify: center,
       $align: flex-start,
@@ -25,8 +41,14 @@
       var.$font-weight-bold,
       var.$line-height-h1
     );
+
     letter-spacing: var.$spacing-minus;
-    margin-block: 0;
+  }
+
+  &__line-one,
+  &__line-two {
+    display: flex;
+    flex-direction: column;
   }
 
   &__highlight {
@@ -34,34 +56,18 @@
   }
 
   &__description {
+    margin-block: 0;
+
     @include mixins.font(
       var.$font-size-h5,
       var.$font-weight-medium,
       var.$line-height-h5
     );
-    margin-block: 0;
     color: var.$color-secondary;
   }
 
-  &__icon-card {
-    display: inline-block;
-    background-color: var.$color-bg-base;
-    border-radius: 10px;
-    padding: 12px;
-    color: var.$color-icon;
-  }
-
-  &__icon-svg {
-    width: 32px;
-    height: 32px;
-    fill: currentColor;
-  }
-
-  &__image {
-    object-fit: cover;
-
-    &:first-child {
-      border-radius: 10px;
-    }
+  &__actions {
+    display: flex;
+    gap: 24px;
   }
 }

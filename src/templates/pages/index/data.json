@@ -1,31 +1,7 @@
 {
   "hero": {
-    "title": "Craft Your Success with Our <span class=\"hero__highlight\">Digital</span> Assets",
-    "text": "From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources.",
-    "icons": [
-      "pen",
-      "palette"
-    ],
-    "images": [
-      {
-        "name": "event-landing-main",
-        "width": 281,
-        "height": 422,
-        "alt": "Landing screen of the event website"
-      },
-      {
-        "name": "event-kit-overview",
-        "width": 291,
-        "height": 164,
-        "alt": "Speaker cards and schedule design for an event"
-      },
-      {
-        "name": "event-schedule-cards",
-        "width": 514,
-        "height": 299,
-        "alt": "Preview with 12 event and conference website screens"
-      }
-    ]
+    "title": "<span class=\"hero__line-one\">Craft Your</span><span class=\"hero__line-two\">Success with</span>Our <span class=\"hero__highlight\">Digital</span> Assets",
+    "text": "From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources."
   },
   "heroButtons": [
     {
