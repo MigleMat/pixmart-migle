@@ -1,0 +1,73 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.customer-form {
+  background-color: var.$color-bg-base;
+  box-shadow: 0px 4px 40px var.$color-shadow;
+  border-radius: 20px;
+  padding: 32px;
+
+  &__label,
+  &__checkbox-label {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-md,
+      var.$font-weight-small,
+      var.$line-height-base
+    );
+  }
+
+  &__input {
+    max-width: 558px;
+    width: 100%;
+    border: 1px solid var.$color-separator-bold;
+    border-radius: 8px;
+    padding: 20px;
+
+    &::placeholder {
+      font-family: var.$font-family-secondary;
+      @include mixins.font(
+        var.$font-size-l,
+        var.$font-weight-small,
+        var.$line-height-body
+      );
+      color: var.$color-secondary2;
+    }
+  }
+
+  &__select {
+    max-width: 558px;
+    width: 100%;
+    border: 1px solid var.$color-separator-bold;
+    border-radius: 8px;
+    padding: 20px;
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+  }
+
+  &__textarea {
+    max-width: 558px;
+    width: 100%;
+    min-height: 180px;
+    border: 1px solid var.$color-separator-bold;
+    border-radius: 8px;
+    padding: 20px;
+
+    &::placeholder {
+      font-family: var.$font-family-secondary;
+      @include mixins.font(
+        var.$font-size-l,
+        var.$font-weight-small,
+        var.$line-height-body
+      );
+    }
+  }
+
+  &__checkbox-list {
+    list-style-type: none;
+  }
+}

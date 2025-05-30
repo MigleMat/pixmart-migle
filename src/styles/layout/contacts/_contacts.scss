@@ -1,0 +1,86 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.contacts {
+  &__container {
+    background: linear-gradient(
+      to bottom,
+      var.$color-bg-alternative3,
+      var.$color-bg-base
+    );
+  }
+
+  &__subtitle {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    color: var.$color-icon;
+  }
+
+  &__title {
+    @include mixins.font(
+      var.$font-size-h1,
+      var.$font-weight-bold,
+      var.$line-height-h1
+    );
+    letter-spacing: var.$spacing-minus;
+  }
+
+  &__description {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-xl,
+      var.$font-weight-small,
+      var.$line-height-h5
+    );
+    color: var.$color-secondary;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__list-item {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-xl,
+      var.$font-weight-large,
+      var.$line-height-h5
+    );
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    color: var.$color-icon;
+  }
+
+  &__address-info {
+    display: inline-block;
+    background-color: var.$color-bg-base;
+    padding: 12px 16px;
+    border-radius: 10px;
+  }
+
+  &__name {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-bold,
+      var.$line-height-body
+    );
+  }
+
+  &__address {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    color: var.$color-secondary;
+  }
+}
