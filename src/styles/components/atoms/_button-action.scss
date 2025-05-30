@@ -1,0 +1,47 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.button-action {
+  @include mixins.button-reset;
+  background-color: var.$color-base-white;
+  border: 1px solid var.$color-separator-bold;
+  border-radius: 8px;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &--secondary {
+    @include mixins.button-reset;
+    background-color: rgb(2 101 220);
+    color: rgb(248 247 255);
+    border-radius: 8px;
+  }
+
+  &--prev {
+    background-color: transparent;
+    display: inline-flex;
+    border: 2px solid var.$color-separator-bold;
+    border-radius: 8px;
+    padding: 18px;
+    transform: scaleX(-1);
+  }
+
+  &--next {
+    background-color: transparent;
+    display: inline-flex;
+    border: 2px solid var.$color-separator-bold;
+    border-radius: 8px;
+    padding: 18px;
+  }
+
+  &__icon {
+    color: var.$color-primary-invert;
+    width: 24px;
+    height: 24px;
+
+    &--nav {
+      color: var.$color-primary;
+    }
+  }
+}

@@ -5,8 +5,8 @@
             <h1 class="contacts__title">{{ contactsTitle }}</h1>
             <p class="contacts__description">{{ contactsDesc }}</p>
 
-            {% set btnTextClass = 'contacts__button-text' %}
-            {% set btnClass = 'contacts__button button button--secondary' %}
+            {% set btnTextClass = 'button-link__text' %}
+            {% set btnClass = 'contacts__button button-link button-link--secondary' %}
             {% set btn = contactsBtn %}
 
             {% include "partials/components/atoms/button-link.njk" %}
@@ -25,7 +25,24 @@
         </div>
 
         <div class="contacts__location">
-            {% include "partials/components/organisms/location.njk" %}
+            <div class="contacts__location-wrapper">
+                <img
+                class="contacts__map"
+                src="/img/location-2x.webp"
+                srcset="/img/location-1x.jpeg 1x, /img/location-2x.jpeg 2x"
+                alt="PixMart HQ Location on Map"
+                width="618"
+                height="314"
+                >
+
+                <div class="contacts__address-info">
+                    <svg class="contacts__icon" aria-hidden="true">
+                        <use xlink:href="/img/sprite.svg#{{ contcIconId }}"></use>
+                    </svg>
+                    <span class="contacts__name">{{ contcAdressName }}</span>
+                    <span class="contacts__address">{{ contcAdress }}</span>
+                </div>
+            </div>
         </div>
 
         <div class="contacts__form">

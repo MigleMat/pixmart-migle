@@ -1,0 +1,28 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.product-carousel {
+  &__list {
+    list-style-type: none;
+  }
+
+  &__subtitle {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    color: rgb(15 115 246);
+  }
+
+  &__title {
+    @include mixins.font(
+      var.$font-size-h2,
+      var.$font-weight-bold,
+      var.$line-height-h2
+    );
+    letter-spacing: var.$spacing-minus;
+    color: (34 34 34);
+  }
+}

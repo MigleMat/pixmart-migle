@@ -1,9 +1,12 @@
 <header class="header">
-    <div class="header__container">
-        {% set logoClass = "header__logo" %}
+    <div class="header__container layout-container">
+        {% set logoClass = "header__logo logo" %}
+        {% set iconClass = "logo__icon icon--large" %}
         {% include "partials/components/atoms/logo.njk" %}
 
-        {% set navClass = "header__nav" %}
+        {% set navListClass = "nav__list" %}
+        {% set navLinkClass = "nav__link" %}
+        {% set navClass = "header__nav nav" %}
         {% include "partials/components/atoms/nav.njk" %}
 
         <div class="header__search search">
@@ -32,8 +35,8 @@
                     {{ headerFormBtn }}
                 </button>
             </form>
-            {% set btnClass = "button button--secondary" %}
-            {% set iconClass = "button-icon" %}
+            {% set btnClass = "button-action button-action--secondary" %}
+            {% set iconClass = "button-action__icon" %}
             {% include "partials/components/atoms/button-action.njk" %}
         </div>
     </div>

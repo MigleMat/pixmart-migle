@@ -1,0 +1,50 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.faq-section {
+  &__container {
+    background: radial-gradient(
+      circle at center,
+      rgb(15 115 246) 0%,
+      rgb(15 115 246 / 0.1) 70%
+    );
+  }
+
+  &__subtitle {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    color: rgb(15 115 246);
+  }
+
+  &__title {
+    @include mixins.font(
+      var.$font-size-h2,
+      var.$font-weight-bold,
+      var.$line-height-h2
+    );
+    letter-spacing: var.$spacing-minus;
+    color: rgb(34 34 34);
+  }
+
+  &__button-link {
+    background-color: transparent;
+    border: 2px solid var.$color-line;
+    border-radius: 8px;
+    padding: 16px 22px;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__list-item {
+    background-color: var.$color-bg-base;
+    border-radius: 10px;
+    box-shadow: 0px 4px 40px rgb(29 57 95 / 0.08);
+    padding: 24px;
+  }
+}

@@ -1,0 +1,27 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.category-navigation {
+  &__list {
+    list-style-type: none;
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    background-color: var.$color-alternative2-white;
+  }
+
+  &__icon {
+    width: 150px;
+    height: 150px;
+    color: rgb(15 115 246);
+  }
+
+  &__label {
+    @include mixins.font(
+      var.$font-size-h5,
+      var.$font-weight-medium,
+      var.$line-height-h5
+    );
+  }
+}

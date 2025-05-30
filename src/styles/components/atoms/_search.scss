@@ -1,0 +1,21 @@
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.search {
+  &__form {
+    width: 100%;
+    max-width: 240px;
+  }
+  &__input {
+    width: 100%;
+    border: 1px solid rgb(29 54 83 / 0.17);
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &::placeholder {
+      color: rgb(42 53 65 / 0.7);
+      @include font($font-size-sm, $font-weight-small, $line-height-small);
+    }
+  }
+}

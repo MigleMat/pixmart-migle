@@ -1,4 +1,4 @@
-<article class="membership-card">
+<article class="membership-card{% if membershipHeader.label == 'Plus Membership' %} membership-card--highlighted{% endif %}">
     <div class="membership-card__header">
         {% if membershipHeader.tag %}
             <span class="membership-card__tag">{{ membershipHeader.tag }}</span>
@@ -19,10 +19,10 @@
 
         </ul>
 
-        {% set btnClass = 'membership-card__button button' %}
-        {% set btnTextClass = 'membership-card__button-text' %}
+        {% set btnClass = 'membership-card__button-link button-link' %}
+        {% set btnTextClass = 'button-link__text' %}
         {% if membershipHeader.modifier %}
-            {% set btnClass = btnClass + ' button--' + membershipHeader.modifier %}
+            {% set btnClass = btnClass + ' button-link--' + membershipHeader.modifier %}
         {% endif %}
 
         {% set btn = membershipButton %}

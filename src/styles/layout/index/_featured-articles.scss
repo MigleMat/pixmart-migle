@@ -1,0 +1,28 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.featured-articles {
+  &__title {
+    @include mixins.font(
+      var.$font-size-h2,
+      var.$font-weight-bold,
+      var.$line-height-h2
+    );
+    letter-spacing: var.$spacing-minus;
+    color: (34 34 34);
+  }
+
+  &__button {
+    color: var.$color-icon;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    color: var.$color-icon;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+}

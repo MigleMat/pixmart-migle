@@ -1,0 +1,12 @@
+.logo {
+  &__icon {
+    width: 108px;
+    aspect-ratio: 108 / 24;
+    color: rgb(2 101 220);
+
+    &--large {
+      width: 300px;
+      aspect-ratio: 300 / 50;
+    }
+  }
+}

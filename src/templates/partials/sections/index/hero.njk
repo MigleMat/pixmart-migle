@@ -2,17 +2,17 @@
     <div class="hero__container layout-container">
         <div class="hero__content">
             <h1 class="hero__title">{{ hero.title | safe }}</h1>
-            <p class="hero__description">{{ hero.text }}</p>
+            <h5 class="hero__description">{{ hero.text }}</h5>
             <div class="hero__actions">
 
                 {% for btn in heroButtons %}
                     {% if btn.text == "Shop Now" %}
-                        {% set btnTextClass = 'hero__button-text' %}
-                        {% set btnClass = "hero__button button button--secondary" %}
+                        {% set btnTextClass = 'button-link__text' %}
+                        {% set btnClass = "hero__button-link button-link button-link--secondary" %}
                     {%else %}
-                        {% set btnClass = "hero__button button" %}
-                        {% set iconClass = "hero__icon" %}
-                        {% set btnTextClass = 'hero__button-text' %}
+                        {% set btnClass = "hero__button-link button-link" %}
+                        {% set iconClass = "button-link__icon" %}
+                        {% set btnTextClass = 'button-link__text' %}
                     {% endif %}
                     {% include "partials/components/atoms/button-link.njk" %}
                 {% endfor %}
@@ -20,9 +20,11 @@
         </div>
         <div class="hero__media">
             {% for icon in hero.icons %}
-                <svg class="hero__icon" aria-hidden="true">
-                    <use xlink:href="/img/sprite.svg#{{ icon }}"></use>
-                </svg>
+                <div class="hero__icon-card">
+                    <svg class="hero__icon-svg" aria-hidden="true">
+                        <use xlink:href="/img/sprite.svg#{{ icon }}"></use>
+                    </svg>
+                </div>
             {% endfor %}
 
             {% for img in hero.images %}

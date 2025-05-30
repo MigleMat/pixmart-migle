@@ -4,8 +4,9 @@
             <p class="faq-section__subtitle">{{ faqHeader.subtitle }}</p>
             <h2 class="faq-section__title">{{ faqHeader.title }}</h2>
 
-            {% set btnClass = 'faq-section__button button' %}
-            {% set btn = faqHeader %}
+            {% set btnClass = 'faq-section__button-link button-link' %}
+            {% set btn = faqHeader.button %}
+            {% set btnTextClass = 'button-link__text' %}
 
             {% include "partials/components/atoms/button-link.njk" %}
 

@@ -7,6 +7,7 @@
          srcset="/img/presentation-1x.webp 1x, /img/presentation-2x.webp 2x" 
          type="image/webp">
         <img 
+         class="blog__image"
          src="/img/presentation-1x.jpg" 
          srcset="/img/presentation-1x.jpg 1x, /img/presentation-2x.jpg 2x" 
          width="1280"
@@ -19,6 +20,7 @@
             <p class="article__lead">{{ intro }}</p>
         </div>
         {% for tip in tips %}
+
             <div class="article__main">
                 <h4 class="article__heading">{{ loop.index }}. {{ tip.title }}</h4>
                 <p class="article__text">{{ tip.description }}</p>
@@ -34,26 +36,31 @@
                      height="{{ tip.image.height }}"
                      loading="lazy">
                     <figcaption class="article__caption">
-                        {{ tip.image.caption }}
-                        {% if tip.image.link %}
-
-                            <a class="article__link" href="{{ tip.image.link.href }}">
-                                {{ tip.image.link.text }}
-                            </a>
-
-                        {% endif %}
+                        <span class="article__caption-text">{{ tip.image.caption }}</span>
+                        <a class="article__caption-link" href="{{ tip.image.link.href }}">
+                            {{ tip.image.link.text }}
+                        </a>
                     </figcaption>
                 </figure>
+
             {% endif %}
 
         {% endfor %}
         {% if quote %}
+
             <blockquote class="article__quote">
+                <svg class="article__quote-icon" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#quote"></use>
+                </svg>
                 <p class="article__quote-text">{{ quote }}</p>
             </blockquote>
+
         {% endif %}
         <div class="article__footer">
             <p class="article__summary">{{ summary }}</p>
         </div>
+        {% include "partials/components/organisms/author-card.njk" %}
     </article>
+
+    {% include "partials/components/organisms/sidebar.njk" %}
 </div>

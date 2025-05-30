@@ -1,0 +1,85 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.sidebar {
+  &__categories-title,
+  &__latest-articles-title {
+    margin: 0;
+    @include mixins.font(
+      var.$font-size-h4,
+      var.$font-weight-bold,
+      var.$line-height-h4
+    );
+  }
+
+  &__categories,
+  &__latest-articles {
+    border-top: 2px solid var.$color-primary;
+    list-style-type: none;
+  }
+
+  &__categories-item {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    color: var.$color-secondary;
+    padding-left: 16px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 11px;
+      left: 2px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var.$color-icon;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__categories-sublist {
+    list-style-type: none;
+  }
+
+  &__categories-subitem {
+    position: relative;
+    font-weight: var.$font-weight-large;
+    color: var.$color-primary;
+    padding-left: 16px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 11px;
+      left: 2px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var.$color-icon;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__latest-articles-item {
+    @include mixins.font(
+      var.$font-size-h5,
+      var.$font-weight-bold,
+      var.$line-height-medium
+    );
+  }
+
+  &__latest-article-date {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    color: var.$color-secondary;
+  }
+}

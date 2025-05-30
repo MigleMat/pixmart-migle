@@ -1,13 +1,14 @@
 <section class="featured-articles">
     <div class="featured-articles__container layout-container">
         <div class="featured-articles__header">
-            <h2 class="featured-articles__heading">{{ blogHeader.title }}</h2>
+            <h2 class="featured-articles__title">{{ blogHeader.title }}</h2>
 
-            {% set btnClass = 'featured-articles__link' %}
-            {% set iconClass = 'featured-articles__icon' %}
-            {% set btnTextClass = 'featured-articles__button-text' %}
-            {% set btn = articleHeaderBtn %}
-            {% include "partials/components/atoms/button-link.njk" %}
+            <a class="featured-articles__button" href="#">
+                <span class="featured-articles__text">{{ blogHeader.text }}</span>
+                <svg class="featured-articles__icon" aria-hidden="true" focusable="false">
+                    <use xlink:href="/img/sprite.svg#{{ blogHeader.iconId }}"></use>
+                </svg>
+            </a>
 
         </div>
 

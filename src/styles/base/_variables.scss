@@ -1,0 +1,90 @@
+$color-primary: rgb(26 115 232);
+$color-primary-hover: rgb(22 103 193);
+$color-primary-light: rgb(232 240 254);
+
+$color-secondary: rgb(251 188 5);
+$color-secondary-hover: rgb(226 169 0);
+$color-secondary-light: rgb(255 247 224);
+
+$color-success: rgb(52 168 83);
+$color-warning: rgb(251 188 4);
+$color-danger: rgb(234 67 53);
+$color-info: rgb(66 133 244);
+$color-icon: rgb(2 101 220);
+
+$color-bg-base: rgb(255 255 255);
+$color-bg-alternative: rgb(248 250 252);
+$color-bg-alternative2: rgb(244 247 250);
+$color-bg-alternative3: rgb(240 246 253);
+$color-bg-baseIcon: rgb(13 13 21);
+$color-bg-alternative-invert: rgb(26 25 37);
+$color-bg-alternative2-invert: rgb(29 28 40);
+$color-bg-base-invert: rgb(13 13 21);
+$color-shadow: rgb(29 57 95 / 0.05);
+
+$color-primary: rgb(13 13 21 / 1);
+$color-primary2: rgb(34 34 34);
+$color-primary2-op: rgb(34 34 34 / 0.5);
+$color-secondary: rgb(42 53 65 / 0.85);
+$color-secondary2: rgb(42 53 65 / 0.7);
+$color-baseIcon: rgb(39 53 68 / 0.55);
+$color-disabled: rgb(34 52 73 / 0.4);
+$color-primary-invert: rgb(248 247 255 / 1);
+$color-secondary-invert: rgb(239 245 250 / 0.82);
+$color-secondary2-invert: rgb(231 238 247 / 0.66);
+$color-baseIcon-invert: rgb(231 241 253 / 0.49);
+$color-disabled-invert: rgb(229 236 251 / 0.36);
+
+$color-primary-white: rgba(245 248 251);
+$color-secondary-white: rgba(239 245 250 / 0.82);
+$color-secondary2-white: rgba(231 238 247 / 0.66);
+$color-disabled-white: rgba(34 52 73 / 0.4);
+$color-line-white: rgba(212 217 242 / 0.26);
+$color-baseIcon-white: rgba(231 241 253 / 0.49);
+$color-separator-white: rgba(191 197 238 / 0.12);
+$color-separator-bold-white: rgba(13 7 251 / 0.17);
+$color-separator-bold: rgb(29 54 83 / 0.17);
+$color-line: rgb(31 50 71 / 0.27);
+$color-alternative-white: rgba(248 250 252);
+$color-alternative2-white: rgba(244 247 250);
+$color-base-white: rgba(255 255 255);
+$color-label1: rgba(0 119 114);
+
+$font-family-primary: "Plus Jakarta Sans", arial, sans-serif;
+$font-family-secondary: "Libre Franklin", arial, sans-serif;
+
+$font-size-h1: 52px;
+$font-size-h2: 36px;
+$font-size-h3: 28px;
+$font-size-h4: 24px;
+$font-size-h5: 20px;
+$font-size-xs: 11px;
+$font-size-sm: 12px;
+$font-size-md: 14px;
+$font-size-l: 16px;
+$font-size-xl: 18px;
+
+$font-weight-small: 400;
+$font-weight-medium: 500;
+$font-weight-large: 600;
+$font-weight-bold: 700;
+
+$line-height-h1: 62px;
+$line-height-h2: 48px;
+$line-height-h3: 36px;
+$line-height-h4: 32px;
+$line-height-h5: 28px;
+$line-height-base: 20px;
+$line-height-body: 24px;
+$line-height-small: 20px;
+$line-height-medium: 26px;
+$line-height-caption: 16px;
+
+$spacing-xxs: 4px;
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+$spacing-minus: -0.5px;

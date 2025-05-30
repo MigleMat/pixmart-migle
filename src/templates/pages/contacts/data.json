@@ -21,7 +21,8 @@
         }
     ],
     "contcIconId": "pin",
-    "contcAdress": "PixMart HQ 123 Creative Ave, Design City, 45678",
+    "contcAdressName": "PixMart HQ 123",
+    "contcAdress": "Creative Ave, Design City, 45678",
     "customerForm": [
         {
             "type": "text",

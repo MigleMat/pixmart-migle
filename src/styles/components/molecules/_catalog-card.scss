@@ -1,0 +1,41 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.catalog-card {
+  &__buttons-item {
+    list-style-type: none;
+  }
+
+  &__image {
+    border-radius: 20px;
+  }
+
+  &__media {
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+
+  &__title,
+  &__price {
+    @include mixins.font(
+      var.$font-size-h5,
+      var.$font-weight-bold,
+      var.$line-height-medium
+    );
+  }
+
+  &__description {
+    font-family: var.$font-family-secondary;
+    color: var.$color-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+  }
+}
