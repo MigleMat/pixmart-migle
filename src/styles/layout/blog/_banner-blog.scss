@@ -1,0 +1,36 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.blog {
+  &__container {
+    background: linear-gradient(
+      to bottom,
+      var.$color-bg-alternative3,
+      var.$color-bg-base
+    );
+    padding-block: 64px;
+  }
+
+  &__banner-tag {
+    display: inline-block;
+    border-radius: 100px;
+    padding: 8px 16px;
+    color: var.$color-primary-white;
+    background-color: var.$color-icon;
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-medium,
+      var.$line-height-medium
+    );
+  }
+
+  &__banner-title {
+    @include mixins.font(
+      var.$font-size-h1,
+      var.$font-weight-bold,
+      var.$line-height-h1
+    );
+    letter-spacing: var.$spacing-minus;
+  }
+}

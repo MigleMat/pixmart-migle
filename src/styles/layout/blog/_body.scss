@@ -1,0 +1,12 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.blog {
+  &__image {
+    object-fit: cover;
+    object-position: top;
+    border-radius: 20px;
+    max-width: 1280px;
+    width: 100%;
+  }
+}

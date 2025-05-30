@@ -13,8 +13,6 @@
   }
 
   &__button {
-    @include mixins.button-reset;
-    cursor: pointer;
     color: var.$color-icon;
   }
 

@@ -8,42 +8,38 @@
         "date": "2024-04-10",
         "formattedDate": "April 10, 2024"
     },
-    "sidebarBlocks": [
+    "titleCat": "Categories",
+    "titleLat": "Latest Articles",
+    "sidebarCategories": [
         {
-            "title": "Categories",
-            "list": [
-                {
-                    "name": "Graphic Design Trends",
-                    "subitems": [
-                        "Typography & Fonts"
-                    ]
-                },
-                {
-                    "name": "UI/UX Design"
-                },
-                {
-                    "name": "Branding & Identity"
-                },
-                {
-                    "name": "Illustration"
-                },
-                {
-                    "name": "Digital Marketing"
-                }
+            "name": "Graphic Design Trends"
+        },
+        {
+            "subitems": [
+                "Typography & Fonts"
             ]
         },
         {
-            "title": "Latest Articles",
-            "list": [
-                {
-                    "name": "Text",
-                    "date": "March 15, 2024"
-                },
-                {
-                    "name": "Text",
-                    "date": "March 15, 2024"
-                }
-            ]
+            "name": "UI/UX Design"
+        },
+        {
+            "name": "Branding & Identity"
+        },
+        {
+            "name": "Illustration"
+        },
+        {
+            "name": "Digital Marketing"
+        }
+    ],
+    "sidebarLatest": [
+        {
+            "name": "Text",
+            "date": "March 15, 2024"
+        },
+        {
+            "name": "Text",
+            "date": "March 15, 2024"
         }
     ],
     "intro": "In the vast expanse of graphic design, typography stands as a pivotal element that can make or break the visual appeal of any project. Understanding the art of typography is essential for creating designs that not only attract attention but also communicate effectively. Here, we delve into practical tips that will help you master typography, transforming your creations into eye-catching masterpieces.",

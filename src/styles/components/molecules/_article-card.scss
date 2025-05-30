@@ -19,4 +19,32 @@
     );
     color: var.$color-secondary2;
   }
+
+  &__image {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+  }
+
+  &__media {
+    position: relative;
+  }
+
+  &__tag {
+    display: inline-block;
+    color: var.$color-primary-white;
+    background-color: var.$color-icon;
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-medium,
+      var.$line-height-body
+    );
+
+    position: absolute;
+    bottom: -20px;
+    left: 16px;
+  }
 }
