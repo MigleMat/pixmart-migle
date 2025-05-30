@@ -1,42 +1,35 @@
 <header class="header">
     <div class="header__container layout-container">
-        {% set logoClass = "header__logo logo" %}
-        {% set iconClass = "logo__icon icon--large" %}
-        {% include "partials/components/atoms/logo.njk" %}
+        <div class="header__branding" >
+            {% set logoClass = "header__logo logo" %}
+            {% set iconLogoClass = "logo__icon" %}
+            {% include "partials/components/atoms/logo.njk" %}
 
-        {% set navListClass = "nav__list" %}
-        {% set navLinkClass = "nav__link" %}
-        {% set navClass = "header__nav nav" %}
-        {% include "partials/components/atoms/nav.njk" %}
+            {% set navClass = "header__nav nav" %}
+            {% set navListClass = "nav__list" %}
+            {% set navLinkClass = "nav__link" %}
+            {% include "partials/components/atoms/nav.njk" %}
+        </div>
 
-        <div class="header__search search">
-            <form class="search__form" action="#" method="get">
-                <label 
-                 class="search__label visually-hidden" 
-                 for="search"
-                >
-                    {{ headerLabel }}
-                </label>
-                <input 
-                 class="search__input" 
-                 type="text" 
-                 name="search" 
-                 id="search" 
-                 placeholder="Search for Digital Assets" 
-                 minlength="1" 
-                 maxlength="15" 
-                 required
-                >
-                <button 
-                 class="search__button visually-hidden" 
-                 type="submit"
-                 aria-label="Submit Search"
-                >
-                    {{ headerFormBtn }}
-                </button>
-            </form>
-            {% set btnClass = "button-action button-action--secondary" %}
-            {% set iconClass = "button-action__icon" %}
+        <div class="header__controls">
+            <div class="header__search search">
+                <form class="search__form" action="#" method="get">
+                    <label class="search__label visually-hidden" for="search">{{ headerLabel }}</label>
+                    <input 
+                    class="search__input" 
+                    type="text" 
+                    name="search" 
+                    id="search" 
+                    placeholder="Search for Digital Assets" 
+                    minlength="1" 
+                    maxlength="15" 
+                    required
+                    >
+                    <button class="search__button visually-hidden" type="submit" aria-label="Submit Search">{{ headerFormBtn }}</button>
+                </form>
+            </div>
+            {% set actionButtonClass = "header__button-action button-action button-action--secondary" %}
+            {% set actionIconClass = "button-action__icon" %}
             {% include "partials/components/atoms/button-action.njk" %}
         </div>
     </div>

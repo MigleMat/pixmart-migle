@@ -1,10 +1,20 @@
 .header {
   &__container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-block: 24px;
   }
-  &__search {
+
+  &__branding {
     display: flex;
-    flex: 1 1 auto;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }

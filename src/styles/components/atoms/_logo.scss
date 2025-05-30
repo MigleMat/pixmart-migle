@@ -1,12 +1,16 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
 .logo {
   &__icon {
+    display: block;
     width: 108px;
     aspect-ratio: 108 / 24;
-    color: rgb(2 101 220);
+    color: var.$color-icon;
 
     &--large {
       width: 300px;
-      aspect-ratio: 300 / 50;
+      aspect-ratio: 6 / 1;
     }
   }
 }
