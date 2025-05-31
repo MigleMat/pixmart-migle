@@ -2,6 +2,12 @@
 @use "../../base/variables" as var;
 
 .membership-plans {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
   &__subtitle {
     font-family: var.$font-family-secondary;
     @include mixins.font(
@@ -9,7 +15,7 @@
       var.$font-weight-small,
       var.$line-height-body
     );
-    color: rgb(15 115 246);
+    color: var.$color-subtitl;
   }
 
   &__title {
@@ -19,12 +25,27 @@
       var.$line-height-h2
     );
     letter-spacing: var.$spacing-minus;
-    color: rgb(34 34 34);
+    color: vsr.$color-primary2;
   }
 
   &__list {
     list-style-type: none;
     padding: 32px;
     border-radius: 20px;
+
+    @include mixins.flex(
+      $justify: center,
+      $align: center,
+      $direction: row,
+      $gap: 16px
+    );
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
   }
 }
