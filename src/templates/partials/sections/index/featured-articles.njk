@@ -2,23 +2,19 @@
     <div class="featured-articles__container layout-container">
         <div class="featured-articles__header">
             <h2 class="featured-articles__title">{{ blogHeader.title }}</h2>
-
             <a class="featured-articles__button" href="#">
                 <span class="featured-articles__text">{{ blogHeader.text }}</span>
                 <svg class="featured-articles__icon" aria-hidden="true" focusable="false">
                     <use xlink:href="/img/sprite.svg#{{ blogHeader.iconId }}"></use>
                 </svg>
             </a>
-
         </div>
 
         <ul class="featured-articles__list">
             {% for blog in articleCards %}
-
                 <li class="featured-articles__list-item">
                     {% include "partials/components/molecules/article-card.njk" %}
                 </li>
-
             {% endfor %}
         </ul>
     </div>

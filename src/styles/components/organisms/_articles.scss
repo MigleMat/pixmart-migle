@@ -1,7 +1,7 @@
 @use "../../base/mixins" as mixins;
 @use "../../base/variables" as var;
 
-.featured-articles {
+.articles {
   background-color: var.$color-bg-alternative3;
 
   &__list-item {
