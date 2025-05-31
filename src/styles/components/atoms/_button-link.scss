@@ -3,12 +3,9 @@
 
 .button-link {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  gap: 16px;
-  background-color: var.$color-bg-base;
+  background-color: transparent;
   padding: 18px 32px;
+  border: 2px solid var.$color-line;
   border-radius: 8px;
 
   @include mixins.font(
@@ -31,6 +28,12 @@
   }
 
   &--tertiary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    gap: 16px;
     border: none;
+    background-color: var.$color-bg-base;
   }
 }

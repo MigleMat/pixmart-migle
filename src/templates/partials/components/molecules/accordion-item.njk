@@ -1,6 +1,6 @@
 <details class="accordion"{% if faq.open %} open{% endif %}>
     <summary class="accordion__question">
-        {{ faq.question }}
+        <span class="accordion__question-text">{{ faq.question }}</span>
         <svg class="accordion__icon" aria-hidden="true">
             <use xlink:href="/img/sprite.svg#chevron"></use>
         </svg>

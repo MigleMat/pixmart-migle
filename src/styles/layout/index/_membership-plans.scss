@@ -15,7 +15,7 @@
       var.$font-weight-small,
       var.$line-height-body
     );
-    color: var.$color-subtitl;
+    color: var.$color-subtitle;
   }
 
   &__title {
@@ -25,7 +25,7 @@
       var.$line-height-h2
     );
     letter-spacing: var.$spacing-minus;
-    color: vsr.$color-primary2;
+    color: var.$color-primary2;
   }
 
   &__list {
