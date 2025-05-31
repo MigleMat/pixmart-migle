@@ -2,6 +2,35 @@
 @use "../../base/variables" as var;
 
 .category-highlight {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 294px);
+    grid-template-rows: repeat(5, 80px);
+    gap: 20px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  &__header {
+    @include mixins.flex(
+      $justify: center,
+      $align: flex-start,
+      $direction: column,
+      $gap: 8px
+    );
+  }
+
   &__subtitle {
     font-family: var.$font-family-secondary;
     @include mixins.font(
@@ -9,7 +38,7 @@
       var.$font-weight-small,
       var.$line-height-body
     );
-    color: rgb(15 115 246);
+    color: var.$color-subtitle;
   }
 
   &__title {
@@ -19,7 +48,12 @@
       var.$line-height-h2
     );
     letter-spacing: var.$spacing-minus;
-    color: rgb(34 34 34);
+    color: var.$color-primary2;
+  }
+
+  &__break-line {
+    display: flex;
+    flex-direction: column;
   }
 
   &__description {
@@ -29,6 +63,6 @@
       var.$font-weight-small,
       var.$line-height-h5
     );
-    color: rgb(34 34 34 / 0.7);
+    color: var.$color-primary2-op;
   }
 }

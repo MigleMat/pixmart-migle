@@ -40,27 +40,43 @@
     {
       "icon": "ui-kits",
       "title": "Templates",
-      "desc": "For all needs • Modern"
+      "desc": "For all needs • Modern",
+      "isFull": true
     },
     {
-      "icon": "presentation",
-      "title": "Slides",
-      "desc": "Pitch-ready • Creative"
+      "icon": "",
+      "title": "",
+      "desc": "",
+      "isHalfUp": true
     },
     {
       "icon": "social-media",
       "title": "App Icons",
-      "desc": "High-quality • Elegant"
+      "desc": "High-quality•Elegant",
+      "isFull": true
     },
     {
-      "icon": "iliustration",
+      "icon": "presentation",
+      "title": "Slides",
+      "desc": "Pitch-ready•Creative",
+      "isFull": true
+    },
+    {
+      "icon": "illustration",
       "title": "Design Tools",
-      "desc": "Easy to use • Unique"
+      "desc": "Easy to use•Unique",
+      "isFull": true
+    },
+    {
+      "icon": "",
+      "title": "",
+      "desc": "",
+      "isHalfDown": true
     }
   ],
   "categoriesHeader": {
     "subtitle": "CATEGORIES",
-    "title": "Discover Assets for Every Projects",
+    "title": "<span class=\"category-highlight__break-line\">Discover Assets for</span> Every Projects",
     "desc": "From fonts and icons to mockups and templates, our comprehensive categories ensure that you find exactly what you need to your projects."
   },
   "categoriesButton": {

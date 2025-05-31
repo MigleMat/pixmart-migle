@@ -1,12 +1,14 @@
-<div class="category-card{% if category.title == 'App Icons' %} category-card--highlighted{% endif %}">
-    <svg class="category-card__icon{% if category.title == 'App Icons' %} category-card__icon--highlighted{% endif %}" aria-hidden="true">
+{% set isHighlighted = category.title == 'App Icons' %}
+
+<div class="category-card{% if isHighlighted %} category-card--highlighted{% endif %}{% if category.isHalfUp %} category-card--half-up{% endif %}{% if category.isHalfDown %} category-card--half-down{% endif %}{% if category.isFull %} category-card--full{% endif %}">
+    <svg class="category-card__icon{% if isHighlighted %} category-card__icon--highlighted{% endif %}" aria-hidden="true">
         <use xlink:href="/img/sprite.svg#{{ category.icon }}"></use>
     </svg>
     <div class="category-card__content">
-        <h3 class="category-card__title{% if category.title == 'App Icons' %} category-card__title--highlighted{% endif %}">
+        <h3 class="category-card__title{% if isHighlighted %} category-card__title--highlighted{% endif %}">
             {{ category.title }}
         </h3>
-        <p class="category-card__description{% if category.title == 'App Icons' %} category-card__description--highlighted{% endif %}">
+        <p class="category-card__description{% if isHighlighted %} category-card__description--highlighted{% endif %}">
             {{ category.desc }}
         </p>
     </div>

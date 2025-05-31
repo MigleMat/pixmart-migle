@@ -2,18 +2,28 @@
 @use "../../base/variables" as var;
 
 .product-carousel {
+  &__container {
+    margin-block: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
   &__list {
     list-style-type: none;
+    display: flex;
+    gap: 16px;
   }
 
   &__subtitle {
     font-family: var.$font-family-secondary;
+    color: var.$color-subtitle;
+
     @include mixins.font(
       var.$font-size-l,
       var.$font-weight-small,
       var.$line-height-body
     );
-    color: rgb(15 115 246);
   }
 
   &__title {
@@ -22,7 +32,31 @@
       var.$font-weight-bold,
       var.$line-height-h2
     );
+
     letter-spacing: var.$spacing-minus;
     color: (34 34 34);
+  }
+
+  &__header {
+    @include mixins.flex(
+      $justify: space-between,
+      $align: center,
+      $direction: row,
+      $gap: 16px
+    );
+  }
+
+  &__intro {
+    @include mixins.flex(
+      $justify: flex-start,
+      $align: stretch,
+      $direction: column,
+      $gap: 16px
+    );
+  }
+
+  &__nav {
+    display: flex;
+    gap: 12px;
   }
 }

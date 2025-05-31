@@ -18,13 +18,16 @@
 
   &--prev,
   &--next {
+    width: 64px;
+    height: 64px;
+    padding: 20px;
     display: inline-flex;
     background-color: transparent;
     border: 2px solid var.$color-separator-bold;
     border-radius: 8px;
   }
 
-  &--next {
+  &--prev {
     transform: scaleX(-1);
   }
 

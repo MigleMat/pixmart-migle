@@ -1,28 +1,27 @@
 <section class="product-carousel">
     <div class="product-carousel__container layout-container">
         <div class="product-carousel__header">
-            <p class="product-carousel__subtitle">{{ productHeader.subtitle }}</p>
-            <h2 class="product-carousel__title">{{ productHeader.title }}</h2>
+            <div class="product-carousel__intro">
+                <p class="product-carousel__subtitle">{{ productHeader.subtitle }}</p>
+                <h2 class="product-carousel__title">{{ productHeader.title }}</h2>
+            </div>
             <nav class="product-carousel__nav">
                 {% for item in productCarouselButtons %}
 
                     {% set btn = item %}
-                    {% set btnClass = "product-carousel__button-action button-action button-action--" + item.modifier %}
-                    {% set iconClass= 'button-action__icon button-action__icon--nav' %}
-
+                    {% set actionButtonClass = "product-carousel__button-action button-action button-action--" + item.modifier %}
+                    {% set actionIconClass= 'button-action__icon button-action__icon--nav' %}
                     {% include "partials/components/atoms/button-action.njk" %}
 
                 {% endfor %}
-
             </nav>
         </div>
+
         <ul class="product-carousel__list">
             {% for product in productCards %}
-
                 <li class="product-carousel__list-item">
                     {% include "partials/components/molecules/product-card.njk" %}
                 </li>
-
             {% endfor %}
         </ul>
     </div>
