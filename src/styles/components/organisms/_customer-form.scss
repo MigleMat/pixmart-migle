@@ -6,6 +6,11 @@
   box-shadow: 0px 4px 40px var.$color-shadow;
   border-radius: 20px;
   padding: 32px;
+  width: 100%;
+  max-width: 622px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 
   &__label,
   &__checkbox-label {
@@ -69,5 +74,47 @@
 
   &__checkbox-list {
     list-style-type: none;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__actions {
+    padding-left: 4px;
+  }
+
+  &__button-link {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px 40px;
+    border: none;
+  }
+
+  &__select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  &__checkbox-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  &__checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
   }
 }

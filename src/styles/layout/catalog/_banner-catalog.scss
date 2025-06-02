@@ -6,10 +6,10 @@
     background-color: var.$color-bg-base;
     background-image: url("/img/catalog-bg-2x.webp");
     height: 288px;
-    width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding-block: 64px 80px;
   }
 
   &__title {
@@ -23,5 +23,15 @@
 
   &__highlight {
     color: var.$color-icon;
+  }
+
+  &__breakline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
   }
 }

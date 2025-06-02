@@ -137,7 +137,7 @@
             "iconId": "telegram"
         }
     ],
-    "newsletterLabel": "Subscribe to Design Newsletter",
+    "newsletterLabel": "<span class=\"footer__breakline\">Subscribe to </span>Design Newsletter",
     "newsletterBtn": "Subscribe",
     "footerLegal": [
         {

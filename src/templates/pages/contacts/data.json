@@ -1,6 +1,6 @@
 {
     "contactsSubtitle": "CONTACT",
-    "contactsTitle": "Get in Touch with Us",
+    "contactsTitle": "<span class=\"contacts__break-line\">Get in Touch </span>with Us",
     "contactsDesc": "We are here to help you navigate your creative journey. Reach out for any questions, support, or feedback.",
     "contactsBtn": {
         "link": "#",
@@ -21,8 +21,8 @@
         }
     ],
     "contcIconId": "pin",
-    "contcAdressName": "PixMart HQ 123",
-    "contcAdress": "Creative Ave, Design City, 45678",
+    "contcAdressName": "PixMart HQ",
+    "contcAdress": "123 Creative Ave, Design City, 45678",
     "customerForm": [
         {
             "type": "text",
@@ -44,6 +44,7 @@
             "id": "subject",
             "name": "subject",
             "required": true,
+            "default": "general",
             "placeholder": "Choose a reason",
             "options": [
                 {

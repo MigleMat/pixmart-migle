@@ -3,26 +3,37 @@
 
 .button-link {
   display: inline-flex;
+  background-color: transparent;
+  padding: 18px 32px;
+  border: 2px solid var.$color-line;
+  border-radius: 8px;
+
   @include mixins.font(
     var.$font-size-xl,
     var.$font-weight-large,
     var.$line-height-h5
   );
-  background-color: var.$color-bg-base;
-  padding: 18px 32px;
-  border: 2px solid var.$color-separator-bold;
-  border-radius: 8px;
 
   &__icon {
-    width: 20px;
-    height: 20px;
-    stroke: var.$color-icon;
-    fill: none;
+    display: block;
+    width: 24px;
+    height: 24px;
+    color: var.$color-icon;
   }
 
   &--secondary {
+    font-family: var.$font-family-secondary;
     color: var.$color-primary-white;
     background-color: var.$color-icon;
-    font-family: var.$font-family-secondary;
+  }
+
+  &--tertiary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    gap: 16px;
+    border: none;
+    background-color: var.$color-bg-base;
   }
 }

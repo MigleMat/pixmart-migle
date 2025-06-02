@@ -2,8 +2,13 @@
 @use "../../base/variables" as vars;
 
 .nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
   &__list {
     list-style-type: none;
+
     @include mixins.flex(flex-start, center, row, vars.$spacing-xs);
 
     &--column {
@@ -15,20 +20,23 @@
   &__link {
     display: inline-flex;
     padding: 6px 12px;
+
     @include mixins.font(
-      vars.$font-size-sm,
+      vars.$font-size-md,
       vars.$font-weight-large,
       vars.$line-height-small
     );
 
     &--column {
       padding: 0;
+
       font-family: vars.$font-family-secondary;
       @include mixins.font(
         vars.$font-size-l,
         vars.$font-weight-small,
         vars.$line-height-body
       );
+
       color: vars.$color-secondary;
     }
   }

@@ -2,16 +2,13 @@
 
 {% block content %}
     <main class="main">
-        <section class="blog">
-            <div class="blog__container layout-container">
-                {% include "partials/sections/blog/banner-blog.njk" %}
 
-                <div class="blog__main-area">
-                    {% include "partials/sections/blog/body.njk" %}
-                </div>
+        {% include "partials/sections/blog/banner-blog.njk" %}
 
-                {% include "partials/components/organisms/articles.njk" %}
-            </div>
-        </section>
-    </main>
+        {% include "partials/sections/blog/body.njk" %}
+        {% set isBlogPage = true %}
+        {% include "partials/components/organisms/articles.njk" %}
+    </div>
+
+</main>
 {% endblock %}

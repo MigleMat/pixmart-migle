@@ -1,42 +1,44 @@
 <section class="catalog">
     <div class="catalog__sorting-controls sorting-controls">
-        <form class="sorting-controls__form">
-            <fieldset class="sorting-controls__fieldset">
-                <legend class="visually-hidden">{{ sortingLegend }}</legend>
-                <div class="sorting-controls__categories-dropdown">
-                    <label class="sorting-controls__label visually-hidden" for="sort" >
-                        {{ sortingLabel }}
-                    </label>
-                    <select class="sorting-controls__dropdown" name="sort" id="sort">
-                        {% for option in sortingOptions %}
+        <div class="sorting-controls__header">
+            <form class="sorting-controls__form">
+                <fieldset class="sorting-controls__fieldset">
+                    <legend class="visually-hidden">{{ sortingLegend }}</legend>
+                    <div class="sorting-controls__categories-dropdown">
+                        <label class="sorting-controls__label visually-hidden" for="sort" >
+                            {{ sortingLabel }}
+                        </label>
+                        <select class="sorting-controls__dropdown" name="sort" id="sort">
+                            {% for option in sortingOptions %}
 
-                            <option value="{{ option.value }}" {% if option.selected %} selected{% endif %}>
-                                {{ option.label }}
-                            </option>
+                                <option value="{{ option.value }}" {% if option.selected %} selected{% endif %}>
+                                    {{ option.label }}
+                                </option>
 
-                        {% endfor %}
-                    </select>
-                </div>
-            </fieldset>
-            <button class="visually-hidden" type="submit">{{ sortingBtn }}</button>
-        </form>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </fieldset>
+                <button class="visually-hidden" type="submit">{{ sortingBtn }}</button>
+            </form>
 
-        <div class="sorting-controls__group">
-            <p class="sorting-controls__result-count">{{ sortingResults }}</p>
-            <ul class="sorting-controls__buttons-list">
-                {% for btn in sortingBtns %}
-                    <li class="sorting-controls__buttons-list-item">
+            <div class="sorting-controls__group">
+                <p class="sorting-controls__result-count">{{ sortingResults }}</p>
+                <ul class="sorting-controls__buttons-list">
+                    {% for btn in sortingBtns %}
+                        <li class="sorting-controls__buttons-list-item">
 
-                        {% set iconClass = 'button-action__icon' %}
-                        {% set btnClass = 'sorting-controls__button-action button-action' %}
-                        {% if btn.iconId == 'grid' %}
-                            {% set btnClass = 'button-action--secondary' %}
-                        {% endif %}
+                            {% set actionIconClass = 'button-action__icon' %}
+                            {% set actionButtonClass = 'sorting-controls__button-action button-action' %}
+                            {% if btn.iconId == 'grid' %}
+                                {% set actionButtonClass = actionButtonClass + ' button-action--secondary' %}
+                            {% endif %}
 
-                        {% include "partials/components/atoms/button-action.njk" %}
-                    </li>
-                {% endfor %}
-            </ul>
+                            {% include "partials/components/atoms/button-action.njk" %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
 
         <div class="sorting-controls__tags">
@@ -65,8 +67,8 @@
         </ul>
     </div>
 
-    {% set btnClass = 'catalog__button button-link' %}
-    {% set btnTextClass = 'button-link__text' %}
+    {% set linkButtonClass = 'catalog__button-link button-link' %}
+    {% set linkTextClass = 'button-link__text' %}
     {% set btn = catalogBtn %}
 
     {% include "partials/components/atoms/button-link.njk" %}

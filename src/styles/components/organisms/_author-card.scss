@@ -2,6 +2,9 @@
 @use "../../base/variables" as var;
 
 .author-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
   &__avatar {
     border-radius: 50%;
   }

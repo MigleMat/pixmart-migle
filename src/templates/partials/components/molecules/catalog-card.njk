@@ -15,7 +15,7 @@
             <img 
                 src="/img/{{ product.base1x }}.jpg" 
                 srcset="/img/{{ product.base1x }}.jpg 1x, /img/{{ product.base2x }}.jpg 2x" 
-                width="305"
+                width="325"
                 height="272" 
                 alt="{{ product.alt }}"
                 class="catalog-card__image"
@@ -35,10 +35,10 @@
                 {% for btn in catalogCardgBtns %}
                     <li class="catalog-card__buttons-item">
 
-                        {% set iconClass = 'button-action__icon' %}
-                        {% set btnClass = 'catalog-card__button-action button-action' %}
+                        {% set actionIconClass = 'button-action__icon' %}
+                        {% set actionButtonClass = 'catalog-card__button-action button-action' %}
                         {% if btn.iconId == 'cart' %}
-                            {% set btnClass = 'button-action--secondary' %}
+                            {% set actionButtonClass = actionButtonClass + ' button-action--secondary' %}
                         {% endif %}
 
                         {% include "partials/components/atoms/button-action.njk" %}

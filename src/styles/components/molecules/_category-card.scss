@@ -2,17 +2,43 @@
 @use "../../base/variables" as var;
 
 .category-card {
+  padding: 24px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   background-color: var.$color-bg-alternative2;
   cursor: pointer;
 
   &--highlighted {
     background-color: var.$color-icon;
+    grid-row: span 2;
+  }
+
+  &--full {
+    grid-row: span 2;
+  }
+
+  &--half-up {
+    background: linear-gradient(
+      to top,
+      var.$color-bg-alternative3 0%,
+      var.$color-bg-base 100%
+    );
+  }
+
+  &--half-down {
+    background: linear-gradient(
+      to bottom,
+      var.$color-bg-alternative3 0%,
+      var.$color-bg-base 100%
+    );
   }
 
   &__icon {
     width: 48px;
     height: 48px;
-    color: rgb(15 115 246);
+    color: var.$color-subtitle;
 
     &--highlighted {
       color: var.$color-bg-base;
@@ -25,6 +51,7 @@
       var.$font-weight-bold,
       var.$line-height-h3
     );
+
     &--highlighted {
       color: var.$color-primary-invert;
     }
@@ -33,13 +60,24 @@
   &__description {
     font-family: var.$font-family-secondary;
     color: var.$color-secondary2;
+
     @include mixins.font(
       var.$font-size-l,
       var.$font-weight-small,
       var.$line-height-body
     );
+
     &--highlighted {
       color: var.$color-secondary-invert;
     }
+  }
+
+  &__content {
+    @include mixins.flex(
+      $justify: center,
+      $align: flex-start,
+      $direction: column,
+      $gap: 8px
+    );
   }
 }

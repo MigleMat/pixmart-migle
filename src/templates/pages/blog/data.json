@@ -1,8 +1,9 @@
 {
     "banner": {
         "tag": "TYPOGRAPHY",
-        "title": "Mastering the Art of Typography: Tips for Eye-Catching Designs for 2024"
+        "title": "<span class=\"blog__banner-breakline-one\">Mastering the Art of Typography:</span>Tips for Eye-Catching Designs for <span class=\"blog__banner-breakline-two\">2024</span>"
     },
+    "isBlogPage": true,
     "author": {
         "name": "Emma Clarke",
         "date": "2024-04-10",
@@ -74,7 +75,7 @@
         }
     ],
     "quote": "Typography is not just the art of arranging type but the craft of breathing life into characters, turning words into stories that captivate the soul.",
-    "summary": "Typography is an art that speaks volumes beyond the mere letters on a surface. By applying these tips, designers can elevate their work from mere messages to powerful visual statements. Remember, mastering typography is a journey of continuous learning and experimentation. Embrace the process, and let your designs speak louder than words. Happy designing!",
+    "summary": "Typography is an art that speaks volumes beyond the mere letters on a surface. By applying these tips, designers can elevate their work from mere messages to powerful visual statements. Remember, mastering typography is a journe...",
     "articlesHeader": "Related Articles",
     "articlesText": "Explore All Articles",
     "articlesCards": [

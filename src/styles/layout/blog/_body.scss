@@ -4,9 +4,7 @@
 .blog {
   &__image {
     object-fit: cover;
-    object-position: top;
+    object-position: 20% 5%;
     border-radius: 20px;
-    max-width: 1280px;
-    width: 100%;
   }
 }

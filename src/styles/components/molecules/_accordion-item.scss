@@ -2,6 +2,10 @@
 @use "../../base/variables" as var;
 
 .accordion {
+  display: flex;
+  flex-direction: column;
+  min-width: 620px;
+
   &__icon {
     background-color: transparent;
     border: 2px solid var.$color-line;
@@ -19,6 +23,9 @@
 
   &__question {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+
     &::-webkit-details-marker {
       display: none;
     }
@@ -30,6 +37,7 @@
   }
 
   &__answer {
+    max-width: 572px;
     font-family: var.$font-family-secondary;
     @include mixins.font(
       var.$font-size-l,

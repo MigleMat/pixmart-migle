@@ -1,4 +1,4 @@
-<div class="blog__content">
+<section class="blog__content layout-container">
     <picture class="blog__picture">
         <source 
          srcset="/img/presentation-1x.avif 1x, /img/presentation-2x.avif 2x" 
@@ -16,51 +16,61 @@
     </picture>
 
     <article class="blog__article article">
-        <div class="article__intro">
-            <p class="article__lead">{{ intro }}</p>
-        </div>
-        {% for tip in tips %}
-
-            <div class="article__main">
-                <h4 class="article__heading">{{ loop.index }}. {{ tip.title }}</h4>
-                <p class="article__text">{{ tip.description }}</p>
+        <div class="article__wrapper">
+            <div class="article__left">
+                {% include "partials/components/organisms/author-card.njk" %}
+                {% include "partials/components/organisms/sidebar.njk" %}
             </div>
-            {% if tip.image %}
+            <div class="article__body">
+                <div class="article__intro">
+                    <p class="article__lead">{{ intro }}</p>
+                </div>
+                {% for tip in tips %}
 
-                <figure class="article__figure">
-                    <img
+                    <div class="article__main">
+                        <h4 class="article__heading">{{ loop.index }}. {{ tip.title }}</h4>
+                        <p class="article__text">{{ tip.description }}</p>
+                    </div>
+                    {% if tip.image %}
+
+                        <figure class="article__figure">
+                            <img
                      class="article__image"
                      src="{{ tip.image.src }}"
                      alt="{{ tip.image.alt }}"
                      width="{{ tip.image.width }}"
                      height="{{ tip.image.height }}"
                      loading="lazy">
-                    <figcaption class="article__caption">
-                        <span class="article__caption-text">{{ tip.image.caption }}</span>
-                        <a class="article__caption-link" href="{{ tip.image.link.href }}">
-                            {{ tip.image.link.text }}
-                        </a>
-                    </figcaption>
-                </figure>
+                            <figcaption class="article__caption">
+                                <span class="article__caption-text">{{ tip.image.caption }}</span>
+                                <a class="article__caption-link" href="{{ tip.image.link.href }}">
+                                    {{ tip.image.link.text }}
+                                </a>
+                            </figcaption>
+                        </figure>
 
-            {% endif %}
+                    {% endif %}
 
-        {% endfor %}
-        {% if quote %}
+                {% endfor %}
+                {% if quote %}
+                    <div class="article__quote-wrapper">
+                        <blockquote class="article__quote">
+                            <svg class="article__quote-icon" aria-hidden="true">
+                                <use xlink:href="/img/sprite.svg#quote"></use>
+                            </svg>
+                            <p class="article__quote-text">{{ quote }}</p>
+                        </blockquote>
+                    </div>
 
-            <blockquote class="article__quote">
-                <svg class="article__quote-icon" aria-hidden="true">
-                    <use xlink:href="/img/sprite.svg#quote"></use>
-                </svg>
-                <p class="article__quote-text">{{ quote }}</p>
-            </blockquote>
+                {% endif %}
+                <div class="article__footer">
+                    <p class="article__summary">{{ summary }}</p>
+                </div>
 
-        {% endif %}
-        <div class="article__footer">
-            <p class="article__summary">{{ summary }}</p>
+            </div>
+
         </div>
-        {% include "partials/components/organisms/author-card.njk" %}
+
     </article>
 
-    {% include "partials/components/organisms/sidebar.njk" %}
-</div>
+</section>

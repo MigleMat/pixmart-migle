@@ -1,21 +1,25 @@
-@use "../../base/mixins" as *;
-@use "../../base/variables" as *;
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
 
 .search {
-  &__form {
-    width: 100%;
-    max-width: 240px;
-  }
+  min-width: 240px;
+
   &__input {
     width: 100%;
-    border: 1px solid rgb(29 54 83 / 0.17);
     padding: 10px 12px;
+
+    border: 1px solid var.$color-separator-bold;
     border-radius: 8px;
+
     cursor: pointer;
 
     &::placeholder {
-      color: rgb(42 53 65 / 0.7);
-      @include font($font-size-sm, $font-weight-small, $line-height-small);
+      @include mixins.font(
+        var.$font-size-md,
+        var.$font-weight-small,
+        var.$line-height-small
+      );
+      color: var.$color-secondary;
     }
   }
 }

@@ -1,13 +1,11 @@
 <article class="product-card">
     <div class="product-card__photo-content">
         {% if product.hasBadge %}
-
             <div class="product-card__badge">
                 <svg class="product-card__icon" aria-hidden="true">
                     <use xlink:href="/img/sprite.svg#trophy"></use>
                 </svg>
             </div>
-
         {% endif %}
         <picture class="product-card__picture">
             <source 
@@ -24,16 +22,18 @@
                 width="305"
                 height="272" 
                 alt="{{ product.alt }}"
+                class="product-card__image"
+                loading="lazy"
+                decoding="async"
             >
         </picture>
     </div>
+
     <div class="product-card__content">
-        <h3 class="product-card__title">
-            {{ product.title }}
-        </h3>
-        <p class="product-card__price">{{ product.price }}</p>
-        <p class="product-card__description">
-            {{ product.desc }}
-        </p>
+        <div class="product-card__header">
+            <h3 class="product-card__title">{{ product.title }}</h3>
+            <p class="product-card__price">{{ product.price }}</p>
+        </div>
+        <p class="product-card__description">{{ product.desc }}</p>
     </div>
 </article>

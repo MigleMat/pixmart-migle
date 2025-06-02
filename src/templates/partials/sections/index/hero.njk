@@ -1,53 +1,34 @@
 <section class="hero">
     <div class="hero__container layout-container">
+        <img 
+            src="/img/hero-bg-2x.webp"
+            srcset="/img/hero-bg-1x.webp 1x, /img/hero-bg-2x.webp 2x"
+            alt=""
+            class="hero__ornament"
+            aria-hidden="true"
+            decoding="async"
+            loading="lazy"/>
+
         <div class="hero__content">
             <h1 class="hero__title">{{ hero.title | safe }}</h1>
             <h5 class="hero__description">{{ hero.text }}</h5>
-            <div class="hero__actions">
 
+            <div class="hero__actions">
                 {% for btn in heroButtons %}
+
                     {% if btn.text == "Shop Now" %}
-                        {% set btnTextClass = 'button-link__text' %}
-                        {% set btnClass = "hero__button-link button-link button-link--secondary" %}
+                        {% set linkButtonClass = "hero__button-link button-link button-link--secondary" %}
+                        {% set linkTextClass = 'button-link__text' %}
                     {%else %}
-                        {% set btnClass = "hero__button-link button-link" %}
-                        {% set iconClass = "button-link__icon" %}
-                        {% set btnTextClass = 'button-link__text' %}
+                        {% set linkButtonClass = "hero__button-link button-link button-link--tertiary" %}
+                        {% set linkIconClass = "button-link__icon" %}
+                        {% set linkTextClass = 'button-link__text' %}
                     {% endif %}
                     {% include "partials/components/atoms/button-link.njk" %}
+
                 {% endfor %}
             </div>
         </div>
-        <div class="hero__media">
-            {% for icon in hero.icons %}
-                <div class="hero__icon-card">
-                    <svg class="hero__icon-svg" aria-hidden="true">
-                        <use xlink:href="/img/sprite.svg#{{ icon }}"></use>
-                    </svg>
-                </div>
-            {% endfor %}
 
-            {% for img in hero.images %}
-                <picture class="hero__picture">
-                    <source 
-                     srcset="/img/{{ img.name }}-1x.avif 1x, /img/{{ img.name }}-2x.avif 2x" 
-                     type="image/avif"
-                    >
-                    <source 
-                     srcset="/img/{{ img.name }}-1x.webp 1x, /img/{{ img.name }}-2x.webp 2x" 
-                     type="image/webp"
-                    >
-                    <img 
-                     src="/img/{{ img.name }}-1x.jpg" 
-                     srcset="/img/{{ img.name }}-1x.jpg 1x, /img/{{ img.name }}-2x.jpg 2x" 
-                     width="{{ img.width }}"
-                     height="{{ img.height }}"
-                     loading="lazy"
-                     alt="{{ img.alt }}"
-                     class="hero__image"
-                    >
-                </picture>
-            {% endfor %}
-        </div>
     </div>
 </section>

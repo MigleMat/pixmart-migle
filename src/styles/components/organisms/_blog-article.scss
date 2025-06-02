@@ -2,10 +2,12 @@
 @use "../../base/variables" as var;
 
 .article {
+  padding-top: 42px;
+  padding-bottom: 120px;
+
   &__lead,
   &__text,
-  &__summary,
-  &__caption-text {
+  &__summary {
     font-family: var.$font-family-secondary;
     @include mixins.font(
       var.$font-size-xl,
@@ -13,6 +15,15 @@
       var.$line-height-h5
     );
     color: var.$color-secondary;
+  }
+
+  &__caption-text {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
   }
 
   &__heading {
@@ -24,8 +35,26 @@
     );
   }
 
+  &__body {
+    max-width: 980px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
   &__quote {
     margin: 0;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 10px;
+    gap: 16px;
   }
 
   &__caption-text {
@@ -46,6 +75,8 @@
     width: 64px;
     height: 64px;
     color: var.$color-icon;
+    flex-shrink: 0;
+    margin-top: -4px;
   }
 
   &__quote-text {
@@ -56,8 +87,35 @@
     );
   }
 
+  &__figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
   &__image {
     object-fit: cover;
     border-radius: 20px;
+    object-position: 0% 27%;
+    display: block;
+  }
+
+  &__caption {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 }

@@ -2,12 +2,30 @@
 @use "../../base/variables" as var;
 
 .article-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+
+  &--blog {
+    gap: 32px;
+  }
+
   &__title {
+    margin-bottom: 8px;
     @include mixins.font(
       var.$font-size-h3,
       var.$font-weight-bold,
       var.$line-height-h3
     );
+
+    &--blog {
+      @include mixins.font(
+        var.$font-size-h5,
+        var.$font-weight-bold,
+        var.$line-height-medium
+      );
+    }
   }
 
   &__date {
@@ -30,6 +48,10 @@
     position: relative;
   }
 
+  &__content--blog {
+    padding-inline: 16px;
+  }
+
   &__tag {
     display: inline-block;
     color: var.$color-primary-white;
@@ -37,6 +59,7 @@
     padding: 8px 16px;
     border-radius: 100px;
     font-family: var.$font-family-secondary;
+
     @include mixins.font(
       var.$font-size-l,
       var.$font-weight-medium,

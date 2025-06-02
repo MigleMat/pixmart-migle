@@ -1,56 +1,60 @@
 <footer class="footer">
-    <div class="footer__container layout-container">
-        <div class="footer__branding">
-            <div class="footer__intro">
 
-                {% set logoClass = 'footer__logo logo' %}
-                {% set iconClass = 'logo__icon logo__icon--large' %}
-                {% include "partials/components/atoms/logo.njk" %}
+    <div class="layout-container">
+        <div class="footer__container-wrapper">
+            <div class="footer__branding">
+                <div class="footer__intro">
 
-                <p class="footer__description">{{ footerDesc }}</p>
+                    {% set logoClass = 'footer__logo logo' %}
+                    {% set iconLogoClass = 'logo__icon logo__icon--large' %}
+                    {% include "partials/components/atoms/logo.njk" %}
+
+                    <p class="footer__description">{{ footerDesc }}</p>
+                </div>
+
+                <div class="footer__nav-wrapper">
+                    {% for navSection in navSections %}
+                        <div class="footer__nav-column">
+
+                            <h3 class="footer__heading">{{ navSection.title }}</h3>
+
+                            {% set navItems = navSection.links %}
+                            {% set navListClass = "nav__list nav__list--column" %}
+                            {% set navLinkClass = "nav__link nav__link--column" %}
+                            {% set navClass = 'footer__nav nav nav--column' %}
+
+                            {% include "partials/components/atoms/nav.njk" %}
+                        </div>
+
+                    {% endfor %}
+                </div>
+
             </div>
 
-            <div class="footer__nav-wrapper">
-                {% for navSection in navSections %}
+            <div class="footer__actions">
+                <ul class="footer__socials-list">
+                    {% for footerButton in footerSocials %}
 
-                    <h3 class="footer__heading">{{ navSection.title }}</h3>
+                        <li class="footer__socials-list-item">
 
-                    {% set navItems = navSection.links %}
-                    {% set navListClass = "nav__list nav__list--column" %}
-                    {% set navLinkClass = "nav__link nav__link--column" %}
-                    {% set navClass = 'footer__nav nav nav--column' %}
+                            {% set btn = footerButton %}
+                            {% set linkButtonClass = 'footer__button-link button-link' %}
+                            {% set linkIconClass = 'button-link__icon' %}
 
-                    {% include "partials/components/atoms/nav.njk" %}
+                            {% include "partials/components/atoms/button-link.njk" %}
+                        </li>
 
-                {% endfor %}
-            </div>
-
-        </div>
-
-        <div class="footer__actions">
-            <ul class="footer__socials-list">
-                {% for footerButton in footerSocials %}
-
-                    <li class="footer__socials-list-item">
-
-                        {% set btn = footerButton %}
-                        {% set btnClass = 'footer__socials-button' %}
-                        {% set iconClass = 'footer__socials-icon' %}
-
-                        {% include "partials/components/atoms/button-link.njk" %}
-                    </li>
-
-                {% endfor %}
-            </ul>
-            <div class="footer__newsletter">
-                <form class="footer__newsletter-form" action="#" method="post">
-                    <label 
+                    {% endfor %}
+                </ul>
+                <div class="footer__newsletter">
+                    <form class="footer__newsletter-form" action="#" method="post">
+                        <label 
                      class="footer__newsletter-label" 
                      for="email"
                     >
-                        {{ newsletterLabel }}
-                    </label>
-                    <input 
+                            {{ newsletterLabel | safe }}
+                        </label>
+                        <input 
                      class="footer__newsletter-input" 
                      type="email" 
                      name="email"
@@ -58,17 +62,19 @@
                      placeholder="Enter your email address ..."
                      required
                     >
-                    <button 
+                        <button 
                      class="footer__newsletter-button" 
                      type="submit"
                     >
-                        {{ newsletterBtn }}
-                    </button>
-                </form>
+                            {{ newsletterBtn }}
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-
-        <div class="footer__copyright">
+    </div>
+    <div class="footer__copyright-wrapper">
+        <div class="footer__copyright layout-container">
             <ul class="footer__legal-list">
                 {% for legal in footerLegal %}
 
@@ -81,4 +87,5 @@
             <p class="footer__credits">{{ footerCredits }}</p>
         </div>
     </div>
+
 </footer>

@@ -2,15 +2,29 @@
 @use "../../base/variables" as var;
 
 .sorting-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
   &__fieldset {
     border: 1px solid var.$color-separator-bold;
     border-radius: 8px;
     padding: 8px 20px;
     display: inline-block;
+    margin: 0;
   }
 
   &__dropdown {
     border: none;
+    appearance: none; // Modern browsers
+    -webkit-appearance: none; // Safari
+    -moz-appearance: none; // Firefox
+
+    background: transparent; // remove any native arrow background
+    position: relative;
+    &:focus-visible {
+      outline: none;
+    }
   }
 
   &__result-count {
@@ -37,5 +51,21 @@
   &__icon {
     width: 24px;
     height: 24px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__group {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  &__buttons-list {
+    display: flex;
+    gap: 8px;
   }
 }

@@ -1,31 +1,7 @@
 {
   "hero": {
-    "title": "Craft Your Success with Our <span class=\"hero__highlight\">Digital</span> Assets",
-    "text": "From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources.",
-    "icons": [
-      "pen",
-      "palette"
-    ],
-    "images": [
-      {
-        "name": "event-landing-main",
-        "width": 281,
-        "height": 422,
-        "alt": "Landing screen of the event website"
-      },
-      {
-        "name": "event-kit-overview",
-        "width": 291,
-        "height": 164,
-        "alt": "Speaker cards and schedule design for an event"
-      },
-      {
-        "name": "event-schedule-cards",
-        "width": 514,
-        "height": 299,
-        "alt": "Preview with 12 event and conference website screens"
-      }
-    ]
+    "title": "<span class=\"hero__line-one\">Craft Your</span><span class=\"hero__line-two\">Success with</span>Our <span class=\"hero__highlight\">Digital</span> Assets",
+    "text": "From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources."
   },
   "heroButtons": [
     {
@@ -64,27 +40,43 @@
     {
       "icon": "ui-kits",
       "title": "Templates",
-      "desc": "For all needs • Modern"
+      "desc": "For all needs • Modern",
+      "isFull": true
     },
     {
-      "icon": "presentation",
-      "title": "Slides",
-      "desc": "Pitch-ready • Creative"
+      "icon": "",
+      "title": "",
+      "desc": "",
+      "isHalfUp": true
     },
     {
       "icon": "social-media",
       "title": "App Icons",
-      "desc": "High-quality • Elegant"
+      "desc": "High-quality•Elegant",
+      "isFull": true
     },
     {
-      "icon": "iliustration",
+      "icon": "presentation",
+      "title": "Slides",
+      "desc": "Pitch-ready•Creative",
+      "isFull": true
+    },
+    {
+      "icon": "illustration",
       "title": "Design Tools",
-      "desc": "Easy to use • Unique"
+      "desc": "Easy to use•Unique",
+      "isFull": true
+    },
+    {
+      "icon": "",
+      "title": "",
+      "desc": "",
+      "isHalfDown": true
     }
   ],
   "categoriesHeader": {
     "subtitle": "CATEGORIES",
-    "title": "Discover Assets for Every Projects",
+    "title": "<span class=\"category-highlight__break-line\">Discover Assets for</span> Every Projects",
     "desc": "From fonts and icons to mockups and templates, our comprehensive categories ensure that you find exactly what you need to your projects."
   },
   "categoriesButton": {
@@ -279,7 +271,7 @@
       "alt": "Futuristic blog thumbnails in dark layout",
       "title": "Creative Blog",
       "date": "2024-04-15",
-      "formattedDate": "15 April 2024",
+      "formattedDate": "15 APRIL 2024",
       "width": "624",
       "height": "702"
     },
@@ -289,7 +281,7 @@
       "alt": "Gourmet food homepage preview",
       "title": "Best Dishes",
       "date": "2024-05-05",
-      "formattedDate": "5 May 2024",
+      "formattedDate": "5 MAY 2024",
       "width": "624",
       "height": "702"
     }

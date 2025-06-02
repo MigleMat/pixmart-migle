@@ -2,6 +2,13 @@
 @use "../../base/variables" as var;
 
 .footer {
+  &__container-wrapper {
+    padding-top: 64px;
+    padding-bottom: 135px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
   &__description {
     font-family: var.$font-family-secondary;
     @include mixins.font(
@@ -12,6 +19,8 @@
   }
 
   &__heading {
+    margin-bottom: 16px;
+
     @include mixins.font(
       var.$font-size-h5,
       var.$font-weight-bold,
@@ -22,12 +31,11 @@
   &__socials-list {
     list-style-type: none;
     display: flex;
+    gap: 8px;
   }
 
-  &__socials-button {
-    border: 2px solid var.$color-separator-bold;
-    padding: 18px;
-    border-radius: 8px;
+  &__button-link {
+    padding: 20px;
   }
 
   &__socials-icon {
@@ -36,11 +44,12 @@
   }
 
   &__newsletter-form {
-    width: 100%;
-    max-width: 240px;
+    display: flex;
+    gap: 8px;
   }
 
   &__newsletter-label {
+    padding-right: 24px;
     @include mixins.font(
       var.$font-size-h4,
       var.$font-weight-bold,
@@ -49,8 +58,8 @@
   }
 
   &__newsletter-input {
+    min-width: 240px;
     @include mixins.button-reset;
-    width: 100%;
     border: 1px solid rgb(29 54 83 / 0.17);
     padding: 20px;
     border-radius: 8px;
@@ -68,12 +77,6 @@
   }
 
   &__newsletter-button {
-    font-family: var.$font-family-secondary;
-    @include mixins.font(
-      var.$font-size-md,
-      var.$font-weight-large,
-      var.$line-height-body
-    );
     @include mixins.button-reset;
     color: var.$color-primary-white;
     background-color: var.$color-icon;
@@ -82,9 +85,17 @@
     border-radius: 8px;
   }
 
+  &__breakline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__copyright-wrapper {
+    background-color: var.$color-bg-base-invert;
+  }
+
   &__copyright {
     color: var.$color-secondary2-invert;
-    background-color: var.$color-bg-base-invert;
     display: flex;
     justify-content: space-between;
     padding: 24px 80px;
@@ -93,15 +104,29 @@
   &__legal-list {
     list-style-type: none;
     display: flex;
+    gap: 16px;
+  }
+
+  &__credits {
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
   }
 
   &__legal-list-item {
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
     position: relative;
     &::after {
       position: absolute;
       content: "";
       top: 50%;
-      right: 0;
+      right: -8px;
       transform: translateY(-50%);
       width: 1px;
       height: 16px;
@@ -115,5 +140,27 @@
 
   &__legal-list-link {
     display: inline-flex;
+  }
+
+  &__intro {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__branding {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav-wrapper {
+    display: flex;
+    gap: 64px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
   }
 }

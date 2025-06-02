@@ -2,19 +2,40 @@
 @use "../../base/variables" as var;
 
 .category-navigation {
+  &__container {
+    margin-block: 120px;
+  }
+
   &__list {
     list-style-type: none;
+    @include mixins.flex(
+      $justify: space-around,
+      $align: center,
+      $direction: row,
+      $gap: 32px
+    );
+  }
+
+  &__link {
+    @include mixins.flex(
+      $justify: center,
+      $align: center,
+      $direction: column,
+      $gap: 18px
+    );
     cursor: pointer;
   }
 
-  &__wrapper {
+  &__icon-box {
     background-color: var.$color-alternative2-white;
+    padding: 37px;
+    border-radius: 20px;
   }
 
   &__icon {
     width: 150px;
     height: 150px;
-    color: rgb(15 115 246);
+    color: var.$color-icon;
   }
 
   &__label {

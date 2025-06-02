@@ -4,12 +4,15 @@
 .membership-card {
   position: relative;
   background-color: transparent;
-  box-shadow: 0 4px 40px rgb(29 57 95 / 0.08);
+  box-shadow: 0 4px 40px var.$color-shadow;
   padding: 32px;
   border-radius: 20px;
+  max-width: 100%;
+  width: 416px;
 
   &--highlighted {
     border: 2px solid var.$color-icon;
+    transform: translateY(-32px);
   }
 
   &__tag {
@@ -19,6 +22,14 @@
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     padding: 7px 24px;
+    top: -2px;
+    right: -2px;
+
+    @include mixins.font(
+      var.$font-size-h5,
+      var.$font-weight-bold,
+      var.$line-height-medium
+    );
   }
 
   &__list {
@@ -32,6 +43,10 @@
       var.$line-height-medium
     );
     margin: 0;
+  }
+
+  &__price {
+    margin-bottom: 32px;
   }
 
   &__value {
@@ -51,11 +66,15 @@
       var.$line-height-body
     );
     letter-spacing: var.$spacing-minus;
-    color: rgb(13 13 21 / 0.5);
+    color: var.$color-primary;
   }
 
   &__list {
     border-top: 1px solid var.$color-line;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-block: 40px;
   }
 
   &__list-item {
@@ -72,5 +91,24 @@
     display: block;
     border: 2px solid var.$color-line;
     border-radius: 8px;
+    text-align: center;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    color: var.$color-icon;
+  }
+
+  &__list-entry {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 }

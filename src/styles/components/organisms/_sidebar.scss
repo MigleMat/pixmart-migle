@@ -2,20 +2,40 @@
 @use "../../base/variables" as var;
 
 .sidebar {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 40px;
+  }
+
   &__categories-title,
   &__latest-articles-title {
     margin: 0;
+    padding-top: 40px;
     @include mixins.font(
       var.$font-size-h4,
       var.$font-weight-bold,
       var.$line-height-h4
     );
+    border-top: 2px solid var.$color-primary;
+  }
+
+  &__latest-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
   }
 
   &__categories,
   &__latest-articles {
-    border-top: 2px solid var.$color-primary;
     list-style-type: none;
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   &__categories-item {
@@ -71,6 +91,7 @@
       var.$font-weight-bold,
       var.$line-height-medium
     );
+    margin-bottom: 12px;
   }
 
   &__latest-article-date {
@@ -81,5 +102,23 @@
       var.$line-height-body
     );
     color: var.$color-secondary;
+  }
+
+  &__latest-articles-group {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -24px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var.$color-primary2-op;
+    }
+
+    &:first-child::before {
+      display: none;
+    }
   }
 }

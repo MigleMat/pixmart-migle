@@ -2,6 +2,13 @@
 @use "../../base/variables" as var;
 
 .featured-articles {
+  &__container {
+    padding-block: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+  }
+
   &__title {
     @include mixins.font(
       var.$font-size-h2,
@@ -9,11 +16,14 @@
       var.$line-height-h2
     );
     letter-spacing: var.$spacing-minus;
-    color: (34 34 34);
+    color: var.$color-primary2;
   }
 
   &__button {
     color: var.$color-icon;
+    display: flex;
+    gap: 14px;
+    align-items: center;
   }
 
   &__icon {
@@ -24,5 +34,15 @@
 
   &__list {
     list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
