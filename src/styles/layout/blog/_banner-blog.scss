@@ -8,7 +8,19 @@
       var.$color-bg-alternative3,
       var.$color-bg-base
     );
+  }
+
+  &__banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
     padding-block: 64px;
+  }
+
+  &__banner-breakline-one {
+    display: flex;
+    flex-direction: column;
   }
 
   &__banner-tag {

@@ -1,33 +1,39 @@
-<aside class="blog__sidebar sidebar">
-    <ul class="sidebar__categories">
+<aside class="sidebar">
+    <div class="sidebar__wrapper">
         <h4 class="sidebar__categories-title">{{ titleCat }}</h4>
-        {% for item in sidebarCategories %}
+        <ul class="sidebar__categories">
 
-            <li class="sidebar__categories-item">
-                {{ item.name }}
-                {% if item.subitems %}
-                    <ul class="sidebar__categories-sublist">
-                        {% for sub in item.subitems %}
+            {% for item in sidebarCategories %}
 
-                            <li class="sidebar__categories-subitem">
-                                {{ sub }}
-                            </li>
-
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </li>
-        {% endfor %}
-    </ul>
-    <ul class="sidebar__latest-articles">
-        <h4 class="sidebar__latest-articles-title">{{ titleLat}}</h4>
-        {% for item in sidebarLatest %}
-            <div class="sidebar__latest-articles-group">
-                <li class="sidebar__latest-articles-item">
+                <li class="sidebar__categories-item">
                     {{ item.name }}
+                    {% if item.subitems %}
+                        <ul class="sidebar__categories-sublist">
+                            {% for sub in item.subitems %}
+
+                                <li class="sidebar__categories-subitem">
+                                    {{ sub }}
+                                </li>
+
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
                 </li>
-                <span class="sidebar__latest-article-date">{{ item.date }}</span>
-            </div>
-        {% endfor %}
-    </ul>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="sidebar__wrapper">
+        <h4 class="sidebar__latest-articles-title">{{ titleLat}}</h4>
+        <ul class="sidebar__latest-articles">
+
+            {% for item in sidebarLatest %}
+                <div class="sidebar__latest-articles-group">
+                    <li class="sidebar__latest-articles-item">
+                        {{ item.name }}
+                    </li>
+                    <span class="sidebar__latest-article-date">{{ item.date }}</span>
+                </div>
+            {% endfor %}
+        </ul>
+    </div>
 </aside>

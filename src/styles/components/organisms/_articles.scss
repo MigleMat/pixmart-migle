@@ -4,6 +4,10 @@
 .articles {
   background-color: var.$color-bg-alternative3;
 
+  &__container {
+    padding-block: 40px;
+  }
+
   &__list-item {
     background-color: var.$color-bg-base;
     border-radius: 20px;
@@ -18,7 +22,35 @@
     letter-spacing: var.$spacing-minus;
     color: (34 34 34);
   }
+
   &__text {
     color: var.$color-icon;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    color: var.$color-icon;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    color: var.$color-icon;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
   }
 }

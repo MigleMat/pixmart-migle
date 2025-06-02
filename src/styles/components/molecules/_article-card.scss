@@ -5,6 +5,11 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 20px;
+
+  &--blog {
+    gap: 32px;
+  }
 
   &__title {
     margin-bottom: 8px;
@@ -13,6 +18,14 @@
       var.$font-weight-bold,
       var.$line-height-h3
     );
+
+    &--blog {
+      @include mixins.font(
+        var.$font-size-h5,
+        var.$font-weight-bold,
+        var.$line-height-medium
+      );
+    }
   }
 
   &__date {
@@ -33,6 +46,10 @@
 
   &__media {
     position: relative;
+  }
+
+  &__content--blog {
+    padding-inline: 16px;
   }
 
   &__tag {
