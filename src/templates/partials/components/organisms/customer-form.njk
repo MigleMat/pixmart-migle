@@ -17,7 +17,10 @@
                     {% endif %}
 
                     {% for option in field.options %}
-                        <option value="{{ option.value }}">{{ option.label }}</option>
+                        <option value="{{ option.value }}"
+                        {% if option.value == field.default %} selected {% endif %}>
+                            {{ option.label }}
+                        </option>
                     {% endfor %}
                 </select>
 
@@ -42,25 +45,28 @@
             {% endif %}
         </div>
     {% endfor %}
-    <div class="customer-form__actions">
-        <ul class="customer-form__checkbox-list">
-            {% for item in formActions %}
-                <li class="customer-form__checkbox-item">
-                    <input
+
+    <div class="customer-form__controls">
+        <div class="customer-form__actions">
+            <ul class="customer-form__checkbox-list">
+                {% for item in formActions %}
+                    <li class="customer-form__checkbox-item">
+                        <input
                         class="customer-form__checkbox-input"
                         type="checkbox"
                         id="checkbox{{ loop.index }}"
                         name="{{ item.name }}"
                         {% if item.checked %}checked{% endif %}
                         {% if item.required %}required{% endif %}>
-                    <label 
+                        <label 
                         class="customer-form__checkbox-label" 
                         for="checkbox{{ loop.index }}">
-                        {{ item.label }}
-                    </label>
-                </li>
-            {% endfor %}
-        </ul>
+                            {{ item.label }}
+                        </label>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <button type="submit" class="customer-form__button-link button-link button-link--secondary">{{ formBtn }}</button>
     </div>
-    <button type="submit" class="customer-form__button-link button-link button-link--secondary">{{ formBtn }}</button>
 </form>

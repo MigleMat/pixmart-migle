@@ -8,6 +8,11 @@
       var.$color-bg-alternative3,
       var.$color-bg-base
     );
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+    padding-top: 64px;
+    padding-bottom: 116px;
   }
 
   &__subtitle {
@@ -41,6 +46,9 @@
 
   &__list {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   &__list-item {
@@ -50,12 +58,18 @@
       var.$font-weight-large,
       var.$line-height-h5
     );
+    display: flex;
+    gap: 8px;
   }
 
   &__icon {
     width: 24px;
     height: 24px;
     color: var.$color-icon;
+  }
+
+  &__map {
+    object-fit: cover;
   }
 
   &__address-info {
@@ -82,5 +96,69 @@
       var.$line-height-body
     );
     color: var.$color-secondary;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__break-line {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button-link {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-large,
+      var.$line-height-body
+    );
+
+    padding: 20px;
+    width: fit-content;
+    border: none;
+    margin-bottom: 32px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__location {
+    position: relative;
+  }
+
+  &__address-info {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  &__address-info {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+
+  &__address-details {
+    display: flex;
+    flex-direction: column;
   }
 }

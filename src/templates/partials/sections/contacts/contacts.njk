@@ -1,31 +1,35 @@
 <section class="contacts">
     <div class="contacts__container layout-container">
-        <div class="contacts__info">
-            <p class="contacts__subtitle">{{ contactsSubtitle }}</p>
-            <h1 class="contacts__title">{{ contactsTitle }}</h1>
-            <p class="contacts__description">{{ contactsDesc }}</p>
+        <div class="contacts__left">
+            <div class="contacts__header">
+                <div class="contacts__info">
+                    <div class="contacts__intro">
+                        <p class="contacts__subtitle">{{ contactsSubtitle }}</p>
+                        <h1 class="contacts__title">{{ contactsTitle | safe }}</h1>
+                        <p class="contacts__description">{{ contactsDesc }}</p>
+                    </div>
 
-            {% set btnTextClass = 'button-link__text' %}
-            {% set btnClass = 'contacts__button button-link button-link--secondary' %}
-            {% set btn = contactsBtn %}
+                    {% set linkTextClass = 'button-link__text' %}
+                    {% set linkButtonClass = 'contacts__button-link button-link button-link--secondary' %}
+                    {% set btn = contactsBtn %}
 
-            {% include "partials/components/atoms/button-link.njk" %}
-            <ul class="contacts__list">
-                {% for item in contactsInfo %}
+                    {% include "partials/components/atoms/button-link.njk" %}
+                </div>
+                <ul class="contacts__list">
+                    {% for item in contactsInfo %}
 
-                    <li class="contacts__list-item">
-                        <svg class="contacts__icon" aria-hidden="true">
-                            <use xlink:href="/img/sprite.svg#{{ item.id }}"></use>
-                        </svg>
-                        <p class="contacts__text">{{ item.text }}</p>
-                    </li>
+                        <li class="contacts__list-item">
+                            <svg class="contacts__icon" aria-hidden="true">
+                                <use xlink:href="/img/sprite.svg#{{ item.id }}"></use>
+                            </svg>
+                            <p class="contacts__text">{{ item.text }}</p>
+                        </li>
 
-                {% endfor %}
-            </ul>
-        </div>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="contacts__location">
 
-        <div class="contacts__location">
-            <div class="contacts__location-wrapper">
                 <img
                 class="contacts__map"
                 src="/img/location-2x.webp"
@@ -39,8 +43,10 @@
                     <svg class="contacts__icon" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#{{ contcIconId }}"></use>
                     </svg>
-                    <span class="contacts__name">{{ contcAdressName }}</span>
-                    <span class="contacts__address">{{ contcAdress }}</span>
+                    <div class="contacts__address-details">
+                        <span class="contacts__name">{{ contcAdressName }}</span>
+                        <span class="contacts__address">{{ contcAdress }}</span>
+                    </div>
                 </div>
             </div>
         </div>
