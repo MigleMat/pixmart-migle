@@ -111,6 +111,27 @@
   }
 }
 
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+@include mixins.desktop {
+  .main-layout {
+    gap: 120px;
+  }
+}
+
+@include mixins.mobile {
+  .main-layout {
+    gap: 120px;
+    &--mobile {
+      gap: 64px;
+    }
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;
