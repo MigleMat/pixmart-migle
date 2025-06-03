@@ -88,12 +88,20 @@
 @include mixins.desktop {
   .layout-container {
     padding-inline: 80px;
+
+    &--hero {
+      padding-inline: 80px 40px;
+    }
   }
 }
 
 @include mixins.tablet {
   .layout-container {
     padding-inline: 40px;
+
+    &--hero {
+      padding-inline: 40px 28px;
+    }
   }
 }
 
