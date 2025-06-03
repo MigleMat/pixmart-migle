@@ -1,0 +1,10 @@
+@use "../base/variables" as var;
+@use "../base/mixins" as mixins;
+
+@include mixins.tablet {
+  .burger {
+    &__button-action {
+      display: none;
+    }
+  }
+}

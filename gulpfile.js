@@ -41,6 +41,7 @@ const paths = {
     modernImages: dev + "images/static/**/*.{webp,avif}",
     svgStatic: dev + "images/static/**/*.svg",
     images: dev + "images/static/**/*.{jpg,jpeg,png}",
+    scripts: "src/scripts/**/*.js",
   },
   dist: {
     pages: dist,
@@ -81,6 +82,9 @@ const { values: args } = parseArgs({
   strict: false,
   allowPositionals: true,
 });
+
+export const scripts = () =>
+  src(paths.dev.scripts).pipe(dest(paths.dist.scripts)).pipe(bs.stream());
 
 const isDev = env.NODE_ENV === "development";
 
@@ -410,7 +414,10 @@ export const liveReload = () =>
     server: paths.distDir,
   });
 
-export const build = series(clean, parallel(styles, images, sprite, markup));
+export const build = series(
+  clean,
+  parallel(styles, images, sprite, markup, scripts)
+);
 
 const watchFiles = (cb) => {
   watch(paths.dev.scss, { delay: 1000 }, styles);
