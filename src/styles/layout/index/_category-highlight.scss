@@ -8,26 +8,19 @@
     gap: 64px;
   }
 
-  &__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 294px);
-    grid-template-rows: repeat(5, 80px);
-    gap: 20px;
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 32px;
-  }
+  // &__content {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   gap: 32px;
+  // }
 
   &__header {
     @include mixins.flex(
       $justify: center,
       $align: flex-start,
       $direction: column,
-      $gap: 8px
+      $gap: 16px
     );
   }
 
@@ -64,5 +57,14 @@
       var.$line-height-h5
     );
     color: var.$color-primary2-op;
+  }
+}
+
+@include mixins.mobile {
+  .category-highlight {
+    &__container {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 }

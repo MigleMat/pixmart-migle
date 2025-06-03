@@ -36,42 +36,28 @@
       "label": "Iliustrations"
     }
   ],
-  "categories": [
+  "firstColumn": [
     {
       "icon": "ui-kits",
       "title": "Templates",
-      "desc": "For all needs • Modern",
-      "isFull": true
-    },
-    {
-      "icon": "",
-      "title": "",
-      "desc": "",
-      "isHalfUp": true
-    },
-    {
-      "icon": "social-media",
-      "title": "App Icons",
-      "desc": "High-quality•Elegant",
-      "isFull": true
+      "desc": "For all needs • Modern"
     },
     {
       "icon": "presentation",
       "title": "Slides",
-      "desc": "Pitch-ready•Creative",
-      "isFull": true
+      "desc": "Pitch-ready•Creative"
+    }
+  ],
+  "secondColumn": [
+    {
+      "icon": "social-media",
+      "title": "App Icons",
+      "desc": "High-quality•Elegant"
     },
     {
       "icon": "illustration",
       "title": "Design Tools",
-      "desc": "Easy to use•Unique",
-      "isFull": true
-    },
-    {
-      "icon": "",
-      "title": "",
-      "desc": "",
-      "isHalfDown": true
+      "desc": "Easy to use•Unique"
     }
   ],
   "categoriesHeader": {
