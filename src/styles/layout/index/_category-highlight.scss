@@ -8,12 +8,12 @@
     gap: 64px;
   }
 
-  // &__content {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   gap: 32px;
-  // }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
 
   &__header {
     @include mixins.flex(

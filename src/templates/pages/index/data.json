@@ -40,24 +40,28 @@
     {
       "icon": "ui-kits",
       "title": "Templates",
-      "desc": "For all needs • Modern"
+      "first": "For all needs",
+      "sec": "Modern"
     },
     {
       "icon": "presentation",
       "title": "Slides",
-      "desc": "Pitch-ready•Creative"
+      "first": "Pitch-ready",
+      "sec": "Creative"
     }
   ],
   "secondColumn": [
     {
       "icon": "social-media",
       "title": "App Icons",
-      "desc": "High-quality•Elegant"
+      "first": "High-quality",
+      "sec": "Elegant"
     },
     {
       "icon": "illustration",
       "title": "Design Tools",
-      "desc": "Easy to use•Unique"
+      "first": "Easy to use",
+      "sec": "Unique"
     }
   ],
   "categoriesHeader": {

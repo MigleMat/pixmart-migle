@@ -7,7 +7,10 @@
                         <use xlink:href="/img/sprite.svg#{{ item.icon }}"></use>
                     </svg>
                     <span class="category-card__title">{{ item.title }}</span>
-                    <span class="category-card__desc">{{ item.desc }}</span>
+                    <div class="category-card__desc">
+                        <span class="category-card__first-world">{{ item.first }}</span>
+                        <span class="category-card__sec-world">{{ item.sec }}</span>
+                    </div>
                 </li>
 
             {% endfor %}
@@ -23,7 +26,10 @@
                         <use xlink:href="/img/sprite.svg#{{ item.icon }}"></use>
                     </svg>
                     <span class="category-card__title{% if item.title == 'App Icons' %} category-card__title--highlighted{% endif %}">{{ item.title }}</span>
-                    <span class="category-card__desc{% if item.title == 'App Icons' %} category-card__desc--highlighted{% endif %}">{{ item.desc }}</span>
+                    <div class="category-card__desc">
+                        <span class="category-card__first-world{% if item.title == 'App Icons' %} category-card__first-world--highlighted{% endif %}">{{ item.first}}</span>
+                        <span class="category-card__sec-world{% if item.title == 'App Icons' %} category-card__sec-world--highlighted{% endif %}">{{ item.sec }}</span>
+                    </div>
                 </li>
             {% endfor %}
         </ul>
