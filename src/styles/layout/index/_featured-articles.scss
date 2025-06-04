@@ -3,10 +3,9 @@
 
 .featured-articles {
   &__container {
-    padding-block: 60px;
     display: flex;
     flex-direction: column;
-    gap: 44px;
+    gap: 48px;
   }
 
   &__title {
@@ -35,14 +34,44 @@
   &__list {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 32px;
+  }
+
+  &__list-item {
+    max-width: 624px;
+    width: 100%;
   }
 
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+@include mixins.tablet {
+  .featured-articles {
+    &__list-item {
+      max-width: 456px;
+      width: 100%;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .featured-articles {
+    &__header {
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    &__list-item {
+      max-width: 408px;
+      width: 100%;
+    }
   }
 }

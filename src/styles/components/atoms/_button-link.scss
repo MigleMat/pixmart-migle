@@ -23,6 +23,11 @@
     color: var.$color-icon;
   }
 
+  &__icon--large {
+    width: 24px;
+    height: 24px;
+  }
+
   &--secondary {
     font-family: var.$font-family-secondary;
     color: var.$color-primary-white;
