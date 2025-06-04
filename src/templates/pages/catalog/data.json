@@ -169,8 +169,8 @@
             "label": "POPULAR"
         },
         {
-            "base1x": "healthcare-website-1x",
-            "base2x": "healthcare-website-2x",
+            "base1x": "healthcare-1x",
+            "base2x": "healthcare-2x",
             "alt": "Healthcare website featuring a doctor profile, patient testimonials, service stats, and a call-to-action to book an appointment.",
             "title": "Caring Hearts",
             "desc": "Healthcare · Support",

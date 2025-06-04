@@ -3,7 +3,7 @@
 
 .footer {
   &__container-wrapper {
-    padding-top: 184px;
+    padding-top: 64px;
     padding-bottom: 135px;
     display: flex;
     flex-direction: column;
@@ -162,6 +162,11 @@
   &__actions {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__newsletter-controls {
+    display: flex;
+    gap: 8px;
   }
 }
 

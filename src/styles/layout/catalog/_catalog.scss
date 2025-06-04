@@ -1,14 +1,27 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
 .catalog {
   max-width: 1040px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-bottom: 120px;
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 325px);
     gap: 32px;
   }
 
   &__list-item {
     list-style-type: none;
+  }
+
+  &__button-link {
+    margin: 0 auto;
+    border: 2px solid var.$color-separator-bold;
+    border-radius: 8px;
   }
 }
