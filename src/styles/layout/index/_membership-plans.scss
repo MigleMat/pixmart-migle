@@ -5,7 +5,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 44px;
+    gap: 80px;
   }
 
   &__subtitle {
@@ -30,7 +30,6 @@
 
   &__list {
     list-style-type: none;
-    padding: 32px;
     border-radius: 20px;
 
     @include mixins.flex(
