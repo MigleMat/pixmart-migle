@@ -47,6 +47,9 @@
 
   &__price {
     margin-bottom: 32px;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
   }
 
   &__value {
@@ -109,6 +112,27 @@
   &__list-entry {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
+  }
+}
+
+@include mixins.tablet {
+  .membership-card {
+    max-width: 100%;
+    width: 304px;
+    padding: 56px 32px 32px;
+  }
+}
+
+@include mixins.mobile {
+  .membership-card {
+    max-width: 100%;
+    width: 408px;
+    padding: 32px;
+
+    &--highlighted {
+      transform: translate(0);
+      margin-bottom: 32px;
+    }
   }
 }

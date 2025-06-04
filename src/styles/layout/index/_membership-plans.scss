@@ -5,7 +5,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 44px;
   }
 
   &__subtitle {
@@ -47,5 +47,24 @@
     justify-content: center;
     align-items: center;
     gap: 16px;
+  }
+}
+
+@include mixins.mobile {
+  .membership-plans {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

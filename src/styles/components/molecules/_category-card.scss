@@ -20,7 +20,8 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    min-width: 294px;
+    width: 294px;
+    max-width: 100%;
 
     &--highlighted {
       background-color: var.$color-icon;
@@ -118,7 +119,8 @@
   .category-card {
     &__first-column-list-item,
     &__second-column-list-item {
-      min-width: 210px;
+      width: 210px;
+      max-width: 100%;
     }
   }
 }
@@ -127,7 +129,8 @@
   .category-card {
     &__first-column-list-item,
     &__second-column-list-item {
-      min-width: 194px;
+      width: 194px;
+      max-width: 100%;
     }
 
     &__sec-world {
