@@ -35,7 +35,8 @@
     );
   }
 
-  &__description {
+  &__first-word,
+  &__sec-word {
     font-family: var.$font-family-secondary;
     color: var.$color-secondary2;
     @include mixins.font(
@@ -72,6 +73,27 @@
   &__header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
+    align-items: center;
+  }
+
+  &__description {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__sec-word {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background: var.$color-secondary2;
+      transform: translateY(10px);
+      left: -10px;
+    }
   }
 }

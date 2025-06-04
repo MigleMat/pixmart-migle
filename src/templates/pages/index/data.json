@@ -97,7 +97,8 @@
       "title": "Travel Hero",
       "hasBadge": true,
       "price": "€29.99",
-      "desc": "Adventure • Journey"
+      "first": "Adventure",
+      "sec": "Journey"
     },
     {
       "base1x": "healthcare-1x",
@@ -106,7 +107,8 @@
       "title": "Healthcare Pro",
       "hasBadge": true,
       "price": "€15.99",
-      "desc": "Medical • Wellness"
+      "first": "Medical",
+      "sec": "Wellness"
     },
     {
       "base1x": "foodish-delight-1x",
@@ -114,7 +116,8 @@
       "alt": "Catering website with food visuals",
       "title": "Foodish Delight",
       "price": "€31.99",
-      "desc": "Catering • Food"
+      "first": "Catering",
+      "sec": "Food"
     },
     {
       "base1x": "real-estate-1x",
@@ -122,7 +125,8 @@
       "alt": "Real estate site layout",
       "title": "Real Estate",
       "price": "€40.99",
-      "desc": "Modern • Homes"
+      "first": "Modern",
+      "sec": "Homes"
     }
   ],
   "pricingHeader": {

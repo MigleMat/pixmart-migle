@@ -34,6 +34,9 @@
             <h3 class="product-card__title">{{ product.title }}</h3>
             <p class="product-card__price">{{ product.price }}</p>
         </div>
-        <p class="product-card__description">{{ product.desc }}</p>
+        <div class="product-card__description">
+            <span class="product-card__first-word">{{ product.first }}</span>
+            <span class="product-card__sec-word">{{ product.sec }}</span>
+        </div>
     </div>
 </article>
