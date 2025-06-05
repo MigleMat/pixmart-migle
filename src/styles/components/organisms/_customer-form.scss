@@ -118,3 +118,21 @@
     gap: 6px;
   }
 }
+
+@include mixins.tablet {
+  .customer-form {
+    max-width: 452px;
+  }
+}
+
+@include mixins.mobile {
+  .customer-form {
+    max-width: 408px;
+
+    &__controls {
+      flex-direction: column;
+      gap: 32px;
+      align-items: flex-start;
+    }
+  }
+}

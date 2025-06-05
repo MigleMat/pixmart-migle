@@ -162,3 +162,26 @@
     flex-direction: column;
   }
 }
+
+@include mixins.tablet {
+  .contacts {
+    &__map {
+      max-width: 452px;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .contacts {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-bottom: 64px;
+    }
+
+    &__map {
+      max-width: 408px;
+    }
+  }
+}
