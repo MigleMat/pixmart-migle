@@ -1,8 +1,11 @@
+@use "../base/variables" as var;
+@use "../base/mixins" as mixins;
+
 .header {
   &__container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-block: 24px;
   }
 
@@ -16,5 +19,56 @@
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+}
+
+@include mixins.desktop {
+  .header {
+    &__burger-menu {
+      display: none;
+    }
+
+    &__search-button {
+      display: none;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .header {
+    &__mobile-nav {
+      display: none;
+      position: absolute;
+      top: 21%;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(240 246 253) 0%,
+        rgba(255 255 255) 100%
+      );
+      padding: 16px;
+      z-index: var.$base;
+
+      &--open {
+        display: flex;
+      }
+    }
+
+    &__search {
+      display: none;
+    }
+
+    &__burger-menu {
+      display: inline;
+    }
+
+    &__search-button {
+      display: inline;
+    }
+
+    &__branding {
+      gap: 16px;
+    }
   }
 }

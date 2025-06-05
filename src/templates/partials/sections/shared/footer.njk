@@ -39,7 +39,7 @@
 
                             {% set btn = footerButton %}
                             {% set linkButtonClass = 'footer__button-link button-link' %}
-                            {% set linkIconClass = 'button-link__icon' %}
+                            {% set linkIconClass = 'button-link__icon button-link__icon--large' %}
 
                             {% include "partials/components/atoms/button-link.njk" %}
                         </li>
@@ -54,7 +54,8 @@
                     >
                             {{ newsletterLabel | safe }}
                         </label>
-                        <input 
+                        <div class="footer__newsletter-controls">
+                            <input 
                      class="footer__newsletter-input" 
                      type="email" 
                      name="email"
@@ -62,12 +63,13 @@
                      placeholder="Enter your email address ..."
                      required
                     >
-                        <button 
+                            <button 
                      class="footer__newsletter-button" 
                      type="submit"
                     >
-                            {{ newsletterBtn }}
-                        </button>
+                                {{ newsletterBtn }}
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>

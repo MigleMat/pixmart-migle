@@ -29,9 +29,15 @@
             "label": "Contact"
         }
     ],
-    "btn": {
+    "headerBtn": {
         "link": "#",
         "iconId": "cart"
+    },
+    "burgerBtn": {
+        "iconId": "menu"
+    },
+    "burgerSearchBtn": {
+        "iconId": "search"
     },
     "footerDesc": "Your premium digital assets solution with high quality and comprehensive range of products and services.",
     "navSections": [

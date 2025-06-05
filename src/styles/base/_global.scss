@@ -1,3 +1,5 @@
+@use "../base/mixins" as mixins;
+
 :root {
   --color-primary: rgb(0 93 255);
   --color-primary-light: rgb(230 239 255);
@@ -81,6 +83,57 @@
   max-width: 1440px;
   margin: 0 auto;
   padding-inline: 80px;
+}
+
+@include mixins.desktop {
+  .layout-container {
+    padding-inline: 80px;
+
+    &--hero {
+      padding-inline: 80px 40px;
+    }
+  }
+}
+
+@include mixins.tablet {
+  .layout-container {
+    padding-inline: 40px;
+
+    &--hero {
+      padding-inline: 40px 28px;
+    }
+
+    &--faq {
+      padding-inline: 80px;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .layout-container {
+    padding-inline: 16px;
+  }
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+@include mixins.desktop {
+  .main-layout {
+    gap: 120px;
+  }
+}
+
+@include mixins.mobile {
+  .main-layout {
+    gap: 120px;
+    &--mobile {
+      gap: 64px;
+    }
+  }
 }
 
 a {

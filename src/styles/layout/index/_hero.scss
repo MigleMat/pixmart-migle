@@ -3,36 +3,29 @@
 
 .hero {
   &__container {
-    position: relative;
-    display: flex;
-    padding-block: 120px;
-    gap: 36px;
+    padding-block: 47px;
     background: linear-gradient(
       180deg,
       rgba(240 246 253) 0%,
       rgba(255 255 255) 100%
     );
-  }
-
-  &__ornament {
-    position: absolute;
-    top: 0;
-    right: 40px;
-    max-width: 624px;
-    object-fit: cover;
-    padding-block: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__content {
     max-width: 520px;
-    min-width: 300px;
-
     @include mixins.flex(
-      $justify: center,
+      $justify: flex-start,
       $align: flex-start,
       $direction: column,
       $gap: 32px
     );
+  }
+
+  &__image {
+    max-width: 624px;
   }
 
   &__title {
@@ -69,5 +62,41 @@
   &__actions {
     display: flex;
     gap: 24px;
+  }
+}
+
+@include mixins.tablet {
+  .hero {
+    &__container {
+      padding-block: 120px 58px;
+    }
+
+    &__content {
+      max-width: 410px;
+    }
+
+    &__image {
+      max-width: 444px;
+    }
+  }
+}
+@include mixins.mobile {
+  .hero {
+    &__container {
+      padding-block: 32px 64px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: space-between;
+      gap: 36px;
+    }
+
+    &__content {
+      max-width: 408px;
+    }
+
+    &__image {
+      max-width: 408px;
+    }
   }
 }

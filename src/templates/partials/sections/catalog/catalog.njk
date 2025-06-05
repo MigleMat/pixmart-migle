@@ -1,27 +1,37 @@
 <section class="catalog">
     <div class="catalog__sorting-controls sorting-controls">
         <div class="sorting-controls__header">
-            <form class="sorting-controls__form">
-                <fieldset class="sorting-controls__fieldset">
-                    <legend class="visually-hidden">{{ sortingLegend }}</legend>
-                    <div class="sorting-controls__categories-dropdown">
-                        <label class="sorting-controls__label visually-hidden" for="sort" >
-                            {{ sortingLabel }}
-                        </label>
-                        <select class="sorting-controls__dropdown" name="sort" id="sort">
-                            {% for option in sortingOptions %}
+            <div class="sorting-controls__header-wrapper">
+                <form class="sorting-controls__form">
+                    <fieldset class="sorting-controls__fieldset">
+                        <legend class="visually-hidden">{{ sortingLegend }}</legend>
+                        <div class="sorting-controls__categories-dropdown">
+                            <label class="sorting-controls__label visually-hidden" for="sort" >
+                                {{ sortingLabel }}
+                            </label>
+                            <select class="sorting-controls__dropdown" name="sort" id="sort">
+                                {% for option in sortingOptions %}
 
-                                <option value="{{ option.value }}" {% if option.selected %} selected{% endif %}>
-                                    {{ option.label }}
-                                </option>
+                                    <option class="sorting-controls__options" value="{{ option.value }}" {% if option.selected %} selected{% endif %}>
+                                        {{ option.label }}
+                                    </option>
 
-                            {% endfor %}
-                        </select>
-                    </div>
-                </fieldset>
-                <button class="visually-hidden" type="submit">{{ sortingBtn }}</button>
-            </form>
+                                {% endfor %}
+                            </select>
+                            <svg class="sorting-controls__arrow" aria-hidden="true" focusable="false">
+                                <use xlink:href="/img/sprite.svg#chevron"></use>
+                            </svg>
+                        </div>
+                    </fieldset>
+                    <button class="visually-hidden" type="submit">{{ sortingBtn }}</button>
+                </form>
 
+                {% set actionIconClass = 'button-action__icon' %}
+                {% set btn = filterIcon %}
+                {% set actionButtonClass = 'sorting-controls__filter-button-action button-action button-action--secondary' %}
+                {% include "partials/components/atoms/button-action.njk" %}
+
+            </div>
             <div class="sorting-controls__group">
                 <p class="sorting-controls__result-count">{{ sortingResults }}</p>
                 <ul class="sorting-controls__buttons-list">
@@ -45,7 +55,7 @@
             {% for tag in selectedTags %}
 
                 <button class="sorting-controls__tag" type="button">
-                    {{ tag }}
+                    <span class="sorting-controls__text">{{ tag }}</span>
                     <svg class="sorting-controls__icon">
                         <use xlink:href="/img/sprite.svg#close"></use>
                     </svg>

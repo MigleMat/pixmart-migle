@@ -2,34 +2,27 @@
 @use "../../base/variables" as var;
 
 .category-navigation {
-  &__container {
-    margin-block: 120px;
-  }
-
   &__list {
     list-style-type: none;
-    @include mixins.flex(
-      $justify: space-around,
-      $align: center,
-      $direction: row,
-      $gap: 32px
-    );
+    display: flex;
+    justify-content: space-between;
   }
 
   &__link {
-    @include mixins.flex(
-      $justify: center,
-      $align: center,
-      $direction: column,
-      $gap: 18px
-    );
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
   }
 
   &__icon-box {
     background-color: var.$color-alternative2-white;
-    padding: 37px;
+    padding: 32px;
     border-radius: 20px;
+    min-width: 224px;
+    min-height: 224px;
   }
 
   &__icon {
@@ -44,5 +37,33 @@
       var.$font-weight-medium,
       var.$line-height-h5
     );
+  }
+}
+
+@include mixins.tablet {
+  .category-navigation {
+    &__icon-box {
+      min-width: 176px;
+      padding: 37px 13px;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .category-navigation {
+    &__icon-box {
+      padding: 32px;
+      min-width: 224px;
+      min-height: 224px;
+    }
+
+    &__list {
+      overflow-x: auto;
+      gap: 16px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 }

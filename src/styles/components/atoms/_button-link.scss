@@ -5,20 +5,27 @@
   display: inline-flex;
   background-color: transparent;
   padding: 18px 32px;
-  border: 2px solid var.$color-line;
   border-radius: 8px;
-
   @include mixins.font(
     var.$font-size-xl,
     var.$font-weight-large,
     var.$line-height-h5
   );
 
+  &__text {
+    white-space: nowrap;
+  }
+
   &__icon {
-    display: block;
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    color: var.$color-icon;
+  }
+
+  &__icon--large {
     width: 24px;
     height: 24px;
-    color: var.$color-icon;
   }
 
   &--secondary {
@@ -32,8 +39,7 @@
     align-items: center;
     justify-content: center;
     vertical-align: middle;
-    gap: 16px;
-    border: none;
+    gap: 14px;
     background-color: var.$color-bg-base;
   }
 }

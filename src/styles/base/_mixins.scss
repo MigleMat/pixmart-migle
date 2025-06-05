@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -35,4 +37,22 @@
   width: $size;
   height: $size;
   border-radius: 50%;
+}
+
+@mixin mobile {
+  @media screen and (max-width: #{$screen-mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: #{$screen-tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: #{$screen-desktop}) {
+    @content;
+  }
 }

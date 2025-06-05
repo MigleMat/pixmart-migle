@@ -1,14 +1,21 @@
 <header class="header">
-    <div class="header__container layout-container">
+    <div class="header__container layout-container layout-container--small layout-container--medium">
         <div class="header__branding" >
+            {% set actionButtonClass = "header__burger-menu button-action button-action--secondary" %}
+            {% set actionIconClass = "button-action__icon" %}
+            {% set btn = burgerBtn %}
+            {% include "partials/components/atoms/button-action.njk" %}
+
             {% set logoClass = "header__logo logo" %}
             {% set iconLogoClass = "logo__icon" %}
             {% include "partials/components/atoms/logo.njk" %}
 
-            {% set navClass = "header__nav nav" %}
-            {% set navListClass = "nav__list" %}
-            {% set navLinkClass = "nav__link" %}
-            {% include "partials/components/atoms/nav.njk" %}
+            <div class="header__mobile-nav" id="mobilenav">
+                {% set navClass = "header__nav nav" %}
+                {% set navListClass = "nav__list" %}
+                {% set navLinkClass = "nav__link" %}
+                {% include "partials/components/atoms/nav.njk" %}
+            </div>
         </div>
 
         <div class="header__controls">
@@ -28,8 +35,15 @@
                     <button class="search__button visually-hidden" type="submit" aria-label="Submit Search">{{ headerFormBtn }}</button>
                 </form>
             </div>
+
+            {% set actionButtonClass = "header__search-button button-action" %}
+            {% set actionIconClass = "button-action__icon button-action__icon--nav" %}
+            {% set btn = burgerSearchBtn %}
+            {% include "partials/components/atoms/button-action.njk" %}
+
             {% set actionButtonClass = "header__button-action button-action button-action--secondary" %}
             {% set actionIconClass = "button-action__icon" %}
+            {% set btn = headerBtn %}
             {% include "partials/components/atoms/button-action.njk" %}
         </div>
     </div>

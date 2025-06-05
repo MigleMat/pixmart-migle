@@ -36,42 +36,32 @@
       "label": "Iliustrations"
     }
   ],
-  "categories": [
+  "firstColumn": [
     {
       "icon": "ui-kits",
       "title": "Templates",
-      "desc": "For all needs • Modern",
-      "isFull": true
-    },
-    {
-      "icon": "",
-      "title": "",
-      "desc": "",
-      "isHalfUp": true
-    },
-    {
-      "icon": "social-media",
-      "title": "App Icons",
-      "desc": "High-quality•Elegant",
-      "isFull": true
+      "first": "For all needs",
+      "sec": "Modern"
     },
     {
       "icon": "presentation",
       "title": "Slides",
-      "desc": "Pitch-ready•Creative",
-      "isFull": true
+      "first": "Pitch-ready",
+      "sec": "Creative"
+    }
+  ],
+  "secondColumn": [
+    {
+      "icon": "social-media",
+      "title": "App Icons",
+      "first": "High-quality",
+      "sec": "Elegant"
     },
     {
       "icon": "illustration",
       "title": "Design Tools",
-      "desc": "Easy to use•Unique",
-      "isFull": true
-    },
-    {
-      "icon": "",
-      "title": "",
-      "desc": "",
-      "isHalfDown": true
+      "first": "Easy to use",
+      "sec": "Unique"
     }
   ],
   "categoriesHeader": {
@@ -107,7 +97,8 @@
       "title": "Travel Hero",
       "hasBadge": true,
       "price": "€29.99",
-      "desc": "Adventure • Journey"
+      "first": "Adventure",
+      "sec": "Journey"
     },
     {
       "base1x": "healthcare-1x",
@@ -116,7 +107,8 @@
       "title": "Healthcare Pro",
       "hasBadge": true,
       "price": "€15.99",
-      "desc": "Medical • Wellness"
+      "first": "Medical",
+      "sec": "Wellness"
     },
     {
       "base1x": "foodish-delight-1x",
@@ -124,7 +116,8 @@
       "alt": "Catering website with food visuals",
       "title": "Foodish Delight",
       "price": "€31.99",
-      "desc": "Catering • Food"
+      "first": "Catering",
+      "sec": "Food"
     },
     {
       "base1x": "real-estate-1x",
@@ -132,7 +125,8 @@
       "alt": "Real estate site layout",
       "title": "Real Estate",
       "price": "€40.99",
-      "desc": "Modern • Homes"
+      "first": "Modern",
+      "sec": "Homes"
     }
   ],
   "pricingHeader": {

@@ -8,10 +8,15 @@
 
   &__image {
     border-radius: 20px;
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
   }
 
   &__media {
     position: relative;
+    margin-bottom: 20px;
   }
 
   &__label {
@@ -37,5 +42,19 @@
       var.$font-weight-small,
       var.$line-height-body
     );
+    margin-bottom: 12px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__buttons-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
   }
 }
