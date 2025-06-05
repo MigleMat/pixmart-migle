@@ -56,8 +56,6 @@
             "image": {
                 "src": "img/presentation-template-2x.webp",
                 "alt": "Example of font usage in typography",
-                "width": 980,
-                "height": 462,
                 "caption": "Example of font usage in typography.",
                 "link": {
                     "href": "#",
@@ -78,7 +76,7 @@
     "summary": "Typography is an art that speaks volumes beyond the mere letters on a surface. By applying these tips, designers can elevate their work from mere messages to powerful visual statements. Remember, mastering typography is a journe...",
     "articlesHeader": "Related Articles",
     "articlesText": "Explore All Articles",
-    "articlesCards": [
+    "relatedArticlesCards": [
         {
             "base1x": "best-dishes-1x",
             "base2x": "best-dishes-2x",

@@ -10,10 +10,6 @@
 
   // padding: 20px;
 
-  &--blog {
-    gap: 32px;
-  }
-
   &__title {
     margin-bottom: 8px;
     @include mixins.font(
@@ -21,14 +17,6 @@
       var.$font-weight-bold,
       var.$line-height-h3
     );
-
-    &--blog {
-      @include mixins.font(
-        var.$font-size-h5,
-        var.$font-weight-bold,
-        var.$line-height-medium
-      );
-    }
   }
 
   &__date {
@@ -50,33 +38,8 @@
     min-height: 702px;
   }
 
-  &__media {
-    position: relative;
-    flex: 1;
-    display: flex;
-  }
-
   &__content--blog {
     padding-inline: 16px;
-  }
-
-  &__tag {
-    display: inline-block;
-    color: var.$color-primary-white;
-    background-color: var.$color-icon;
-    padding: 8px 16px;
-    border-radius: 100px;
-    font-family: var.$font-family-secondary;
-
-    @include mixins.font(
-      var.$font-size-l,
-      var.$font-weight-medium,
-      var.$line-height-body
-    );
-
-    position: absolute;
-    bottom: -20px;
-    left: 16px;
   }
 }
 
