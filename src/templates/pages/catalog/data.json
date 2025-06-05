@@ -18,6 +18,14 @@
             "name": "Price"
         }
     ],
+    "filterIcon": {
+        "iconId": "filter"
+    },
+    "filterHeadTitle": "Filters",
+    "filterHeader": {
+        "iconId": "close"
+    },
+    "filterFooterbtn": "Submit",
     "filterItems": {
         "categories": [
             {

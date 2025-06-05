@@ -25,3 +25,27 @@
     border-radius: 8px;
   }
 }
+
+// @include mixins.desktop {
+//   .catalog {
+//     .filter-open {
+//       display: none;
+//     }
+//   }
+// }
+
+@include mixins.tablet {
+  .catalog {
+    &__list {
+      grid-template-columns: repeat(3, 293px);
+    }
+  }
+}
+
+@include mixins.mobile {
+  .catalog {
+    &__list {
+      grid-template-columns: repeat(1, 408px);
+    }
+  }
+}

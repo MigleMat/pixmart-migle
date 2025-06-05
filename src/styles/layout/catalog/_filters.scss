@@ -78,7 +78,7 @@
       height: 14px;
       background-color: var.$color-icon;
       border-radius: 4px;
-      transition: opacity 0.2s;
+      transition: opacity 0.5s;
       opacity: 0;
     }
   }
@@ -192,5 +192,74 @@
 
   &__option-label--price {
     padding: 0;
+  }
+
+  &__header-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@include mixins.desktop {
+  .catalog-filters {
+    &__header {
+      display: none;
+    }
+
+    &__footer {
+      display: none;
+    }
+    &__reset-up {
+      display: none;
+    }
+    &__footer-button-link {
+      display: none;
+    }
+  }
+}
+
+@include mixins.tablet {
+  .catalog-filters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1024px;
+    height: 100%;
+    z-index: 4;
+    padding: 1.5rem;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateX(100%); // hidden by default
+
+    &__header {
+      display: inline;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 16px;
+      background-color: var.$color-bg-base;
+    }
+
+    &__footer-button-link {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__form {
+      padding-top: 40px;
+      background-color: var.$color-bg-alternative2;
+    }
+
+    &__reset-up {
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    &.is-shown {
+      transform: translateX(0);
+    }
   }
 }

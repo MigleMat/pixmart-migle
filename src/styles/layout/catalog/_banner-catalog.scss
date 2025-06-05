@@ -35,3 +35,19 @@
     align-items: center;
   }
 }
+
+@include mixins.mobile {
+  .catalog-banner {
+    &__container {
+      padding-block: 64px 96px;
+    }
+
+    &__title {
+      @include mixins.font(
+        var.$font-size-h2,
+        var.$font-weight-bold,
+        var.$line-height-h2
+      );
+    }
+  }
+}

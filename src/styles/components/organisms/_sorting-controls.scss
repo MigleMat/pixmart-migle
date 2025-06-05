@@ -106,3 +106,44 @@
     gap: 8px;
   }
 }
+
+@include mixins.desktop {
+  .sorting-controls {
+    &__filter-button-action {
+      display: none;
+    }
+  }
+}
+
+@include mixins.tablet {
+  .sorting-controls {
+    &__filter-button-action {
+      display: block;
+    }
+
+    &__header-wrapper {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .sorting-controls {
+    &__header {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__dropdown {
+      min-width: 360px;
+      width: 100%;
+    }
+
+    &__group {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
