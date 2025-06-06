@@ -23,11 +23,20 @@
     border-radius: 20px;
     min-width: 224px;
     min-height: 224px;
+
+    &:hover {
+      background-color: var.$color-button-focus;
+      transition: background-color 0.3s ease;
+      .category-navigation__icon {
+        color: var.$color-secondary-hover-text;
+      }
+    }
   }
 
   &__icon {
     width: 150px;
     height: 150px;
+    fill: currentColor;
     color: var.$color-icon;
   }
 

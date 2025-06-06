@@ -8,8 +8,23 @@
     aspect-ratio: 108 / 24;
     color: var.$color-icon;
 
+    &:hover {
+      color: var.$color-hover;
+    }
+
+    &:focus {
+      color: var.$color-button-focus;
+    }
+
+    &:active {
+      color: var.$color-button-active;
+    }
+
     &--large {
       width: 300px;
     }
+  }
+  &:focus-visible {
+    outline: none;
   }
 }

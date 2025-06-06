@@ -61,8 +61,11 @@
                      name="email"
                      id="email"
                      placeholder="Enter your email address ..."
+                     aria-describedby="searcherrorfooter" 
                      required
                     >
+                            <span id="searcherrorfooter" class="footer__newsletter-error">{{ footerError }}</span>
+                            <span class="footer__newsletter-success">{{ footerSuccess }}</span>
                             <button 
                      class="footer__newsletter-button" 
                      type="submit"

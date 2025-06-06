@@ -89,6 +89,10 @@
       "modifier": "next"
     }
   ],
+  "overlayButton": {
+    "link": "#",
+    "text": "Go to product"
+  },
   "productCards": [
     {
       "base1x": "travel-hero-1x",

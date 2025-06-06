@@ -23,6 +23,21 @@
     width: 294px;
     max-width: 100%;
 
+    &:hover {
+      background-color: var.$color-button-focus;
+      transition: background-color 0.3s ease;
+      .category-card__icon {
+        color: var.$color-bg-base;
+      }
+      .category-card__title {
+        color: var.$color-primary-invert;
+      }
+      .category-card__first-world,
+      .category-card__sec-world {
+        color: var.$color-secondary-invert;
+      }
+    }
+
     &--highlighted {
       background-color: var.$color-icon;
     }
@@ -84,6 +99,10 @@
       var.$font-weight-small,
       var.$line-height-body
     );
+
+    &:hover {
+      color: var.$color-secondary-invert;
+    }
 
     &--highlighted {
       color: var.$color-secondary-invert;

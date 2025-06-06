@@ -29,9 +29,12 @@
                     id="search" 
                     placeholder="Search for Digital Assets" 
                     minlength="1" 
-                    maxlength="15" 
+                    maxlength="15"
+                    aria-describedby="searcherror" 
                     required
                     >
+                    <span id="searcherror" class="search__error">{{ headerError }}</span>
+                    <span class="search__success">{{ headerSuccess }}</span>
                     <button class="search__button visually-hidden" type="submit" aria-label="Submit Search">{{ headerFormBtn }}</button>
                 </form>
             </div>

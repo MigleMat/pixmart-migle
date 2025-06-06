@@ -3,6 +3,39 @@
 
 .search {
   min-width: 240px;
+  position: relative;
+
+  &__error {
+    position: absolute;
+    display: none;
+    font-family: var.$font-family-secondary;
+    color: var.$color-danger;
+    @include mixins.font(
+      var.$font-size-sm,
+      var.$font-weight-small,
+      var.$line-height-caption
+    );
+  }
+
+  &__input:user-invalid + &__error {
+    display: block;
+  }
+
+  &__success {
+    position: absolute;
+    display: none;
+    color: var.$color-success;
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-sm,
+      var.$font-weight-small,
+      var.$line-height-caption
+    );
+  }
+
+  &__input:valid ~ &__success {
+    display: block;
+  }
 
   &__input {
     width: 100%;
@@ -20,6 +53,37 @@
         var.$line-height-small
       );
       color: var.$color-secondary;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:hover {
+      border: 2px solid var.$color-hover;
+      border-radius: 8px;
+      padding: 9px 11px;
+    }
+
+    &:focus {
+      border: 3px solid var.$color-hover;
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+
+    &:user-invalid {
+      border: 1px solid var.$color-danger;
+      padding: 9px 11px;
+    }
+
+    &:valid {
+      border: 1px solid var.$color-separator-bold;
+      padding: 9px 11px;
+    }
+
+    &:disabled {
+      background-color: var.$color-disabled-bg;
+      cursor: not-allowed;
     }
   }
 }

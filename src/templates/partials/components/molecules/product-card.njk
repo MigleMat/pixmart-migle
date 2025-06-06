@@ -1,5 +1,13 @@
 <article class="product-card">
-    <div class="product-card__photo-content">
+    <div class="product-card__photo-content {% if loop.index == 2 %}product-card__photo-content--hover{% endif %}">
+        <div class="product-card__overlay">
+
+            {% set linkButtonClass = 'product-card__button-link button-link button-link--secondary' %}
+            {% set linkTextClass = 'button-link__text' %}
+            {% set btn = overlayButton %}
+            {% include "partials/components/atoms/button-link.njk" %}
+
+        </div>
         {% if product.hasBadge %}
             <div class="product-card__badge">
                 <svg class="product-card__icon" aria-hidden="true">
@@ -7,6 +15,7 @@
                 </svg>
             </div>
         {% endif %}
+
         <picture class="product-card__picture">
             <source 
                 srcset="/img/{{ product.base1x }}.webp 1x, /img/{{ product.base2x }}.webp 2x" 

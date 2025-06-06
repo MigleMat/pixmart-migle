@@ -34,7 +34,6 @@
 
   &__button-link {
     align-self: flex-start;
-    border: 2px solid rgba(31, 50, 71, 0.27);
   }
 
   &__list {
@@ -51,10 +50,16 @@
     padding: 24px;
     width: 100%;
     max-width: 620px;
+
+    &:hover {
+      border: 2px solid var.$color-icon;
+      padding: 22px;
+    }
   }
 
   &__list-item:nth-child(2) {
     border: 2px solid var.$color-icon;
+    padding: 22px;
   }
 
   &__intro {
