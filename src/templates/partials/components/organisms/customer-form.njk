@@ -31,7 +31,9 @@
                     name="{{ field.name }}"
                     class="customer-form__textarea"
                     placeholder="{{ field.placeholder }}"
+                    aria-describedby="texterror" 
                     required></textarea>
+                <span id="texterror" class="customer-form__text-error">{{ textError }}</span>
 
             {% else %}
 
@@ -39,8 +41,11 @@
                     class="customer-form__input" 
                     type="{{ field.type }}" id="{{ field.id }}" 
                     name="{{ field.name }}" 
-                    placeholder="{{ field.placeholder }}" 
+                    placeholder="{{ field.placeholder }}"
+                    aria-describedby="formerror"  
                     required>
+                <span id="formerror" class="customer-form__error">{{ customerFormError }}</span>
+                <span class="customer-form__success">{{ customerFormSuccess }}</span>
 
             {% endif %}
         </div>

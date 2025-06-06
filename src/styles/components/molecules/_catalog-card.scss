@@ -2,6 +2,28 @@
 @use "../../base/variables" as var;
 
 .catalog-card {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .catalog-card__price {
+      color: var.$color-button-focus;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255 255 255 / 0.5) 0%,
+      rgba(255 255 255 / 0.4) 100%
+    );
+    border-radius: 20px;
+    z-index: 1;
+    cursor: not-allowed;
+  }
+
   &__buttons-item {
     list-style-type: none;
   }

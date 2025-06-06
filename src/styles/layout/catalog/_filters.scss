@@ -56,47 +56,66 @@
     display: inline-block;
   }
 
-  &__option-label--categories {
-    &::before {
-      content: "";
-      position: absolute;
-      left: 5px;
-      top: 3px;
-      width: 14px;
-      height: 14px;
-      background-color: transparent;
-      border: 1px solid rgb(31 50 71 / 0.27);
-      border-radius: 4px;
-    }
+  // Styling Categories checkboxes
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 5px;
-      top: 5px;
-      width: 14px;
-      height: 14px;
-      background-color: var.$color-icon;
-      border-radius: 4px;
-      transition: opacity 0.5s;
+  &__checkbox-icon {
+    color: var.$color-bg-base;
+  }
+
+  &__options-item--categories {
+    position: relative;
+  }
+
+  &__option-input--categories {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__checkbox-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var.$color-line;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-left: 4px;
+    padding-top: 2px;
+    .icon {
       opacity: 0;
+      transition: opacity 0.2s ease;
     }
   }
+
+  &__option-input:checked + &__checkbox-icon {
+    background-color: var.$color-icon;
+    border-color: var.$color-icon;
+
+    .icon {
+      opacity: 1;
+      fill: var.$color-primary-invert;
+    }
+  }
+
+  &__option-label--categories {
+    padding-left: 10px;
+  }
+
   &__option-input--range {
     width: 215px;
     margin-bottom: 8px;
   }
 
-  &__option-input:checked + &__option-label--categories::after {
-    opacity: 1;
-  }
+  // Styling Format Type radio
 
   &__option-label--format {
     &::before {
       content: "";
       position: absolute;
       left: 5px;
-      top: 5px;
+      top: 3px;
       width: 14px;
       height: 14px;
       background-color: transparent;
@@ -122,33 +141,75 @@
     opacity: 1;
   }
 
+  &__option-input:hover + &__option-label--format::before {
+    background-color: var.$color-separator-bold;
+  }
+
+  &__option-label--format:active::before {
+    border: 5px solid var.$color-icon;
+    border-radius: 50%;
+  }
+
+  &__option-input:disabled + &__option-label--format {
+    cursor: not-allowed;
+
+    &::before {
+      border-color: var.$color-separator-bold;
+      background-color: var.$color-separator-bold;
+    }
+
+    &::after {
+      background-color: var.$color-separator-bold;
+    }
+  }
+
+  &__option-label--format.is-invalid::before {
+    border-color: var.$color-danger;
+  }
+
+  // Styling Style toggle
+
   &__option-label--style {
-    width: 40px;
-    height: 20px;
-    background-color: var.$color-disabled;
-    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+    padding-left: 52px;
+    line-height: 20px;
+    cursor: pointer;
 
     &::before {
       content: "";
       position: absolute;
-      left: 2px;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 20px;
+      background-color: var.$color-disabled;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
       top: 2px;
+      left: 2px;
       width: 16px;
       height: 16px;
-      border-radius: 50%;
       background-color: var.$color-base-white;
+      border-radius: 50%;
       transition: transform 0.3s ease;
+      z-index: 2;
     }
   }
 
-  &__option-input:checked + &__option-label--style {
+  &__option-input:checked + &__option-label--style::before {
     background-color: var.$color-icon;
   }
 
-  &__option-input:checked + &__option-label--style::before {
+  &__option-input:checked + &__option-label--style::after {
     transform: translateX(20px);
   }
-
   &__reset {
     @include mixins.button-reset;
     font-family: var.$font-family-secondary;
@@ -160,6 +221,60 @@
     border: 2px solid var.$color-separator-bold;
     border-radius: 8px;
     padding: 6px 18px;
+
+    &:hover {
+      background-color: var.$color-disabled-bg;
+    }
+
+    &:focus {
+      border: 4px solid var.$color-focus;
+      background-color: var.$color-disabled-bg;
+      padding: 4px 16px;
+    }
+
+    &:active {
+      background-color: var.$color-disabled-bg;
+      border: 2px solid var.$color-separator-bold;
+      padding: 6px 18px;
+    }
+  }
+
+  // Hover for toggle
+
+  &__option-input:not(:disabled):hover + &__option-label--style::before {
+    background-color: var.$color-line;
+  }
+
+  &__option-input:checked:hover + &__option-label--style::before {
+    background-color: var.$color-focus;
+  }
+
+  // Focus toggle
+
+  &__option-input:focus-visible + &__option-label--style::before {
+    outline: 2px solid var.$color-focus;
+    outline-offset: 2px;
+  }
+
+  // Active
+
+  &__option-label--style:active::before {
+    background-color: var.$color-secondary;
+  }
+
+  &__option-input:checked + &__option-label--style:active::before {
+    background-color: var.$color-focus;
+  }
+
+  // Disabled
+
+  &__option-input:disabled + &__option-label--style::before {
+    background-color: var.$color-separator-bold;
+    cursor: not-allowed;
+  }
+
+  &__option-input:disabled + &__option-label--style::after {
+    background-color: var.$color-separator-bold;
   }
 
   &__reset {
@@ -198,68 +313,68 @@
     width: 24px;
     height: 24px;
   }
-}
 
-@include mixins.desktop {
-  .catalog-filters {
-    &__header {
-      display: none;
-    }
+  @include mixins.desktop {
+    .catalog-filters {
+      &__header {
+        display: none;
+      }
 
-    &__footer {
-      display: none;
-    }
-    &__reset-up {
-      display: none;
-    }
-    &__footer-button-link {
-      display: none;
+      &__footer {
+        display: none;
+      }
+      &__reset-up {
+        display: none;
+      }
+      &__footer-button-link {
+        display: none;
+      }
     }
   }
-}
 
-@include mixins.tablet {
-  .catalog-filters {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: 1024px;
-    height: 100%;
-    z-index: 4;
-    padding: 1.5rem;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    transition: transform 0.3s ease;
-    transform: translateX(100%); // hidden by default
-
-    &__header {
-      display: inline;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 16px;
-      background-color: var.$color-bg-base;
-    }
-
-    &__footer-button-link {
-      display: block;
+  @include mixins.tablet {
+    .catalog-filters {
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-      text-align: center;
-    }
+      max-width: 1024px;
+      height: 100%;
+      z-index: 4;
+      padding: 1.5rem;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      transition: transform 0.3s ease;
+      transform: translateX(100%); // hidden by default
 
-    &__form {
-      padding-top: 40px;
-      background-color: var.$color-bg-alternative2;
-    }
+      &__header {
+        display: inline;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 16px;
+        background-color: var.$color-bg-base;
+      }
 
-    &__reset-up {
-      display: block;
-      margin-bottom: 40px;
-    }
+      &__footer-button-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
 
-    &.is-shown {
-      transform: translateX(0);
+      &__form {
+        padding-top: 40px;
+        background-color: var.$color-bg-alternative2;
+      }
+
+      &__reset-up {
+        display: block;
+        margin-bottom: 40px;
+      }
+
+      &.is-shown {
+        transform: translateX(0);
+      }
     }
   }
 }

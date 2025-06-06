@@ -8,7 +8,11 @@
   width: 100%;
   height: 100%;
 
-  // padding: 20px;
+  &:hover {
+    .article-card__title {
+      color: var.$color-button-focus;
+    }
+  }
 
   &__title {
     margin-bottom: 8px;

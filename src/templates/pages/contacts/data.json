@@ -23,6 +23,9 @@
     "contcIconId": "pin",
     "contcAdressName": "PixMart HQ",
     "contcAdress": "123 Creative Ave, Design City, 45678",
+    "customerFormError": "This field is required.",
+    "customerFormSuccess": "Field validation is successful.",
+    "textError": "This field is required.",
     "customerForm": [
         {
             "type": "text",

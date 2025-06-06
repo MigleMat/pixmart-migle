@@ -69,6 +69,10 @@
       var.$font-weight-large,
       var.$line-height-body
     );
+
+    &:hover {
+      color: var.$color-hover;
+    }
   }
 
   &__quote-icon {

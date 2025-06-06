@@ -1,4 +1,7 @@
 <div class="catalog-card">
+    {% if product.soldOut %}
+        <div class="catalog-card__overlay"></div>
+    {% endif %}
     <div class="catalog-card__media">
         <span class="catalog-card__label label{% if product.label == 'NEW' %} label--accent{% elif product.label == 'POPULAR' %} label--primary{% endif %}">
             {{ product.label }}
@@ -31,20 +34,25 @@
         </p>
         <div class="catalog-card__footer">
             <p class="catalog-card__price">{{ product.price }}</p>
-            <ul class="catalog-card__buttons-list">
-                {% for btn in catalogCardgBtns %}
-                    <li class="catalog-card__buttons-item">
 
-                        {% set actionIconClass = 'button-action__icon' %}
-                        {% set actionButtonClass = 'catalog-card__button-action button-action' %}
-                        {% if btn.iconId == 'cart' %}
-                            {% set actionButtonClass = actionButtonClass + ' button-action--secondary' %}
-                        {% endif %}
+            {% if not product.soldOut %}
+                <ul class="catalog-card__buttons-list">
 
-                        {% include "partials/components/atoms/button-action.njk" %}
-                    </li>
-                {% endfor %}
-            </ul>
+                    {% for btn in catalogCardgBtns %}
+                        <li class="catalog-card__buttons-item">
+
+                            {% set actionIconClass = 'button-action__icon' %}
+                            {% set actionButtonClass = 'catalog-card__button-action button-action' %}
+                            {% if btn.iconId == 'cart' %}
+                                {% set actionButtonClass = actionButtonClass + ' button-action--secondary' %}
+                            {% endif %}
+
+                            {% include "partials/components/atoms/button-action.njk" %}
+                        </li>
+                    {% endfor %}
+
+                </ul>
+            {% endif %}
         </div>
     </div>
 </div>

@@ -48,6 +48,11 @@
     color: var.$color-secondary;
     padding-left: 16px;
     position: relative;
+    cursor: pointer;
+
+    &:hover {
+      color: var.$color-bg-baseIcon;
+    }
 
     &::before {
       position: absolute;
@@ -102,6 +107,10 @@
       var.$line-height-body
     );
     color: var.$color-secondary;
+
+    &:hover {
+      color: var.$color-bg-baseIcon;
+    }
   }
 
   &__latest-articles-group {
