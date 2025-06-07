@@ -105,20 +105,16 @@
     display: flex;
     gap: 8px;
   }
-}
 
-@include mixins.desktop {
-  .sorting-controls {
-    &__filter-button-action {
-      display: none;
-    }
+  &__filter-button-action {
+    display: none;
   }
 }
 
 @include mixins.tablet {
   .sorting-controls {
     &__filter-button-action {
-      display: block;
+      display: inline-flex;
     }
 
     &__header-wrapper {

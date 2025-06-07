@@ -253,6 +253,13 @@
 @include mixins.tablet {
   .customer-form {
     max-width: 452px;
+
+    &__controls {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+    }
   }
 }
 

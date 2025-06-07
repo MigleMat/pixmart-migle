@@ -21,6 +21,7 @@
 
   &__legend {
     margin-bottom: 24px;
+
     @include mixins.font(
       var.$font-size-h4,
       var.$font-weight-bold,
@@ -44,16 +45,17 @@
   }
 
   &__option-label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    display: inline-block;
     font-family: var.$font-family-secondary;
+
     @include mixins.font(
       var.$font-size-md,
       var.$font-weight-small,
       var.$line-height-base
     );
-    cursor: pointer;
-    position: relative;
-    padding-left: 30px;
-    display: inline-block;
   }
 
   // Styling Categories checkboxes
@@ -314,67 +316,90 @@
     height: 24px;
   }
 
-  @include mixins.desktop {
-    .catalog-filters {
-      &__header {
-        display: none;
-      }
-
-      &__footer {
-        display: none;
-      }
-      &__reset-up {
-        display: none;
-      }
-      &__footer-button-link {
-        display: none;
-      }
-    }
+  &__header {
+    display: none;
   }
 
-  @include mixins.tablet {
-    .catalog-filters {
-      position: fixed;
-      top: 0;
-      left: 0;
+  &__footer {
+    display: none;
+  }
+  &__reset-up {
+    display: none;
+  }
+  &__footer-button-link {
+    display: none;
+  }
+}
+
+@include mixins.tablet {
+  .catalog-filters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1024px;
+    height: 100%;
+    z-index: 4;
+    padding: 1.5rem;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+
+    &__header {
+      display: inline;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 16px;
+      background-color: var.$color-bg-base;
+    }
+
+    &__footer-button-link {
+      display: block;
       width: 100%;
-      max-width: 1024px;
-      height: 100%;
-      z-index: 4;
-      padding: 1.5rem;
-      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-      overflow-y: auto;
-      transition: transform 0.3s ease;
-      transform: translateX(100%); // hidden by default
+      text-align: center;
+    }
 
-      &__header {
-        display: inline;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 24px 16px;
-        background-color: var.$color-bg-base;
+    &__form {
+      padding-top: 40px;
+      background-color: var.$color-bg-alternative2;
+    }
+
+    &__reset-up {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      @include mixins.button-reset;
+      font-family: var.$font-family-secondary;
+      @include mixins.font(
+        var.$font-size-l,
+        var.$font-weight-large,
+        var.$line-height-body
+      );
+      border: 2px solid var.$color-separator-bold;
+      border-radius: 8px;
+      padding: 6px 18px;
+
+      &:hover {
+        background-color: var.$color-disabled-bg;
       }
 
-      &__footer-button-link {
-        display: block;
-        width: 100%;
-        text-align: center;
+      &:focus {
+        border: 4px solid var.$color-focus;
+        background-color: var.$color-disabled-bg;
+        padding: 4px 16px;
       }
 
-      &__form {
-        padding-top: 40px;
-        background-color: var.$color-bg-alternative2;
+      &:active {
+        background-color: var.$color-disabled-bg;
+        border: 2px solid var.$color-separator-bold;
+        padding: 6px 18px;
       }
+    }
 
-      &__reset-up {
-        display: block;
-        margin-bottom: 40px;
-      }
-
-      &.is-shown {
-        transform: translateX(0);
-      }
+    &.is-shown {
+      transform: translateX(0);
     }
   }
 }
