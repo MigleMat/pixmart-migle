@@ -7,7 +7,7 @@
     padding-bottom: 135px;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 70px;
   }
   &__description {
     font-family: var.$font-family-secondary;
@@ -35,6 +35,8 @@
   }
 
   &__button-link {
+    width: 64px;
+    height: 64px;
     padding: 20px;
 
     &:hover {
@@ -70,7 +72,7 @@
   }
 
   &__newsletter-label {
-    padding-right: 24px;
+    padding-right: 20px;
     @include mixins.font(
       var.$font-size-h4,
       var.$font-weight-bold,
@@ -203,7 +205,7 @@
   &__legal-list {
     list-style-type: none;
     display: flex;
-    gap: 16px;
+    gap: 20px;
   }
 
   &__credits {
@@ -247,7 +249,7 @@
     max-width: 320px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 4px;
   }
 
   &__branding {
@@ -270,11 +272,28 @@
     gap: 8px;
   }
 }
+@media (max-width: 768px) {
+  .footer {
+    &__branding {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__actions {
+      flex-direction: column;
+    }
+
+    &__newsletter-form {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
 
 @include mixins.mobile {
   .footer {
     &__container-wrapper {
-      padding-top: 96px;
+      padding-top: 0;
       padding-bottom: 64px;
       gap: 72px;
     }

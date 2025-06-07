@@ -2,8 +2,11 @@
 @use "../../base/variables" as var;
 
 .category-card {
-  display: flex;
+  display: grid;
   gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(294px, 1fr));
+  width: 100%;
+  max-width: 608px;
 
   &__first-column-list,
   &__second-column-list {
@@ -20,8 +23,9 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    width: 294px;
-    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
 
     &:hover {
       background-color: var.$color-button-focus;
@@ -45,22 +49,19 @@
 
   &__spacer {
     height: 60px;
-    min-height: 60px;
-    max-width: 294px;
-    width: 100%;
     display: block;
     &--down {
       background: linear-gradient(
         to bottom,
-        rgba(240, 246, 253, 1) 0%,
-        rgba(255, 255, 255, 0) 100%
+        rgba(240 246 253) 0%,
+        rgba(255 255 255) 100%
       );
     }
     &--up {
       background: linear-gradient(
         to top,
-        rgba(240, 246, 253, 1) 0%,
-        rgba(255, 255, 255, 0) 100%
+        rgba(240 246 253) 0%,
+        rgba(255 255 255) 100%
       );
     }
   }
@@ -136,21 +137,22 @@
 
 @include mixins.tablet {
   .category-card {
-    &__first-column-list-item,
-    &__second-column-list-item {
-      width: 210px;
-      max-width: 100%;
-    }
+    grid-template-columns: repeat(2, minmax(210px, 1fr));
+    max-width: 440px;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-card {
+    grid-template-columns: repeat(2, minmax(194px, 1fr));
+    max-width: 408px;
   }
 }
 
 @include mixins.mobile {
   .category-card {
-    &__first-column-list-item,
-    &__second-column-list-item {
-      width: 194px;
-      max-width: 100%;
-    }
+    grid-template-columns: repeat(2, minmax(194px, 1fr));
+    max-width: 408px;
 
     &__sec-world {
       padding-left: 10px;

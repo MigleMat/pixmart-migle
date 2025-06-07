@@ -58,12 +58,16 @@
     );
     color: var.$color-primary2-op;
   }
+
+  &__cards {
+    max-width: 608px;
+    width: 100%;
+  }
 }
 
-@include mixins.mobile {
+@media (max-width: 768px) {
   .category-highlight {
     &__container {
-      display: flex;
       flex-direction: column-reverse;
     }
   }

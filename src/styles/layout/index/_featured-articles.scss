@@ -74,6 +74,10 @@
 
 @include mixins.tablet {
   .featured-articles {
+    &__container {
+      gap: 46px;
+    }
+
     &__list-item {
       max-width: 456px;
       width: 100%;
@@ -92,6 +96,10 @@
     &__list-item {
       max-width: 408px;
       width: 100%;
+    }
+
+    &__container {
+      margin-bottom: 64px;
     }
   }
 }

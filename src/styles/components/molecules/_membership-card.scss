@@ -7,8 +7,9 @@
   box-shadow: 0 4px 40px var.$color-shadow;
   padding: 32px;
   border-radius: 20px;
+  flex: 1;
+  width: 100%;
   max-width: 100%;
-  width: 416px;
 
   &:hover {
     border: 2px solid var.$color-icon;
@@ -43,12 +44,13 @@
   }
 
   &__label {
+    margin: 0;
+
     @include mixins.font(
       var.$font-size-h5,
       var.$font-weight-bold,
       var.$line-height-medium
     );
-    margin: 0;
   }
 
   &__price {
@@ -59,23 +61,25 @@
   }
 
   &__value {
+    letter-spacing: var.$spacing-minus;
+
     @include mixins.font(
       var.$font-size-h2,
       var.$font-weight-bold,
       var.$line-height-h2
     );
-    letter-spacing: var.$spacing-minus;
   }
 
   &__unit {
     font-family: var.$font-family-secondary;
+    letter-spacing: var.$spacing-minus;
+    color: var.$color-primary;
+
     @include mixins.font(
       var.$font-size-l,
       var.$font-weight-small,
       var.$line-height-body
     );
-    letter-spacing: var.$spacing-minus;
-    color: var.$color-primary;
   }
 
   &__list {
@@ -88,6 +92,7 @@
 
   &__list-item {
     font-family: var.$font-family-secondary;
+
     @include mixins.font(
       var.$font-size-l,
       var.$font-weight-small,
@@ -124,16 +129,13 @@
 
 @include mixins.tablet {
   .membership-card {
-    max-width: 100%;
-    width: 304px;
     padding: 56px 32px 32px;
   }
 }
 
 @include mixins.mobile {
   .membership-card {
-    max-width: 100%;
-    width: 408px;
+    min-width: 408px;
     padding: 32px;
 
     &--highlighted {

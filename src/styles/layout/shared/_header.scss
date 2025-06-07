@@ -13,23 +13,37 @@
     display: flex;
     align-items: center;
     gap: 32px;
+
+    @include mixins.mobile {
+      gap: 16px;
+    }
   }
 
   &__controls {
     display: flex;
     align-items: center;
     gap: 8px;
-  }
-}
+    flex: 0 1 288px;
 
-@include mixins.desktop {
-  .header {
-    &__burger-menu {
+    @include mixins.mobile {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__search {
+    flex: 0 1 288px;
+
+    @include mixins.mobile {
       display: none;
     }
+  }
 
-    &__search-button {
-      display: none;
+  &__burger-menu,
+  &__search-button {
+    display: none;
+
+    @include mixins.mobile {
+      display: inline-flex;
     }
   }
 }
@@ -39,13 +53,13 @@
     &__mobile-nav {
       display: none;
       position: absolute;
-      top: 21%;
+      top: 11%;
       left: 0;
       width: 100%;
       background: linear-gradient(
         180deg,
-        rgba(240 246 253) 0%,
-        rgba(255 255 255) 100%
+        rgb(240 246 253) 0%,
+        rgb(255 255 255) 100%
       );
       padding: 16px;
       z-index: var.$base;
@@ -53,22 +67,6 @@
       &--open {
         display: flex;
       }
-    }
-
-    &__search {
-      display: none;
-    }
-
-    &__burger-menu {
-      display: inline;
-    }
-
-    &__search-button {
-      display: inline;
-    }
-
-    &__branding {
-      gap: 16px;
     }
   }
 }

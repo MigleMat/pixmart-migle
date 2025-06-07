@@ -2,12 +2,17 @@
 @use "../../base/variables" as var;
 
 .button-action {
+  @include mixins.button-reset;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   width: 40px;
   height: 40px;
-  padding: 0;
-  @include mixins.button-reset;
+  padding: 12px;
   background-color: var.$color-base-white;
-  border: 1px solid var.$color-separator-bold;
+  border: 2px solid var.$color-separator-bold;
   border-radius: 8px;
 
   &:focus-visible {
@@ -36,6 +41,8 @@
   &--secondary {
     background-color: var.$color-icon;
     color: var.$color-primary-invert;
+    border: none;
+
     &:hover {
       background-color: var.$color-hover;
     }
@@ -74,6 +81,8 @@
     color: var.$color-primary-invert;
     width: 24px;
     height: 24px;
+    flex-shrink: 0;
+    flex-grow: 0;
 
     &--nav {
       color: var.$color-primary;
