@@ -11,7 +11,7 @@
                     {% if field.required %}required{% endif %}>
 
                     {% if field.required %}
-                        <option value="" disabled selected hidden>
+                        <option value="" disabled hidden>
                             {{ field.placeholder or 'Select an option' }}
                         </option>
                     {% endif %}
@@ -42,9 +42,9 @@
                     type="{{ field.type }}" id="{{ field.id }}" 
                     name="{{ field.name }}" 
                     placeholder="{{ field.placeholder }}"
-                    aria-describedby="formerror"  
+                    aria-describedby="{{ field.id }}error"  
                     required>
-                <span id="formerror" class="customer-form__error">{{ customerFormError }}</span>
+                <span id="{{ field.id }}error" class="customer-form__error">{{ customerFormError }}</span>
                 <span class="customer-form__success">{{ customerFormSuccess }}</span>
 
             {% endif %}

@@ -192,7 +192,7 @@
   }
 }
 
-@include mixins.mobile {
+@media (max-width: 768px) {
   .contacts {
     &__container {
       display: flex;

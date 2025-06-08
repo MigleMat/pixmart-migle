@@ -5,27 +5,28 @@
   display: flex;
   gap: 16px;
   align-items: center;
+
   &__avatar {
     border-radius: 50%;
   }
 
   &__name {
     margin: 0;
+    color: var.$color-primary2;
     @include mixins.font(
       var.$font-size-h5,
       var.$font-weight-bold,
       var.$line-height-medium
     );
-    color: var.$color-primary2;
   }
 
   &__date {
     font-family: var.$font-family-secondary;
+    color: var.$color-primary2-op;
     @include mixins.font(
       var.$font-size-l,
       var.$font-weight-small,
       var.$line-height-body
     );
-    color: var.$color-primary2-op;
   }
 }
