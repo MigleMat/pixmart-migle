@@ -2,53 +2,72 @@
 @use "../../base/variables" as vars;
 
 .nav {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
   &__list {
     list-style-type: none;
-
     @include mixins.flex(flex-start, center, row, vars.$spacing-xs);
+    flex-wrap: wrap;
 
     &--column {
       flex-direction: column;
       align-items: flex-start;
     }
+
+    @include mixins.mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
   }
 
   &__link {
     display: inline-flex;
-    padding: 6px 12px;
-
+    padding: 8px 12px;
+    font-family: vars.$font-family-secondary;
     @include mixins.font(
       vars.$font-size-md,
       vars.$font-weight-large,
       vars.$line-height-small
     );
 
+    &:hover {
+      color: vars.$color-hover;
+    }
+
+    &:focus {
+      color: vars.$color-bg-base-invert;
+      border: 4px solid vars.$color-focus;
+      border-radius: 5px;
+      padding: 2px 8px;
+    }
+
+    &:disabled {
+      color: vars.$color-disabled;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
     &--column {
       padding: 0;
-
       font-family: vars.$font-family-secondary;
       @include mixins.font(
         vars.$font-size-l,
         vars.$font-weight-small,
         vars.$line-height-body
       );
-
       color: vars.$color-secondary;
-    }
-  }
-}
 
-@include mixins.mobile {
-  .nav {
-    &__list {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
+      &:hover {
+        color: vars.$color-hover;
+      }
+
+      &:focus {
+        color: vars.$color-bg-base-invert;
+        border: none;
+        padding: 0;
+        outline: 4px solid vars.$color-focus;
+      }
     }
   }
 }

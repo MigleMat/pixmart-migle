@@ -10,6 +10,7 @@
     background-position: center;
     background-repeat: no-repeat;
     padding-block: 64px 80px;
+    padding-left: 80px;
   }
 
   &__title {
@@ -39,7 +40,9 @@
 @include mixins.mobile {
   .catalog-banner {
     &__container {
-      padding-block: 64px 96px;
+      padding-block: 64px 16px;
+      padding-left: 16px;
+      height: 256px;
     }
 
     &__title {

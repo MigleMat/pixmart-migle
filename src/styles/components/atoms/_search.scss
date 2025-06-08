@@ -2,15 +2,17 @@
 @use "../../base/variables" as var;
 
 .search {
-  min-width: 240px;
+  position: relative;
+
+  &__form {
+    width: 100%;
+  }
 
   &__input {
     width: 100%;
     padding: 10px 12px;
-
     border: 1px solid var.$color-separator-bold;
     border-radius: 8px;
-
     cursor: pointer;
 
     &::placeholder {
@@ -21,5 +23,64 @@
       );
       color: var.$color-secondary;
     }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:hover {
+      border: 2px solid var.$color-hover;
+      border-radius: 8px;
+      padding: 9px 11px;
+    }
+
+    &:focus {
+      border: 3px solid var.$color-hover;
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+
+    &:user-invalid {
+      border: 1px solid var.$color-danger;
+      padding: 9px 11px;
+    }
+
+    &:valid {
+      border: 1px solid var.$color-separator-bold;
+      padding: 9px 11px;
+    }
+
+    &:disabled {
+      background-color: var.$color-disabled-bg;
+      cursor: not-allowed;
+    }
+  }
+
+  &__error,
+  &__success {
+    position: absolute;
+    display: none;
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-sm,
+      var.$font-weight-small,
+      var.$line-height-caption
+    );
+  }
+
+  &__error {
+    color: var.$color-danger;
+  }
+
+  &__success {
+    color: var.$color-success;
+  }
+
+  &__input:user-invalid + &__error {
+    display: block;
+  }
+
+  &__input:valid ~ &__success {
+    display: block;
   }
 }

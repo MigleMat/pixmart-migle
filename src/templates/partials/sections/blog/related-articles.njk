@@ -13,7 +13,7 @@
         <ul class="related-articles__list">
             {% for blog in relatedArticlesCards %}
 
-                <li class="related-articles__list-item {% if blog.title == 'Creative blog'%}related-articles__list-item--wide{% endif %}">
+                <li class="related-articles__list-item{% if blog.title == 'Creative blog'%} related-articles__list-item--wide{% endif %}">
                     <article class="related-articles__card">
                         <div class="related-articles__media">
                             <picture class="related-articles__picture">

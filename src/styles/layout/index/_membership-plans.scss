@@ -5,32 +5,36 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 75px;
   }
 
   &__subtitle {
     font-family: var.$font-family-secondary;
+    color: var.$color-subtitle;
+
     @include mixins.font(
       var.$font-size-l,
       var.$font-weight-small,
       var.$line-height-body
     );
-    color: var.$color-subtitle;
   }
 
   &__title {
+    letter-spacing: var.$spacing-minus;
+    color: var.$color-primary2;
+
     @include mixins.font(
       var.$font-size-h2,
       var.$font-weight-bold,
       var.$line-height-h2
     );
-    letter-spacing: var.$spacing-minus;
-    color: var.$color-primary2;
   }
 
   &__list {
     list-style-type: none;
     border-radius: 20px;
+    width: 100%;
+    max-width: 1280px;
 
     @include mixins.flex(
       $justify: center,
@@ -38,6 +42,11 @@
       $direction: row,
       $gap: 16px
     );
+  }
+
+  &__list-item {
+    flex: 1 1 0;
+    min-width: 280px;
   }
 
   &__header {
@@ -49,12 +58,20 @@
   }
 }
 
+@include mixins.tablet {
+  .membership-plans {
+    &__scroll-wrapper {
+      overflow: auto;
+    }
+  }
+}
+
 @include mixins.mobile {
   .membership-plans {
     &__container {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 45px;
     }
 
     &__title {
@@ -64,6 +81,10 @@
     &__list {
       display: flex;
       flex-direction: column;
+    }
+
+    &__scroll-wrapper {
+      overflow: unset;
     }
   }
 }

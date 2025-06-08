@@ -4,17 +4,18 @@
             <p class="membership-plans__subtitle">{{ pricingHeader.subtitle }}</p>
             <h2 class="membership-plans__title">{{ pricingHeader.title }}</h2>
         </div>
+        <div class="membership-plans__scroll-wrapper">
+            <ul class="membership-plans__list">
+                {% for membership in memberships %}
+                    {% set membershipHeader = membership.membershipHeader %}
+                    {% set membershipContent = membership.membershipContent %}
+                    {% set membershipButton = membership.membershipButton %}
 
-        <ul class="membership-plans__list">
-            {% for membership in memberships %}
-                {% set membershipHeader = membership.membershipHeader %}
-                {% set membershipContent = membership.membershipContent %}
-                {% set membershipButton = membership.membershipButton %}
-
-                <li class="membership-plans__list-item">
-                    {% include "partials/components/molecules/membership-card.njk" %}
-                </li>
-            {% endfor %}
-        </ul>
+                    <li class="membership-plans__list-item">
+                        {% include "partials/components/molecules/membership-card.njk" %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </section>

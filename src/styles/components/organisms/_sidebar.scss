@@ -48,6 +48,11 @@
     color: var.$color-secondary;
     padding-left: 16px;
     position: relative;
+    cursor: pointer;
+
+    &:hover {
+      color: var.$color-bg-baseIcon;
+    }
 
     &::before {
       position: absolute;
@@ -86,22 +91,26 @@
   }
 
   &__latest-articles-item {
+    margin-bottom: 12px;
     @include mixins.font(
       var.$font-size-h5,
       var.$font-weight-bold,
       var.$line-height-medium
     );
-    margin-bottom: 12px;
   }
 
   &__latest-article-date {
+    color: var.$color-secondary;
     font-family: var.$font-family-secondary;
     @include mixins.font(
       var.$font-size-l,
       var.$font-weight-small,
       var.$line-height-body
     );
-    color: var.$color-secondary;
+
+    &:hover {
+      color: var.$color-bg-baseIcon;
+    }
   }
 
   &__latest-articles-group {

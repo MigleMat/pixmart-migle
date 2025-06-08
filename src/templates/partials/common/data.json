@@ -1,7 +1,4 @@
 {
-    "site": {
-        "title": "PixMart"
-    },
     "logo": {
         "link": "/index.html"
     },
@@ -33,6 +30,8 @@
         "link": "#",
         "iconId": "cart"
     },
+    "headerError": "This field is required.",
+    "headerSuccess": "Field validation is successful.",
     "burgerBtn": {
         "iconId": "menu"
     },
@@ -145,6 +144,8 @@
     ],
     "newsletterLabel": "<span class=\"footer__breakline\">Subscribe to </span>Design Newsletter",
     "newsletterBtn": "Subscribe",
+    "footerError": "This field is required.",
+    "footerSuccess": "Field validation is successful.",
     "footerLegal": [
         {
             "link": "Privacy Policy"

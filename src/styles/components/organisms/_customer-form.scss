@@ -11,10 +11,21 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  position: relative;
+
+  &__label,
+  &__checkbox-label,
+  &__input::placeholder,
+  &__select,
+  &__textarea::placeholder,
+  &__error,
+  &__text-error,
+  &__success {
+    font-family: var.$font-family-secondary;
+  }
 
   &__label,
   &__checkbox-label {
-    font-family: var.$font-family-secondary;
     @include mixins.font(
       var.$font-size-md,
       var.$font-weight-small,
@@ -22,25 +33,9 @@
     );
   }
 
-  &__input {
-    max-width: 558px;
-    width: 100%;
-    border: 1px solid var.$color-separator-bold;
-    border-radius: 8px;
-    padding: 20px;
-
-    &::placeholder {
-      font-family: var.$font-family-secondary;
-      @include mixins.font(
-        var.$font-size-l,
-        var.$font-weight-small,
-        var.$line-height-body
-      );
-      color: var.$color-secondary2;
-    }
-  }
-
-  &__select {
+  &__input,
+  &__select,
+  &__textarea {
     max-width: 558px;
     width: 100%;
     border: 1px solid var.$color-separator-bold;
@@ -52,27 +47,50 @@
       var.$font-weight-small,
       var.$line-height-body
     );
-  }
 
-  &__textarea {
-    max-width: 558px;
-    width: 100%;
-    min-height: 180px;
-    border: 1px solid var.$color-separator-bold;
-    border-radius: 8px;
-    padding: 20px;
+    &:hover {
+      border: 2px solid var.$color-hover;
+      padding: 19px;
+    }
+
+    &:focus {
+      border: 3px solid var.$color-hover;
+      padding: 18px;
+      outline: none;
+    }
+
+    &:user-invalid {
+      border: 1px solid var.$color-danger;
+      padding: 20px;
+    }
+
+    &:valid {
+      border: 1px solid var.$color-success;
+      padding: 20px;
+    }
 
     &::placeholder {
-      font-family: var.$font-family-secondary;
-      @include mixins.font(
-        var.$font-size-l,
-        var.$font-weight-small,
-        var.$line-height-body
-      );
+      color: var.$color-secondary2;
     }
   }
 
+  &__select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  &__textarea {
+    min-height: 180px;
+    resize: none;
+    box-sizing: border-box;
+  }
+
   &__checkbox-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
     list-style-type: none;
   }
 
@@ -91,6 +109,16 @@
     line-height: 24px;
     padding: 20px 40px;
     border: none;
+
+    &:hover {
+      background-color: var.$color-hover;
+    }
+
+    &:focus {
+      border: 4px solid var.$color-focus;
+      background-color: var.$color-button-focus;
+      padding: 16px 36px;
+    }
   }
 
   &__select {
@@ -117,11 +145,69 @@
     flex-direction: column;
     gap: 6px;
   }
+
+  &__error {
+    position: absolute;
+    transform: translateY(90px);
+    display: none;
+    font-family: var.$font-family-secondary;
+    color: var.$color-danger;
+    @include mixins.font(
+      var.$font-size-sm,
+      var.$font-weight-small,
+      var.$line-height-caption
+    );
+  }
+
+  &__input:user-invalid + &__error {
+    display: block;
+  }
+
+  &__text-error {
+    position: absolute;
+    transform: translateY(210px);
+    display: none;
+    font-family: var.$font-family-secondary;
+    color: var.$color-danger;
+    @include mixins.font(
+      var.$font-size-sm,
+      var.$font-weight-small,
+      var.$line-height-caption
+    );
+  }
+
+  &__textarea:user-invalid + &__text-error {
+    display: block;
+  }
+
+  &__success {
+    position: absolute;
+    transform: translateY(90px);
+    display: none;
+    color: var.$color-success;
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-sm,
+      var.$font-weight-small,
+      var.$line-height-caption
+    );
+  }
+
+  &__input:valid ~ &__success {
+    display: block;
+  }
 }
 
 @include mixins.tablet {
   .customer-form {
     max-width: 452px;
+
+    &__controls {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+    }
   }
 }
 

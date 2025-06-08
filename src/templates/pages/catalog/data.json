@@ -147,7 +147,8 @@
             "title": "Lens Chronicles",
             "desc": "Photography · Creative",
             "price": "€00.00",
-            "label": "SOLD OUT"
+            "label": "SOLD OUT",
+            "soldOut": true
         },
         {
             "base1x": "job-website-1x",
@@ -192,7 +193,8 @@
             "title": "Gaming Rise",
             "desc": "eSports · Trends",
             "price": "€00.00",
-            "label": "SOLD OUT"
+            "label": "SOLD OUT",
+            "soldOut": true
         },
         {
             "base1x": "video-edit-1x",
@@ -201,7 +203,8 @@
             "title": "Edit Pro",
             "desc": "Design · Tools",
             "price": "€00.00",
-            "label": "SOLD OUT"
+            "label": "SOLD OUT",
+            "soldOut": true
         },
         {
             "base1x": "banking-website-1x",
@@ -246,7 +249,8 @@
             "title": "Kindergarden",
             "desc": "Education · Kids",
             "price": "€00.00",
-            "label": "SOLD OUT"
+            "label": "SOLD OUT",
+            "soldOut": true
         }
     ],
     "catalogCardgBtns": [

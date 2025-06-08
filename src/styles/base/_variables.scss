@@ -2,13 +2,24 @@ $color-primary: rgb(26 115 232);
 $color-primary-hover: rgb(22 103 193);
 $color-primary-light: rgb(232 240 254);
 
+$color-hover: rgb(56 146 243 / 1);
+$color-focus: rgb(56 146 243 / 1);
+$color-visited: rgb(0 84 182 / 1);
+$color-disabled: rgb(34 52 73 / 0.4);
+$color-danger: rgb(234 56 41);
+$color-success: rgb(0 143 93);
+$color-disabled-bg: rgb(41 77 117/ 0.09);
+$color-button-focus: rgb(2 101 220);
+$color-button-active: rgb(0 84 182);
+$color-button-disabled: rgba(29 54 83 / 0.17);
+
 $color-secondary: rgb(251 188 5);
 $color-secondary-hover: rgb(226 169 0);
 $color-secondary-light: rgb(255 247 224);
+$color-secondary-hover-text: rgb(224 242 255);
 
-$color-success: rgb(52 168 83);
 $color-warning: rgb(251 188 4);
-$color-danger: rgb(234 67 53);
+
 $color-info: rgb(66 133 244);
 $color-icon: rgb(2 101 220);
 

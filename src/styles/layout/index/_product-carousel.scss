@@ -33,7 +33,7 @@
     );
 
     letter-spacing: var.$spacing-minus;
-    color: (34 34 34);
+    color: var.$color-primary2;
   }
 
   &__header {
@@ -60,10 +60,14 @@
   }
 }
 
-@include mixins.tablet {
+@include mixins.desktop {
   .product-carousel {
     &__list {
       overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 }
@@ -72,14 +76,6 @@
   .product-carousel {
     &__nav {
       display: none;
-    }
-
-    &__list {
-      overflow-x: auto;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
     }
   }
 }

@@ -11,7 +11,7 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 325px);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
   }
 
@@ -21,23 +21,13 @@
 
   &__button-link {
     margin: 0 auto;
-    border: 2px solid var.$color-separator-bold;
-    border-radius: 8px;
   }
 }
-
-// @include mixins.desktop {
-//   .catalog {
-//     .filter-open {
-//       display: none;
-//     }
-//   }
-// }
 
 @include mixins.tablet {
   .catalog {
     &__list {
-      grid-template-columns: repeat(3, 293px);
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
   }
 }

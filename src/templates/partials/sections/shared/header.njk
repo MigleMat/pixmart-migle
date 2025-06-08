@@ -23,15 +23,18 @@
                 <form class="search__form" action="#" method="get">
                     <label class="search__label visually-hidden" for="search">{{ headerLabel }}</label>
                     <input 
-                    class="search__input" 
-                    type="text" 
-                    name="search" 
-                    id="search" 
-                    placeholder="Search for Digital Assets" 
-                    minlength="1" 
-                    maxlength="15" 
-                    required
-                    >
+                        class="search__input" 
+                        type="text" 
+                        name="search" 
+                        id="search" 
+                        placeholder="Search for Digital Assets" 
+                        minlength="1" 
+                        maxlength="15"
+                        aria-describedby="searcherror" 
+                        required
+                        >
+                    <span id="searcherror" class="search__error">{{ headerError }}</span>
+                    <span class="search__success">{{ headerSuccess }}</span>
                     <button class="search__button visually-hidden" type="submit" aria-label="Submit Search">{{ headerFormBtn }}</button>
                 </form>
             </div>

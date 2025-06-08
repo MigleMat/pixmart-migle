@@ -3,39 +3,78 @@
 
 .hero {
   &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding-block: 47px;
+
     background: linear-gradient(
       180deg,
       rgba(240 246 253) 0%,
       rgba(255 255 255) 100%
     );
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+    @include mixins.tablet {
+      padding-block: 120px 58px;
+    }
+
+    @include mixins.mobile {
+      flex-direction: column-reverse;
+      align-items: left;
+      gap: 36px;
+      padding-block: 32px 64px;
+    }
   }
 
   &__content {
     max-width: 520px;
+
     @include mixins.flex(
       $justify: flex-start,
       $align: flex-start,
       $direction: column,
       $gap: 32px
     );
+
+    @include mixins.tablet {
+      max-width: 410px;
+    }
+
+    @include mixins.mobile {
+      max-width: 408px;
+      align-items: center;
+      text-align: left;
+    }
   }
 
   &__image {
+    width: 100%;
     max-width: 624px;
+    height: auto;
+    display: block;
+
+    @include mixins.tablet {
+      max-width: 444px;
+    }
+
+    @include mixins.mobile {
+      max-width: 408px;
+    }
+  }
+
+  &__picture {
+    flex-shrink: 1;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   &__title {
+    letter-spacing: var.$spacing-minus;
     @include mixins.font(
       var.$font-size-h1,
       var.$font-weight-bold,
       var.$line-height-h1
     );
-
-    letter-spacing: var.$spacing-minus;
   }
 
   &__line-one,
@@ -50,53 +89,21 @@
 
   &__description {
     margin-block: 0;
+    color: var.$color-secondary;
 
     @include mixins.font(
       var.$font-size-h5,
       var.$font-weight-medium,
       var.$line-height-h5
     );
-    color: var.$color-secondary;
   }
 
   &__actions {
     display: flex;
     gap: 24px;
-  }
-}
 
-@include mixins.tablet {
-  .hero {
-    &__container {
-      padding-block: 120px 58px;
-    }
-
-    &__content {
-      max-width: 410px;
-    }
-
-    &__image {
-      max-width: 444px;
-    }
-  }
-}
-@include mixins.mobile {
-  .hero {
-    &__container {
-      padding-block: 32px 64px;
-      display: flex;
-      flex-direction: column-reverse;
+    @include mixins.mobile {
       align-items: center;
-      justify-content: space-between;
-      gap: 36px;
-    }
-
-    &__content {
-      max-width: 408px;
-    }
-
-    &__image {
-      max-width: 408px;
     }
   }
 }
