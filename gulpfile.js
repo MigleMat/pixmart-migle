@@ -42,12 +42,14 @@ const paths = {
     svgStatic: dev + "images/static/**/*.svg",
     images: dev + "images/static/**/*.{jpg,jpeg,png}",
     scripts: "src/scripts/**/*.js",
+    favicons: dev + "images/favicons/**/*.{ico,svg,png}",
   },
   dist: {
     pages: dist,
     styles: dist + "css",
     scripts: dist + "js",
     images: dist + "img",
+    favicons: dist + "img",
   },
 };
 
@@ -87,6 +89,9 @@ export const scripts = () =>
   src(paths.dev.scripts).pipe(dest(paths.dist.scripts)).pipe(bs.stream());
 
 const isDev = env.NODE_ENV === "development";
+
+export const favicons = () =>
+  src(paths.dev.favicons, { encoding: false }).pipe(dest(paths.dist.favicons));
 
 export const clean = () => deleteAsync([paths.distDir]);
 
@@ -416,7 +421,7 @@ export const liveReload = () =>
 
 export const build = series(
   clean,
-  parallel(styles, images, sprite, markup, scripts)
+  parallel(styles, favicons, images, sprite, markup, scripts)
 );
 
 const watchFiles = (cb) => {

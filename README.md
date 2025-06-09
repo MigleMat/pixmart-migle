@@ -3,6 +3,7 @@
 ## First install
 
 Run `npm ci` after first installation to install dependencies
+Run `npm i` to install dependencies
 
 ## Commands
 
