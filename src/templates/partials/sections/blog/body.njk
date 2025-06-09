@@ -10,7 +10,10 @@
          class="blog__image"
          src="/img/presentation-1x.jpg" 
          srcset="/img/presentation-1x.jpg 1x, /img/presentation-2x.jpg 2x" 
-         alt=" Group of professionals in a meeting room watching a presenter explain graphs on a screen, promoting business plan presentation templates.">
+         alt=" Group of professionals in a meeting room watching a presenter explain graphs on a screen, promoting business plan presentation templates."
+         width="1280"
+         height="398">
+
     </picture>
 
     <article class="blog__article article">
@@ -37,7 +40,9 @@
                      class="article__image"
                      src="{{ tip.image.src }}"
                      alt="{{ tip.image.alt }}"
-                     loading="lazy">
+                     loading="lazy"
+                     width="980"
+                     height="462">
                             <figcaption class="article__caption">
                                 <span class="article__caption-text">{{ tip.image.caption }}</span>
                                 <a class="article__caption-link" href="{{ tip.image.link.href }}">

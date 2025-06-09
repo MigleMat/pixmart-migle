@@ -5,10 +5,10 @@
   &__picture {
     display: flex;
     width: 100%;
-    max-height: 398px;
   }
   &__image {
     width: 100%;
+    display: block;
     object-fit: cover;
     object-position: 20% 5%;
     border-radius: 20px;
@@ -17,8 +17,8 @@
 
 @include mixins.mobile {
   .blog {
-    &__picture {
-      max-height: 127px;
+    &__image {
+      height: auto;
     }
   }
 }
