@@ -73,6 +73,7 @@
   &__map {
     object-fit: cover;
     border-radius: 20px;
+    width: 100%;
   }
 
   &__address-info {
@@ -190,6 +191,7 @@
   .contacts {
     &__map {
       max-width: 452px;
+      width: 100%;
     }
   }
 }
@@ -205,6 +207,7 @@
 
     &__map {
       max-width: 408px;
+      width: 100%;
     }
   }
 }

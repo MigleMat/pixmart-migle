@@ -81,3 +81,14 @@
     gap: 8px;
   }
 }
+
+@include mixins.mobile {
+  .catalog-card {
+    &__price {
+      margin-bottom: 12px;
+    }
+    &__description {
+      margin-bottom: 20px;
+    }
+  }
+}

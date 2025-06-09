@@ -7,7 +7,6 @@
     background-image: url("/img/catalog-bg-2x.webp");
     height: 288px;
     background-size: cover;
-    background-position: 15% 0%;
     background-repeat: no-repeat;
     padding-block: 64px 80px;
     padding-left: 80px;
@@ -43,6 +42,7 @@
       padding-block: 64px 16px;
       padding-left: 16px;
       height: 256px;
+      background-position: 15% 0%;
     }
 
     &__title {

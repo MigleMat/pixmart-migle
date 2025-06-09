@@ -12,7 +12,7 @@
   &__categories-title,
   &__latest-articles-title {
     margin: 0;
-    padding-top: 40px;
+    padding-top: 37px;
     @include mixins.font(
       var.$font-size-h4,
       var.$font-weight-bold,
@@ -58,7 +58,7 @@
       position: absolute;
       content: "";
       top: 11px;
-      left: 2px;
+      left: 0;
       width: 8px;
       height: 8px;
       border-radius: 50%;
@@ -81,7 +81,7 @@
       position: absolute;
       content: "";
       top: 11px;
-      left: 2px;
+      left: 0;
       width: 8px;
       height: 8px;
       border-radius: 50%;
@@ -91,7 +91,6 @@
   }
 
   &__latest-articles-text {
-    margin-bottom: 12px;
     @include mixins.font(
       var.$font-size-h5,
       var.$font-weight-bold,
