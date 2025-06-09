@@ -87,19 +87,20 @@
 
 @include mixins.mobile {
   .featured-articles {
+    &__container {
+      gap: 54px;
+      margin-bottom: 64px;
+    }
+
     &__header {
       flex-direction: column;
-      gap: 16px;
+      gap: 24px;
       align-items: flex-start;
     }
 
     &__list-item {
       max-width: 408px;
       width: 100%;
-    }
-
-    &__container {
-      margin-bottom: 64px;
     }
   }
 }

@@ -86,6 +86,11 @@
       max-width: 412px;
     }
 
+    &__list {
+      align-items: flex-end;
+      gap: 15px;
+    }
+
     &__list-item {
       width: 100%;
       max-width: 412px;

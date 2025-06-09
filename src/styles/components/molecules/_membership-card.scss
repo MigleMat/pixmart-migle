@@ -20,6 +20,7 @@
   &--highlighted {
     border: 2px solid var.$color-icon;
     transform: translateY(-32px);
+    padding-top: 56px;
   }
 
   &__tag {
@@ -129,8 +130,8 @@
 
 @include mixins.tablet {
   .membership-card {
-    padding: 56px 32px 32px;
-    flex: 0 0 auto;
+    max-width: 304px;
+    width: 100%;
   }
 }
 

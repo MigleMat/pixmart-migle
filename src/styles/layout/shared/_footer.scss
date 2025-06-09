@@ -286,13 +286,22 @@
   }
 }
 
+@include mixins.tablet {
+  .footer {
+    &__intro {
+      gap: 10px;
+    }
+  }
+}
+
 @include mixins.mobile {
   .footer {
     &__container-wrapper {
-      padding-top: 0;
-      padding-bottom: 64px;
+      padding-block: 32px;
       gap: 72px;
+      margin-bottom: 32px;
     }
+
     &__branding {
       flex-direction: column;
       gap: 32px;
