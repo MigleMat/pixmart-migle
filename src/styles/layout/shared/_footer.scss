@@ -103,25 +103,21 @@
     }
 
     &:hover {
-      border: 2px solid var.$color-hover;
+      outline: 2px solid var.$color-hover;
       border-radius: 8px;
-      padding: 19px;
     }
 
     &:focus {
-      border: 3px solid var.$color-hover;
+      outline: 3px solid var.$color-hover;
       border-radius: 8px;
-      padding: 18px;
     }
 
     &:user-invalid {
-      border: 1px solid var.$color-danger;
-      padding: 20px;
+      outline: 1px solid var.$color-danger;
     }
 
     &:valid {
-      border: 1px solid var.$color-separator-bold;
-      padding: 20px;
+      outline: 1px solid var.$color-separator-bold;
     }
 
     &:disabled {
@@ -333,8 +329,9 @@
       display: flex;
       flex-direction: column;
       white-space: nowrap;
-      align-items: center;
+      align-items: flex-start;
       gap: 32px;
+      padding: 24px 16px;
     }
   }
 }

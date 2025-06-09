@@ -39,10 +39,10 @@
     object-position: center;
     border-radius: 20px;
     width: 100%;
-    min-height: 702px;
+    height: 702px;
 
     &:hover {
-      border: 2px solid var.$color-button-focus;
+      outline: 2px solid var.$color-button-focus;
     }
   }
 
@@ -54,7 +54,7 @@
 @include mixins.mobile {
   .article-card {
     &__image {
-      min-height: 289px;
+      height: 289px;
       object-fit: cover;
       width: 100%;
     }

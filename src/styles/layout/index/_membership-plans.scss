@@ -61,7 +61,13 @@
 @include mixins.tablet {
   .membership-plans {
     &__scroll-wrapper {
-      overflow: auto;
+      overflow-x: auto;
+      margin-right: -16px;
+      padding-bottom: 12px;
+    }
+
+    &__list {
+      padding-top: 32px;
     }
   }
 }

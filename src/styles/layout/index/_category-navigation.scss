@@ -61,14 +61,16 @@
       flex-wrap: nowrap;
       gap: 16px;
       overflow-x: auto;
+      padding-bottom: 12px;
 
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      // &::-webkit-scrollbar {
+      //   display: none;
+      // }
     }
     &__icon-box {
       min-width: 176px;
       padding: 37px 13px;
+      padding-bottom: 24px;
     }
   }
 }
@@ -82,7 +84,6 @@
     }
 
     &__list {
-      padding-left: 16px;
       margin-right: -16px;
     }
   }

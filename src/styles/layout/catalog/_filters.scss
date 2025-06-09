@@ -336,17 +336,22 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    max-width: 1024px;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 4;
-    padding: 1.5rem;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     transition: transform 0.3s ease;
     transform: translateX(100%);
 
+    &__form {
+      padding-inline: 16px;
+    }
+
     &__header {
+      position: sticky;
+      top: 0;
+      z-index: 1;
       display: inline;
       display: flex;
       justify-content: space-between;
@@ -366,11 +371,23 @@
       background-color: var.$color-bg-alternative2;
     }
 
+    &__footer {
+      display: block;
+      background-color: var.$color-bg-base;
+      position: sticky;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    &__reset {
+      display: none;
+    }
+
     &__reset-up {
       display: block;
       width: 100%;
-      margin-bottom: 40px;
       @include mixins.button-reset;
+      margin-bottom: 40px;
       font-family: var.$font-family-secondary;
       @include mixins.font(
         var.$font-size-l,

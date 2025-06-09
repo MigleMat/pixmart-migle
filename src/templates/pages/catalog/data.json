@@ -261,8 +261,5 @@
             "iconId": "cart"
         }
     ],
-    "catalogBtn": {
-        "text": "Load more",
-        "link": "#0"
-    }
+    "catalogButton": "Load more"
 }

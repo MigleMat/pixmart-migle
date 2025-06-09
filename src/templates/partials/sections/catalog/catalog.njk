@@ -76,11 +76,10 @@
             {% endfor %}
         </ul>
     </div>
-
-    {% set linkButtonClass = 'catalog__button-link button-link' %}
-    {% set linkTextClass = 'button-link__text' %}
-    {% set btn = catalogBtn %}
-
-    {% include "partials/components/atoms/button-link.njk" %}
+    <div class="catalog__button-wrapper">
+        <a class="catalog__button" href="#">
+            <span class="catalog__button-text">{{ catalogButton }}</span>
+        </a>
+    </div>
 
 </section>

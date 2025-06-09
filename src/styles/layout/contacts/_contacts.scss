@@ -59,6 +59,7 @@
       var.$line-height-h5
     );
     display: flex;
+    align-items: center;
     gap: 8px;
     cursor: pointer;
   }
@@ -71,6 +72,7 @@
 
   &__map {
     object-fit: cover;
+    border-radius: 20px;
   }
 
   &__address-info {

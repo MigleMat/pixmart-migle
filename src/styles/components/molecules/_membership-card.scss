@@ -3,7 +3,7 @@
 
 .membership-card {
   position: relative;
-  background-color: transparent;
+  background-color: var.$color-bg-base;
   box-shadow: 0 4px 40px var.$color-shadow;
   padding: 32px;
   border-radius: 20px;
@@ -130,6 +130,7 @@
 @include mixins.tablet {
   .membership-card {
     padding: 56px 32px 32px;
+    flex: 0 0 auto;
   }
 }
 

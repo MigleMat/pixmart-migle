@@ -64,10 +64,7 @@
   .product-carousel {
     &__list {
       overflow-x: auto;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      padding-bottom: 12px;
     }
   }
 }

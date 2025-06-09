@@ -34,7 +34,6 @@
   }
 
   &__input,
-  &__select,
   &__textarea {
     max-width: 558px;
     width: 100%;
@@ -49,24 +48,21 @@
     );
 
     &:hover {
-      border: 2px solid var.$color-hover;
-      padding: 19px;
+      outline: 2px solid var.$color-hover;
     }
 
     &:focus {
-      border: 3px solid var.$color-hover;
-      padding: 18px;
+      outline: 3px solid var.$color-hover;
+
       outline: none;
     }
 
     &:user-invalid {
-      border: 1px solid var.$color-danger;
-      padding: 20px;
+      outline: 1px solid var.$color-danger;
     }
 
     &:valid {
-      border: 1px solid var.$color-success;
-      padding: 20px;
+      outline: 1px solid var.$color-success;
     }
 
     &::placeholder {
@@ -75,9 +71,29 @@
   }
 
   &__select {
+    max-width: 558px;
+    width: 100%;
+    border: 1px solid var.$color-separator-bold;
+    border-radius: 8px;
+    padding: 20px;
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    background-color: var.$color-bg-base;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+
+    &:hover {
+      outline: 2px solid var.$color-hover;
+    }
+
+    &:focus {
+      outline: 3px solid var.$color-hover;
+    }
   }
 
   &__textarea {
