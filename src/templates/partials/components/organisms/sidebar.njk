@@ -27,12 +27,12 @@
         <ul class="sidebar__latest-articles">
 
             {% for item in sidebarLatest %}
-                <div class="sidebar__latest-articles-group">
-                    <li class="sidebar__latest-articles-item">
-                        {{ item.name }}
-                    </li>
+
+                <li class="sidebar__latest-articles-item">
+                    <span class="sidebar__latest-articles-text">{{ item.name }}</span>
                     <span class="sidebar__latest-article-date">{{ item.date }}</span>
-                </div>
+                </li>
+
             {% endfor %}
         </ul>
     </div>

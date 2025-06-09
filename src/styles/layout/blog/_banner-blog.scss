@@ -2,7 +2,7 @@
 @use "../../base/variables" as var;
 
 .blog {
-  &__banner-content {
+  &__content {
     background: linear-gradient(
       to bottom,
       var.$color-bg-alternative3,

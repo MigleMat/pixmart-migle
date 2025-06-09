@@ -90,7 +90,7 @@
     }
   }
 
-  &__latest-articles-item {
+  &__latest-articles-text {
     margin-bottom: 12px;
     @include mixins.font(
       var.$font-size-h5,
@@ -113,7 +113,10 @@
     }
   }
 
-  &__latest-articles-group {
+  &__latest-articles-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     position: relative;
 
     &::before {

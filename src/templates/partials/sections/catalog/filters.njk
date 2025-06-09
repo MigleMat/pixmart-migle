@@ -64,10 +64,10 @@
                                  for="{{ item.id }}{{ loop.index }}"
                                 >
                                         {% if item.id == "price" %}
-                                            <div class="catalog-filters__range-values">
+                                            <span class="catalog-filters__range-values">
                                                 <span id="pricemin">{{ option.priceMin }}</span>
                                                 <span id="pricemax">{{ option.priceMax }}</span>
-                                            </div>
+                                            </span>
                                             {% if item.id == "categories" %}
                                                 <span class="catalog-filters__checkbox-icon">
                                                     <svg class="catalog-filters__icon" aria-hidden="true">
@@ -98,7 +98,7 @@
                 <span class="catalog-filters__text">{{ filterBtn }}</span></button>
             <button type="submit" class="catalog-filters__submit visually-hidden"></button>
         </div>
-        <div class="catalog-fitlers__footer">
+        <div class="catalog-filters__footer">
             <button type="submit" class="catalog-filters__footer-button-link button-link button-link--secondary">{{ filterFooterbtn }}</button>
         </div>
     </form>
