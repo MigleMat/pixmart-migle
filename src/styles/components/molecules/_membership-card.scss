@@ -20,7 +20,6 @@
   &--highlighted {
     border: 2px solid var.$color-icon;
     transform: translateY(-32px);
-    padding-top: 56px;
   }
 
   &__tag {
@@ -132,6 +131,8 @@
   .membership-card {
     max-width: 304px;
     width: 100%;
+
+    padding-top: 56px;
   }
 }
 

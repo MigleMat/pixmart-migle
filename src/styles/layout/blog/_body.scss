@@ -6,6 +6,7 @@
     display: flex;
     width: 100%;
   }
+
   &__image {
     width: 100%;
     display: block;
@@ -13,12 +14,25 @@
     object-position: 20% 5%;
     border-radius: 20px;
   }
+
+  &__spacer {
+    height: 120px;
+    background-color: var.$color-bg-base;
+  }
+}
+
+@include mixins.tablet {
+  .blog {
+    &__image {
+      height: 293px;
+    }
+  }
 }
 
 @include mixins.mobile {
   .blog {
     &__image {
-      height: auto;
+      height: 127px;
     }
   }
 }
