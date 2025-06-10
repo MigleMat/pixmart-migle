@@ -39,6 +39,7 @@
                                      type="radio" 
                                      class="catalog-filters__option-input visually-hidden" 
                                      name="format" id="{{ item.id }}{{ loop.index }}"
+                                     required
                                     >
 
                                     {% elif item.id == "style" %}
@@ -46,9 +47,11 @@
                                      type="checkbox" 
                                      class="catalog-filters__option-input visually-hidden" 
                                      id="{{ item.id }}{{ loop.index }}"
+                                     required
                                     >
 
                                     {% elif item.id == "price" %}
+
                                         <input 
                                      type="range" 
                                      min="5" 

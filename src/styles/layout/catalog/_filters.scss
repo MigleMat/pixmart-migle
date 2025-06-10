@@ -66,6 +66,9 @@
 
   &__options-item--categories {
     position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   &__option-input--categories {
@@ -105,6 +108,33 @@
     padding-left: 10px;
   }
 
+  &__option-input:hover ~ &__checkbox-icon {
+    background-color: var.$color-bg-alternative2;
+  }
+
+  &__option-input:active + &__checkbox-icon {
+    background-color: var.$color-check-active;
+    border: none;
+  }
+
+  &__option-input:focus + &__checkbox-icon {
+    outline: 2px solid var.$color-focus;
+  }
+
+  &__option-input:disabled + &__checkbox-icon {
+    background-color: var.$color-separator-bold;
+    border-color: var.$color-separator-bold;
+  }
+
+  &__option-input:disabled ~ &__option-label--categories {
+    color: var.$color-separator-bold;
+    cursor: not-allowed;
+  }
+
+  &__option-input.is-invalid + &__checkbox-icon {
+    border-color: var.$color-danger;
+  }
+
   &__option-input--range {
     width: 215px;
     margin-bottom: 8px;
@@ -129,7 +159,7 @@
       content: "";
       position: absolute;
       left: 5px;
-      top: 5px;
+      top: 3px;
       width: 14px;
       height: 14px;
       border: 5px solid var.$color-icon;
@@ -145,6 +175,11 @@
 
   &__option-input:hover + &__option-label--format::before {
     background-color: var.$color-separator-bold;
+  }
+
+  &__option-input:focus + &__option-label--format::before {
+    border-color: var.$color-secondary2;
+    box-shadow: 0 0 0 3px var.$color-focus;
   }
 
   &__option-label--format:active::before {
