@@ -129,9 +129,11 @@
 
 @include mixins.tablet {
   .membership-card {
-    max-width: 304px;
+    min-width: 304px;
     width: 100%;
-    padding-top: 56px;
+    &--highlighted {
+      padding-top: 56px;
+    }
   }
 }
 
