@@ -71,3 +71,30 @@
     }
   }
 }
+
+// &--burger {
+//   display: inline-flex;
+//   padding: 18px 32px;
+//   font-family: vars.$font-family-secondary;
+//   border: 4px solid transparent;
+//   @include mixins.font(
+//     vars.$font-size-xl,
+//     vars.$font-weight-large,
+//     vars.$line-height-h5
+//   );
+
+//   &:hover {
+//     color: vars.$color-hover;
+//   }
+
+//   &:focus {
+//     color: vars.$color-bg-base-invert;
+//     border: 4px solid vars.$color-focus;
+//     border-radius: 8px;
+//     padding: 18px 32px;
+//   }
+
+//   &:focus-visible {
+//     outline: none;
+//   }
+// }

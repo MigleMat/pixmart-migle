@@ -10,12 +10,20 @@
             {% set iconLogoClass = "logo-icon" %}
             {% include "partials/components/atoms/logo.njk" %}
 
-            <div class="header__mobile-nav" id="mobilenav">
-                {% set navClass = "header__nav nav" %}
-                {% set navListClass = "nav__list" %}
-                {% set navLinkClass = "nav__link" %}
-                {% include "partials/components/atoms/nav.njk" %}
-            </div>
+            <nav class="header__mobile-nav header__mobile-nav--open" id="mobilenav">
+                <ul class="header__mobile-nav-list">
+                    {% for item in burgerNav %}
+                        <li class="nav__item">
+                            <a class="header__mobile-nav-link" href="{{item.link}}">{{ item.label }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+
+            {% set navClass = "header__nav nav" %}
+            {% set navListClass = "nav__list" %}
+            {% set navLinkClass = "nav__link" %}
+            {% include "partials/components/atoms/nav.njk" %}
         </div>
 
         <div class="header__controls">
@@ -48,6 +56,7 @@
             {% set actionIconClass = "button-action__icon" %}
             {% set btn = headerBtn %}
             {% include "partials/components/atoms/button-action.njk" %}
+
         </div>
     </div>
 </header>

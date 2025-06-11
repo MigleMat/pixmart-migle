@@ -4,6 +4,28 @@
     },
     "headerLabel": "Search",
     "headerFormBtn": "Search",
+    "burgerNav": [
+        {
+            "link": "#",
+            "label": "About"
+        },
+        {
+            "link": "/catalog.html",
+            "label": "Products"
+        },
+        {
+            "link": "#",
+            "label": "Creators"
+        },
+        {
+            "link": "/blog.html",
+            "label": "Blog"
+        },
+        {
+            "link": "/contacts.html",
+            "label": "Contact"
+        }
+    ],
     "navItems": [
         {
             "link": "#",

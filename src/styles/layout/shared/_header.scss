@@ -38,6 +38,43 @@
     }
   }
 
+  &__mobile-nav {
+    display: none;
+  }
+
+  &__mobile-nav-list {
+    list-style: none;
+    @include mixins.flex(flex-start, flex-start, column, var.$spacing-xs);
+    gap: 8px;
+  }
+
+  &__mobile-nav-link {
+    display: block;
+    font-family: var.$font-family-secondary;
+    border: 4px solid transparent;
+    padding: 18px 32px;
+    @include mixins.font(
+      var.$font-size-xl,
+      var.$font-weight-large,
+      var.$line-height-h5
+    );
+
+    &:hover {
+      color: var.$color-hover;
+    }
+
+    &:focus {
+      color: var.$color-bg-base-invert;
+      border: 4px solid var.$color-focus;
+      border-radius: 8px;
+      padding: 18px 32px;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
   &__burger-menu,
   &__search-button {
     display: none;
@@ -49,8 +86,19 @@
 }
 
 @include mixins.mobile {
+  body.not-scrolled {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+
   .header {
+    &__nav {
+      display: none;
+    }
+
     &__mobile-nav {
+      display: block;
       visibility: hidden;
       opacity: 0;
       position: absolute;
