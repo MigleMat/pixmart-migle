@@ -71,6 +71,8 @@
   }
 
   &__map {
+    max-width: 618px;
+    width: 100%;
     object-fit: cover;
     border-radius: 20px;
   }
@@ -166,6 +168,17 @@
     position: absolute;
     bottom: 16px;
     right: 16px;
+
+    @media (max-width: 768px) {
+      bottom: 16px;
+      right: 216px;
+    }
+
+    @include mixins.mobile {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+    }
   }
 
   &__address-info {
@@ -204,7 +217,6 @@
     }
 
     &__map {
-      max-width: 408px;
       width: 100%;
     }
   }
