@@ -13,12 +13,10 @@
       rgba(240 246 253) 0%,
       rgba(255 255 255) 100%
     );
-
-    @include mixins.tablet {
+    @include mixins.desktop {
       padding-block: 120px 58px;
     }
-
-    @include mixins.mobile {
+    @include mixins.tablet {
       flex-direction: column-reverse;
       gap: 36px;
       padding-block: 32px 64px;
@@ -26,8 +24,8 @@
   }
 
   &__content {
-    max-width: 520px;
-
+    max-width: 740px;
+    padding-inline-end: 15px;
     @include mixins.flex(
       $justify: flex-start,
       $align: flex-start,
@@ -35,12 +33,7 @@
       $gap: 32px
     );
 
-    @include mixins.tablet {
-      max-width: 410px;
-    }
-
     @include mixins.mobile {
-      max-width: 408px;
       align-items: center;
       text-align: left;
     }
