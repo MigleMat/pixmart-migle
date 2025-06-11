@@ -9,6 +9,7 @@
     flex-direction: column;
     gap: 70px;
   }
+
   &__description {
     font-family: var.$font-family-secondary;
     @include mixins.font(
@@ -16,6 +17,10 @@
       var.$font-weight-small,
       var.$line-height-body
     );
+  }
+
+  &__nav-column {
+    flex: 1;
   }
 
   &__heading {
@@ -266,6 +271,7 @@
   &__actions {
     display: flex;
     justify-content: space-between;
+    row-gap: 32px;
   }
 
   &__newsletter-controls {
@@ -273,11 +279,10 @@
     gap: 8px;
   }
 }
-@include mixins.mobile {
+@include mixins.tablet {
   .footer {
-    &__nav-wrapper {
-      flex-direction: column;
-      gap: 32px;
+    &__intro {
+      gap: 10px;
     }
 
     &__branding {
@@ -306,16 +311,13 @@
   }
 }
 
-@include mixins.tablet {
-  .footer {
-    &__intro {
-      gap: 10px;
-    }
-  }
-}
-
 @include mixins.mobile-big {
   .footer {
+    &__nav-wrapper {
+      flex-direction: column;
+      gap: 32px;
+    }
+
     &__container-wrapper {
       padding-block: 32px;
       gap: 62px;
