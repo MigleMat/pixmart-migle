@@ -2,57 +2,60 @@
     <div class="catalog-filters__header">
         <h3 class="catalog-filters__header">{{ filterHeadTitle }}</h3>
         {% set actionButtonClass = 'catalog-filters__header-button-action button-action' %}
-        {% set actionIconClass = 'catalog-filters__header-icon' %}
+        {% set actionIconClass = 'button-action__icon  button-action__icon--nav' %}
         {% set btn = filterHeader %}
         {% include "partials/components/atoms/button-action.njk" %}
     </div>
 
     <form class="catalog-filters__form" method="get" action="#">
-        <button type="reset" class="catalog-filters__reset-up">
+        <div class="catalog-filters__wrapper">
+            <button type="reset" class="catalog-filters__reset-up">
+                <svg class="catalog-filters__icon" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#close"></use>
+                </svg>
+                <span class="catalog-filters__text">{{ filterBtn }}</span>
+            </button>
+            <ul class="catalog-filters__list">
+                {% for item in filterMenu %}
 
-            <span class="catalog-filters__text">{{ filterBtn }}</span>
-        </button>
-        <ul class="catalog-filters__list">
-            {% for item in filterMenu %}
+                    <li class="catalog-filters__item">
+                        <fieldset class="catalog-filters__fieldset">
+                            <legend class="catalog-filters__legend">{{ item.name }}</legend>
+                            <ul class="catalog-filters__options">
+                                {% for option in filterItems[item.id] %}
 
-                <li class="catalog-filters__item">
-                    <fieldset class="catalog-filters__fieldset">
-                        <legend class="catalog-filters__legend">{{ item.name }}</legend>
-                        <ul class="catalog-filters__options">
-                            {% for option in filterItems[item.id] %}
-
-                                <li class="catalog-filters__options-item catalog-filters__options-item--{{ item.id }}">
-                                    {% if item.id == "categories" %}
-                                        <input 
+                                    <li class="catalog-filters__options-item catalog-filters__options-item--{{ item.id }}">
+                                        {% if item.id == "categories" %}
+                                            <input 
                                      type="checkbox" 
                                      class="catalog-filters__option-input visually-hidden" 
                                      id="{{ item.id }}{{ loop.index }}"
                                     >
-                                        <span class="catalog-filters__checkbox-icon">
-                                            <svg class="icon" width="14" height="14" aria-hidden="true" focusable="false">
-                                                <use xlink:href="/img/sprite.svg#check"></use>
-                                            </svg>
-                                        </span>
+                                            <span class="catalog-filters__checkbox-icon">
+                                                <svg class="icon" width="14" height="14" aria-hidden="true" focusable="false">
+                                                    <use xlink:href="/img/sprite.svg#check"></use>
+                                                </svg>
+                                            </span>
 
-                                    {% elif item.id == "format" %}
-                                        <input 
+                                        {% elif item.id == "format" %}
+                                            <input 
                                      type="radio" 
                                      class="catalog-filters__option-input visually-hidden" 
                                      name="format" id="{{ item.id }}{{ loop.index }}"
                                      required
                                     >
 
-                                    {% elif item.id == "style" %}
-                                        <input 
+                                        {% elif item.id == "style" %}
+                                            <input 
                                      type="checkbox" 
                                      class="catalog-filters__option-input visually-hidden" 
                                      id="{{ item.id }}{{ loop.index }}"
                                      required
                                     >
 
-                                    {% elif item.id == "price" %}
+                                        {% elif item.id == "price" %}
 
-                                        <input 
+                                            <input 
                                      type="range" 
                                      min="5" 
                                      max="50" 
@@ -60,46 +63,47 @@
                                     id="{{ item.id }}{{ loop.index }}"
                                     >
 
-                                    {% endif %}
+                                        {% endif %}
 
-                                    <label 
+                                        <label 
                                  class="catalog-filters__option-label catalog-filters__option-label--{{ item.id }}" 
                                  for="{{ item.id }}{{ loop.index }}"
                                 >
-                                        {% if item.id == "price" %}
-                                            <span class="catalog-filters__range-values">
-                                                <span id="pricemin">{{ option.priceMin }}</span>
-                                                <span id="pricemax">{{ option.priceMax }}</span>
-                                            </span>
-                                            {% if item.id == "categories" %}
-                                                <span class="catalog-filters__checkbox-icon">
-                                                    <svg class="catalog-filters__icon" aria-hidden="true">
-                                                        <use xlink:href="/img/sprite.svg#close"></use>
-                                                    </svg>
+                                            {% if item.id == "price" %}
+                                                <span class="catalog-filters__range-values">
+                                                    <span id="pricemin">{{ option.priceMin }}</span>
+                                                    <span id="pricemax">{{ option.priceMax }}</span>
                                                 </span>
+                                                {% if item.id == "categories" %}
+                                                    <span class="catalog-filters__checkbox-icon">
+                                                        <svg class="catalog-filters__icon" aria-hidden="true">
+                                                            <use xlink:href="/img/sprite.svg#close"></use>
+                                                        </svg>
+                                                    </span>
+                                                {% endif %}
+                                            {% else %}
+
+                                                {{ option.name }}
                                             {% endif %}
-                                        {% else %}
+                                        </label>
+                                    </li>
 
-                                            {{ option.name }}
-                                        {% endif %}
-                                    </label>
-                                </li>
+                                {% endfor %}
+                            </ul>
+                        </fieldset>
+                    </li>
 
-                            {% endfor %}
-                        </ul>
-                    </fieldset>
-                </li>
+                {% endfor %}
+            </ul>
 
-            {% endfor %}
-        </ul>
-
-        <div class="catalog-filters__actions">
-            <button type="reset" class="catalog-filters__reset">
-                <svg class="catalog-filters__icon" aria-hidden="true">
-                    <use xlink:href="/img/sprite.svg#close"></use>
-                </svg>
-                <span class="catalog-filters__text">{{ filterBtn }}</span></button>
-            <button type="submit" class="catalog-filters__submit visually-hidden"></button>
+            <div class="catalog-filters__actions">
+                <button type="reset" class="catalog-filters__reset">
+                    <svg class="catalog-filters__icon" aria-hidden="true">
+                        <use xlink:href="/img/sprite.svg#close"></use>
+                    </svg>
+                    <span class="catalog-filters__text">{{ filterBtn }}</span></button>
+                <button type="submit" class="catalog-filters__submit visually-hidden"></button>
+            </div>
         </div>
         <div class="catalog-filters__footer">
             <button type="submit" class="catalog-filters__footer-button-link button-link button-link--secondary">{{ filterFooterbtn }}</button>

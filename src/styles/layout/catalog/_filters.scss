@@ -135,6 +135,20 @@
     border-color: var.$color-danger;
   }
 
+  &__option-input:checked:hover + &__checkbox-icon {
+    background: var.$color-hover;
+    border: none;
+  }
+
+  &__option-input:checked:active + &__checkbox-icon {
+    background-color: var.$color-check-active;
+    border-color: var.$color-check-active;
+
+    .icon {
+      color: var.$color-icon;
+    }
+  }
+
   &__option-input--range {
     width: 215px;
     margin-bottom: 8px;
@@ -358,9 +372,11 @@
   &__footer {
     display: none;
   }
+
   &__reset-up {
     display: none;
   }
+
   &__footer-button-link {
     display: none;
   }
@@ -378,10 +394,6 @@
     overflow-y: auto;
     transition: transform 0.3s ease;
     transform: translateX(100%);
-
-    &__form {
-      padding-inline: 16px;
-    }
 
     &__header {
       position: sticky;
@@ -413,6 +425,7 @@
     &__footer {
       display: block;
       background-color: var.$color-bg-base;
+      padding: 16px;
       position: sticky;
       bottom: 0;
       z-index: 5;
@@ -422,8 +435,15 @@
       display: none;
     }
 
+    &__wrapper {
+      padding-inline: 16px;
+    }
+
     &__reset-up {
-      display: block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       width: 100%;
       @include mixins.button-reset;
       margin-bottom: 40px;

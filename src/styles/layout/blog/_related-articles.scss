@@ -26,7 +26,7 @@
       var.$line-height-h2
     );
     letter-spacing: var.$spacing-minus;
-    color: (34 34 34);
+    color: var.$color-primary2;
   }
 
   &__text {
@@ -138,6 +138,8 @@
 
 @include mixins.mobile {
   .related-articles {
+    padding-block: 32px;
+
     &__list {
       display: flex;
       flex-direction: column;

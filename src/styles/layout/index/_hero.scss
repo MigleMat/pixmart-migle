@@ -15,12 +15,11 @@
     );
 
     @include mixins.tablet {
-      padding-block: 120px 58px;
+      padding-block: 120px 110px;
     }
 
     @include mixins.mobile {
       flex-direction: column-reverse;
-      align-items: left;
       gap: 36px;
       padding-block: 32px 64px;
     }

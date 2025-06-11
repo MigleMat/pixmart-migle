@@ -18,7 +18,7 @@
 
   &__arrow {
     position: absolute;
-    right: 16px;
+    right: 19px;
     top: 50%;
     transform: translateY(-50%) rotate(90deg);
     width: 24px;
@@ -28,14 +28,20 @@
   }
 
   &__dropdown {
-    width: 154px;
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-large,
+      var.$line-height-body
+    );
     appearance: none;
     -webkit-appearance: none;
     background: transparent;
-    padding: 8px 20px;
+    padding: 7px 20px;
+    max-width: 156px;
+    width: 100%;
     border-radius: 8px;
     border: 1px solid var.$color-separator-bold;
-    font-size: 16px;
     cursor: pointer;
 
     &:focus-visible {
@@ -74,11 +80,17 @@
 
   &__tag {
     @include mixins.button-reset;
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-md,
+      var.$font-weight-large,
+      var.$line-height-base
+    );
     border: 1px solid var.$color-separator-bold;
     border-radius: 8px;
-    padding: 4px 9px;
+    padding: 5px 11px;
     display: inline-flex;
-    gap: 12px;
+    gap: 8px;
     align-items: center;
   }
 
@@ -121,6 +133,8 @@
   .sorting-controls {
     &__filter-button-action {
       display: inline-flex;
+      width: 40px;
+      height: 40px;
     }
 
     &__header-wrapper {
