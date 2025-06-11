@@ -52,26 +52,26 @@
     {% endfor %}
 
     <div class="customer-form__controls">
-        <div class="customer-form__actions">
-            <ul class="customer-form__checkbox-list">
-                {% for item in formActions %}
-                    <li class="customer-form__checkbox-item">
-                        <input
+
+        <ul class="customer-form__checkbox-list">
+            {% for item in formActions %}
+                <li class="customer-form__checkbox-item">
+                    <input
                         class="customer-form__checkbox-input"
                         type="checkbox"
                         id="checkbox{{ loop.index }}"
                         name="{{ item.name }}"
                         {% if item.checked %}checked{% endif %}
                         {% if item.required %}required{% endif %}>
-                        <label 
+                    <label 
                         class="customer-form__checkbox-label" 
                         for="checkbox{{ loop.index }}">
-                            {{ item.label }}
-                        </label>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
+                        {{ item.label }}
+                    </label>
+                </li>
+            {% endfor %}
+        </ul>
+
         <button type="submit" class="customer-form__button-link button-link button-link--secondary">{{ formBtn }}</button>
     </div>
 </form>

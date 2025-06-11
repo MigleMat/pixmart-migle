@@ -75,7 +75,7 @@
     width: 100%;
     border: 1px solid var.$color-separator-bold;
     border-radius: 8px;
-    padding: 20px;
+    padding: 19px;
     font-family: var.$font-family-secondary;
     @include mixins.font(
       var.$font-size-l,
@@ -102,17 +102,14 @@
   }
 
   &__checkbox-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 14px;
     list-style-type: none;
+    padding-left: 4px;
   }
 
   &__controls {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &__actions {

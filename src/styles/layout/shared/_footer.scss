@@ -164,6 +164,11 @@
     color: var.$color-primary-white;
     background-color: var.$color-icon;
     font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-large,
+      var.$line-height-body
+    );
     padding: 20px 40px;
     border-radius: 8px;
 
@@ -313,8 +318,8 @@
   .footer {
     &__container-wrapper {
       padding-block: 32px;
-      gap: 72px;
-      margin-bottom: 32px;
+      gap: 62px;
+      margin-bottom: 24px;
     }
 
     &__branding {
@@ -330,7 +335,7 @@
 
     &__actions {
       flex-direction: column;
-      gap: 32px;
+      gap: 64px;
     }
 
     &__newsletter-form {
