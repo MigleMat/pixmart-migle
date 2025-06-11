@@ -8,11 +8,13 @@
   }
 
   &__image {
-    width: 100%;
     display: block;
     object-fit: cover;
     object-position: 20% 5%;
     border-radius: 20px;
+    margin: 0 auto;
+    height: 420px;
+    width: 1360px;
   }
 
   &__spacer {
@@ -25,18 +27,29 @@
   }
 }
 
-@include mixins.tablet {
+@include mixins.desktop {
   .blog {
     &__image {
-      height: 293px;
+      height: 300px;
+      width: 980px;
     }
   }
 }
 
-@include mixins.mobile {
+@include mixins.tablet {
+  .blog {
+    &__image {
+      height: 215px;
+      width: 700px;
+    }
+  }
+}
+
+@include mixins.mobile-big {
   .blog {
     &__image {
       height: 127px;
+      width: 400px;
     }
   }
 }
