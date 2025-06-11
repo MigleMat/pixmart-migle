@@ -83,7 +83,6 @@
   .faq-section {
     &__header {
       width: 100%;
-      max-width: 412px;
     }
 
     &__list {
@@ -93,12 +92,11 @@
 
     &__list-item {
       width: 100%;
-      max-width: 412px;
     }
   }
 }
 
-@include mixins.mobile {
+@include mixins.mobile-big {
   .faq-section {
     &__container {
       flex-direction: column;

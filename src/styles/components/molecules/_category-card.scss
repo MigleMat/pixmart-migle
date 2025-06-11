@@ -112,7 +112,8 @@
 
   &__desc {
     display: flex;
-    gap: 20px;
+    column-gap: 20px;
+    flex-wrap: wrap;
   }
 
   &__first-world {
@@ -138,22 +139,16 @@
 @include mixins.tablet {
   .category-card {
     grid-template-columns: repeat(2, minmax(210px, 1fr));
-    max-width: 440px;
   }
 }
-
 @include mixins.mobile-big {
   .category-card {
     grid-template-columns: repeat(2, minmax(194px, 1fr));
-    max-width: 408px;
   }
 }
 
 @include mixins.mobile {
   .category-card {
-    grid-template-columns: repeat(2, minmax(194px, 1fr));
-    max-width: 408px;
-
     &__sec-world {
       padding-left: 10px;
 
