@@ -36,7 +36,7 @@
   }
 }
 
-@include mixins.mobile {
+@media (max-width: 768px) {
   .catalog-banner {
     &__container {
       padding-block: 64px 16px;
