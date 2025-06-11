@@ -13,7 +13,7 @@
     list-style: none;
     display: flex;
     justify-content: space-between;
-
+    align-items: flex-end;
     @include mixins.font(
       var.$font-size-h5,
       var.$font-weight-bold,
