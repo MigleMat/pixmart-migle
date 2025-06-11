@@ -18,6 +18,10 @@
   &__spacer {
     height: 120px;
     background-color: var.$color-bg-base;
+
+    @include mixins.mobile {
+      height: 64px;
+    }
   }
 }
 

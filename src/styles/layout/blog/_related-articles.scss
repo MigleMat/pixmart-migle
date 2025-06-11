@@ -3,7 +3,7 @@
 
 .related-articles {
   background-color: var.$color-bg-alternative3;
-  padding-block: 50px;
+  padding-block: 40px;
 
   &__list-item {
     background-color: var.$color-bg-base;
@@ -111,8 +111,8 @@
   &__list {
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    gap: 24px;
   }
 
   &__list-item {
