@@ -44,7 +44,7 @@
   }
 }
 
-@include mixins.mobile {
+@media (max-width: 768px) {
   .blog {
     &__banner-title {
       @include mixins.font(
