@@ -273,7 +273,7 @@
     gap: 8px;
   }
 }
-@media (max-width: 768px) {
+@include mixins.mobile {
   .footer {
     &__nav-wrapper {
       flex-direction: column;
@@ -314,7 +314,7 @@
   }
 }
 
-@include mixins.mobile {
+@include mixins.mobile-big {
   .footer {
     &__container-wrapper {
       padding-block: 32px;

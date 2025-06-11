@@ -84,7 +84,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.mobile {
   .featured-articles {
     &__container {
       gap: 54px;

@@ -137,7 +137,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.mobile {
   .membership-card {
     min-width: 408px;
     padding: 32px;

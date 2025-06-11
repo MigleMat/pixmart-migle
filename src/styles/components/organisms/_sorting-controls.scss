@@ -144,7 +144,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.mobile {
   .sorting-controls {
     &__header {
       display: flex;

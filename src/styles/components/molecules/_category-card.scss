@@ -142,7 +142,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.mobile-big {
   .category-card {
     grid-template-columns: repeat(2, minmax(194px, 1fr));
     max-width: 408px;

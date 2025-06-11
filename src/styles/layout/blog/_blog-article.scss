@@ -134,7 +134,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.mobile {
   .article {
     &__wrapper {
       display: flex;

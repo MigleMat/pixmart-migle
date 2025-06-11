@@ -90,7 +90,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.mobile {
   .membership-plans {
     &__container {
       display: flex;

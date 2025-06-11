@@ -170,7 +170,7 @@
     bottom: 16px;
     right: 16px;
 
-    @media (max-width: 768px) {
+    @include mixins.mobile {
       bottom: 16px;
       right: 216px;
     }
@@ -208,7 +208,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.mobile {
   .contacts {
     &__container {
       display: flex;

@@ -65,7 +65,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.mobile-big {
   .category-highlight {
     &__container {
       flex-direction: column-reverse;

@@ -135,7 +135,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.mobile {
   .related-articles {
     padding-block: 32px;
 

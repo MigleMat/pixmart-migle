@@ -73,7 +73,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.mobile {
   .category-navigation {
     &__icon-box {
       padding: 32px;

@@ -33,7 +33,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.mobile {
   .blog {
     &__image {
       height: 127px;

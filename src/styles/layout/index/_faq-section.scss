@@ -98,7 +98,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.mobile {
   .faq-section {
     &__container {
       flex-direction: column;
