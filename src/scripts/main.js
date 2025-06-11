@@ -2,7 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const burgerBtn = document.querySelector(".header__burger-menu");
   const mobileNav = document.getElementById("mobilenav");
   const body = document.body;
-
+  const filterBtn = document.querySelector(
+    ".sorting-controls__filter-button-action"
+  );
+  const catalogSidebar = document.querySelector(".catalog-filters");
+  const closeBtn = document.querySelector(
+    ".catalog-filters__header-button-action"
+  );
   if (burgerBtn && mobileNav) {
     burgerBtn.addEventListener("click", () => {
       const isOpen = mobileNav.classList.contains("header__mobile-nav--open");
@@ -11,18 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
       body.classList.toggle("not-scrolled", !isOpen);
     });
   }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const filterBtn = document.querySelector(
-    ".sorting-controls__filter-button-action"
-  );
-  const catalogSidebar = document.querySelector(".catalog-filters");
-  const body = document.body;
-  const closeBtn = document.querySelector(
-    ".catalog-filters__header-button-action"
-  );
-
   if (filterBtn && catalogSidebar) {
     filterBtn.addEventListener("click", () => {
       const isShown = catalogSidebar.classList.contains("is-shown");

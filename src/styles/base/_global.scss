@@ -39,12 +39,10 @@
   --font-size-body: 16px;
   --font-size-small: 14px;
   --font-size-caption: 12px;
-
   --font-weight-small: 400;
   --font-weight-medium: 500;
   --font-weight-large: 600;
   --font-weight-bold: 700;
-
   --line-height-h1: 56px;
   --line-height-h2: 48px;
   --line-height-h3: 40px;
@@ -145,9 +143,7 @@ body {
 }
 
 body.not-scrolled {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
+  overflow-y: hidden;
 }
 
 *,
