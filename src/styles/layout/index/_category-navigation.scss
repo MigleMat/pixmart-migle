@@ -54,8 +54,7 @@
     );
   }
 }
-
-@include mixins.tablet {
+@include mixins.desktop {
   .category-navigation {
     &__list {
       flex-wrap: nowrap;
@@ -73,7 +72,7 @@
   }
 }
 
-@include mixins.mobile {
+@include mixins.mobile-big {
   .category-navigation {
     &__icon-box {
       padding: 32px;
