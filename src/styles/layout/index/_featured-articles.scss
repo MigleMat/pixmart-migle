@@ -54,7 +54,6 @@
   &__list {
     list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
     gap: 32px;
@@ -85,7 +84,7 @@
   }
 }
 
-@include mixins.mobile {
+@media (max-width: 768px) {
   .featured-articles {
     &__container {
       gap: 54px;
@@ -96,6 +95,10 @@
       flex-direction: column;
       gap: 24px;
       align-items: flex-start;
+    }
+
+    &__list {
+      flex-wrap: wrap;
     }
 
     &__list-item {

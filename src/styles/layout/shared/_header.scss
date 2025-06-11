@@ -14,7 +14,7 @@
     align-items: center;
     gap: 32px;
 
-    @include mixins.mobile {
+    @media (max-width: 768px) {
       gap: 16px;
     }
   }
@@ -25,7 +25,7 @@
     gap: 8px;
     flex: 0 1 288px;
 
-    @include mixins.mobile {
+    @media (max-width: 768px) {
       flex: 0 0 auto;
     }
   }
@@ -75,17 +75,22 @@
     }
   }
 
-  &__burger-menu,
   &__search-button {
     display: none;
-
     @include mixins.mobile {
+      display: inline-flex;
+    }
+  }
+
+  &__burger-menu {
+    display: none;
+    @media (max-width: 768px) {
       display: inline-flex;
     }
   }
 }
 
-@include mixins.mobile {
+@media (max-width: 768px) {
   body.not-scrolled {
     overflow: hidden;
     position: fixed;
