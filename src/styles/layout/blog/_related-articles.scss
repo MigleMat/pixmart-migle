@@ -117,8 +117,7 @@
 
   &__list-item {
     &:hover {
-      border: 2px solid var.$color-button-focus;
-      padding: 18px;
+      outline: 2px solid var.$color-button-focus;
     }
   }
 }
