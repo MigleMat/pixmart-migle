@@ -91,12 +91,6 @@
 }
 
 @media (max-width: 768px) {
-  body.not-scrolled {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-  }
-
   .header {
     &__nav {
       display: none;

@@ -147,6 +147,12 @@ body {
   background-color: var(--color-white);
 }
 
+body.not-scrolled {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 *,
 *::before,
 *::after {

@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
   const burgerBtn = document.querySelector(".header__burger-menu");
   const mobileNav = document.getElementById("mobilenav");
+  const body = document.body;
 
   if (burgerBtn && mobileNav) {
     burgerBtn.addEventListener("click", () => {
       const isOpen = mobileNav.classList.contains("header__mobile-nav--open");
       burgerBtn.setAttribute("aria-expanded", String(!isOpen));
       mobileNav.classList.toggle("header__mobile-nav--open", !isOpen);
+      body.classList.toggle("not-scrolled", !isOpen);
     });
   }
 });
@@ -26,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const isShown = catalogSidebar.classList.contains("is-shown");
       filterBtn.setAttribute("aria-expanded", String(!isShown));
       catalogSidebar.classList.toggle("is-shown", !isShown);
-      body.classList.toggle("not-scrolled", !isShown); // optional scroll-lock
+      body.classList.toggle("not-scrolled", !isShown);
     });
   }
   if (closeBtn) {
