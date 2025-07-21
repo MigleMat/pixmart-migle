@@ -331,12 +331,12 @@ export const optimizeRasterImages = () =>
           { format: "avif", rename: { suffix: "-2x" } },
           {
             width: (metadata) => Math.round(metadata.width * 0.5),
-            format: "avif",
             format: "webp",
             rename: { suffix: "-1x" },
           },
           {
             width: (metadata) => Math.round(metadata.width * 0.5),
+            format: "avif",
             rename: { suffix: "-1x" },
           },
         ],
