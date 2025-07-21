@@ -1,0 +1,17 @@
+{% extends "layouts/base.njk" %}
+
+{% set isHomePage = true %}
+{% set siteTitle = "PIXMart – Discover Premium Products and Smart Deals" %}
+{% set metaDescription = "Welcome to PIXMart – Discover smart deals and premium products online." %}
+
+{% block content %}
+    <main class="main main-layout main-layout--mobile">
+        {% include "partials/sections/index/hero.njk" %}
+        {% include "partials/sections/index/category-navigation.njk" %}
+        {% include "partials/sections/index/category-highlight.njk" %}
+        {% include "partials/sections/index/product-carousel.njk" %}
+        {% include "partials/sections/index/membership-plans.njk" %}
+        {% include "partials/sections/index/faq-section.njk" %}
+        {% include "partials/sections/index/featured-articles.njk" %}
+    </main>
+{% endblock %}

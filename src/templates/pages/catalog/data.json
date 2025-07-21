@@ -1,0 +1,265 @@
+{
+    "title": "<span class=\"catalog-banner__breakline\">Explore Top </span><span class=\"catalog-banner__highlight\">UI Kits</span> Design Assets",
+    "filterMenu": [
+        {
+            "id": "categories",
+            "name": "Categories"
+        },
+        {
+            "id": "format",
+            "name": "Format Type"
+        },
+        {
+            "id": "style",
+            "name": "Style"
+        },
+        {
+            "id": "price",
+            "name": "Price"
+        }
+    ],
+    "filterIcon": {
+        "iconId": "filter"
+    },
+    "filterHeadTitle": "Filters",
+    "filterHeader": {
+        "iconId": "close"
+    },
+    "filterFooterbtn": "Submit",
+    "filterItems": {
+        "categories": [
+            {
+                "name": "All Categories"
+            },
+            {
+                "name": "Technology"
+            },
+            {
+                "name": "Travel & Tourism"
+            },
+            {
+                "name": "Health & Fitness"
+            },
+            {
+                "name": "E-Commerce"
+            },
+            {
+                "name": "Education"
+            },
+            {
+                "name": "Entertainment"
+            },
+            {
+                "name": "Others"
+            },
+            {
+                "name": "Others"
+            }
+        ],
+        "format": [
+            {
+                "name": "Figma"
+            },
+            {
+                "name": "Sketch"
+            },
+            {
+                "name": "Adobe XD"
+            },
+            {
+                "name": "Adobe Photoshop"
+            },
+            {
+                "name": "Adobe Illustration"
+            }
+        ],
+        "style": [
+            {
+                "name": "Minimalist"
+            },
+            {
+                "name": "Modern"
+            },
+            {
+                "name": "Playful"
+            },
+            {
+                "name": "Dark Mode"
+            },
+            {
+                "name": "Photocentric"
+            }
+        ],
+        "price": [
+            {
+                "priceMin": "€5",
+                "priceMax": "€50"
+            }
+        ]
+    },
+    "filterBtn": "Clear all filter",
+    "sortingLabel": "Sort by:",
+    "sortingLegend": "Sorting Options",
+    "sortingBtn": "Submit",
+    "sortingBtns": [
+        {
+            "link": "#",
+            "iconId": "grid"
+        },
+        {
+            "link": "#",
+            "iconId": "list"
+        }
+    ],
+    "sortingOptions": [
+        {
+            "value": "bestseller",
+            "label": "Best Seller",
+            "selected": true
+        },
+        {
+            "value": "newest",
+            "label": "Newest"
+        },
+        {
+            "value": "price-low-high",
+            "label": "Price: Low to High"
+        },
+        {
+            "value": "price-high-low",
+            "label": "Price: High to Low"
+        },
+        {
+            "value": "alphabetical",
+            "label": "Alphabetical"
+        }
+    ],
+    "sortingResults": "Showing 12 out of 120 results.",
+    "selectedTags": [
+        "UI Kit",
+        "UI Kit"
+    ],
+    "catalogProducts": [
+        {
+            "base1x": "photography-website-1x",
+            "base2x": "photography-website-2x",
+            "alt": "Photography website showcasing overlapping portrait images, navigation bar, and brief text about the photographers work",
+            "title": "Lens Chronicles",
+            "desc": "Photography · Creative",
+            "price": "€00.00",
+            "label": "SOLD OUT",
+            "soldOut": true
+        },
+        {
+            "base1x": "job-website-1x",
+            "base2x": "job-website-2x",
+            "alt": "Career website with a job search bar, featured job listings, company logos, and a headline about career success.",
+            "title": "Career Success",
+            "desc": "Guidance · Jobs",
+            "price": "€20.99",
+            "label": "NEW"
+        },
+        {
+            "base1x": "real-estate-1x",
+            "base2x": "real-estate-2x",
+            "alt": "Real estate website featuring modern home images, a search prompt, newsletter sign-up, and company statistics.",
+            "title": "Dream Homes",
+            "desc": "Real Estate · Modern",
+            "price": "€45.99",
+            "label": "POPULAR"
+        },
+        {
+            "base1x": "foodish-delight-1x",
+            "base2x": "foodish-delight-2x",
+            "alt": "Catering website with bold text, colorful vegetable illustrations, and a button to explore services.",
+            "title": "Foodish Catering",
+            "desc": "Food · Events",
+            "price": "€15.99",
+            "label": "POPULAR"
+        },
+        {
+            "base1x": "healthcare-1x",
+            "base2x": "healthcare-2x",
+            "alt": "Healthcare website featuring a doctor profile, patient testimonials, service stats, and a call-to-action to book an appointment.",
+            "title": "Caring Hearts",
+            "desc": "Healthcare · Support",
+            "price": "€19.99",
+            "label": "NEW"
+        },
+        {
+            "base1x": "esports-news-1x",
+            "base2x": "esports-news-2x",
+            "alt": "Article on e-sports, featuring a photo of excited gamers and related posts on the right.",
+            "title": "Gaming Rise",
+            "desc": "eSports · Trends",
+            "price": "€00.00",
+            "label": "SOLD OUT",
+            "soldOut": true
+        },
+        {
+            "base1x": "video-edit-1x",
+            "base2x": "video-edit-2x",
+            "alt": "Video editing website with abstract purple graphics.",
+            "title": "Edit Pro",
+            "desc": "Design · Tools",
+            "price": "€00.00",
+            "label": "SOLD OUT",
+            "soldOut": true
+        },
+        {
+            "base1x": "banking-website-1x",
+            "base2x": "banking-website-2x",
+            "alt": "Financial services website with account stats, customer count.",
+            "title": "Banking Redefined",
+            "desc": "Finance · Secure",
+            "price": "€25.99",
+            "label": "NEW"
+        },
+        {
+            "base1x": "travel-hero-1x",
+            "base2x": "travel-hero-2x",
+            "alt": "Travel website featuring a cartoon explorer, testimonials, and navigation for trip planning.",
+            "title": "Exploring Fun",
+            "desc": "Travel · Adventure",
+            "price": "€41.99",
+            "label": "POPULAR"
+        },
+        {
+            "base1x": "dashboard-finance-1x",
+            "base2x": "dashboard-finance-2x",
+            "alt": "Financial admin dashboard showing charts, KPIs, graphs, and expense summaries in a structured layout.",
+            "title": "Admin Dashboard",
+            "desc": "Data · Tools",
+            "price": "€15.99",
+            "label": "POPULAR"
+        },
+        {
+            "base1x": "dashboard-school-1x",
+            "base2x": "dashboard-school-2x",
+            "alt": "School management dashboard with student data, attendance, schedules, and performance stats in colorful cards.",
+            "title": "Analytical Dashboard",
+            "desc": "Data · Tools",
+            "price": "€10.99",
+            "label": "NEW"
+        },
+        {
+            "base1x": "kindergarden-1x",
+            "base2x": "kindergarden-2x",
+            "alt": "Kindergarten website template with cheerful child imagery, event schedule, and a pastel color scheme.",
+            "title": "Kindergarden",
+            "desc": "Education · Kids",
+            "price": "€00.00",
+            "label": "SOLD OUT",
+            "soldOut": true
+        }
+    ],
+    "catalogCardgBtns": [
+        {
+            "iconId": "heart"
+        },
+        {
+            "iconId": "cart"
+        }
+    ],
+    "catalogButton": "Load more"
+}

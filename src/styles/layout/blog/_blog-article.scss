@@ -1,0 +1,153 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.article {
+  padding-top: 45px;
+  padding-bottom: 120px;
+
+  &__lead,
+  &__text,
+  &__summary {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-xl,
+      var.$font-weight-small,
+      var.$line-height-h5
+    );
+    color: var.$color-secondary;
+  }
+
+  &__caption-text {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+  }
+
+  &__heading {
+    margin: 0;
+    @include mixins.font(
+      var.$font-size-h4,
+      var.$font-weight-bold,
+      var.$line-height-h4
+    );
+  }
+
+  &__body {
+    max-width: 980px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__quote {
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  &__caption-text {
+    line-height: var.$line-height-body;
+  }
+
+  &__caption-link {
+    font-family: var.$font-family-secondary;
+    color: var.$color-icon;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-large,
+      var.$line-height-body
+    );
+
+    &:hover {
+      color: var.$color-hover;
+    }
+  }
+
+  &__quote-icon {
+    width: 64px;
+    height: 64px;
+    color: var.$color-icon;
+    flex-shrink: 0;
+    margin-top: -4px;
+  }
+
+  &__quote-text {
+    @include mixins.font(
+      var.$font-size-h4,
+      var.$font-weight-bold,
+      var.$line-height-h4
+    );
+  }
+
+  &__figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    object-position: 0% 30%;
+    display: block;
+  }
+
+  &__caption {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
+}
+
+@include mixins.tablet {
+  .article {
+    &__image {
+      width: 100%;
+      min-height: 462px;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .article {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .article {
+    &__image {
+      width: 100%;
+    }
+  }
+}

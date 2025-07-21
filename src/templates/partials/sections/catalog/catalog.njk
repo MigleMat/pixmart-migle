@@ -1,0 +1,85 @@
+<section class="catalog">
+    <div class="catalog__sorting-controls sorting-controls">
+        <div class="sorting-controls__header">
+            <div class="sorting-controls__header-wrapper">
+                <form class="sorting-controls__form">
+                    <fieldset class="sorting-controls__fieldset">
+                        <legend class="visually-hidden">{{ sortingLegend }}</legend>
+                        <div class="sorting-controls__categories-dropdown">
+                            <label class="sorting-controls__label visually-hidden" for="sort" >
+                                {{ sortingLabel }}
+                            </label>
+                            <select class="sorting-controls__dropdown" name="sort" id="sort">
+                                {% for option in sortingOptions %}
+
+                                    <option class="sorting-controls__options" value="{{ option.value }}" {% if option.selected %} selected{% endif %}>
+                                        {{ option.label }}
+                                    </option>
+
+                                {% endfor %}
+                            </select>
+                            <svg class="sorting-controls__arrow" aria-hidden="true" focusable="false">
+                                <use xlink:href="/img/sprite.svg#chevron"></use>
+                            </svg>
+                        </div>
+                    </fieldset>
+                    <button class="visually-hidden" type="submit">{{ sortingBtn }}</button>
+                </form>
+
+                {% set actionIconClass = 'button-action__icon' %}
+                {% set btn = filterIcon %}
+                {% set actionButtonClass = 'sorting-controls__filter-button-action button-action button-action--secondary' %}
+                {% include "partials/components/atoms/button-action.njk" %}
+
+            </div>
+            <div class="sorting-controls__group">
+                <p class="sorting-controls__result-count">{{ sortingResults }}</p>
+                <ul class="sorting-controls__buttons-list">
+                    {% for btn in sortingBtns %}
+                        <li class="sorting-controls__buttons-list-item">
+
+                            {% set actionIconClass = 'button-action__icon' %}
+                            {% set actionButtonClass = 'sorting-controls__button-action button-action' %}
+                            {% if btn.iconId == 'grid' %}
+                                {% set actionButtonClass = actionButtonClass + ' button-action--secondary' %}
+                            {% endif %}
+
+                            {% include "partials/components/atoms/button-action.njk" %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="sorting-controls__tags">
+            {% for tag in selectedTags %}
+
+                <button class="sorting-controls__tag" type="button">
+                    <span class="sorting-controls__text">{{ tag }}</span>
+                    <svg class="sorting-controls__icon">
+                        <use xlink:href="/img/sprite.svg#close"></use>
+                    </svg>
+                </button>
+
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="catalog__products">
+        <ul class="catalog__list">
+            {% for product in catalogProducts %}
+                <li class="catalog__list-item">
+
+                    {% include "partials/components/molecules/catalog-card.njk" %}
+
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="catalog__button-wrapper">
+        <a class="catalog__button" href="#">
+            <span class="catalog__button-text">{{ catalogButton }}</span>
+        </a>
+    </div>
+
+</section>

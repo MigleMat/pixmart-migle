@@ -1,0 +1,37 @@
+<section class="hero">
+    <div class="hero__container layout-container layout-container--hero">
+        <div class="hero__content">
+            <h1 class="hero__title">{{ hero.title | safe }}</h1>
+            <h5 class="hero__description">{{ hero.text }}</h5>
+
+            <div class="hero__actions">
+                {% for btn in heroButtons %}
+
+                    {% if btn.text == "Shop Now" %}
+                        {% set linkButtonClass = "hero__button-link button-link button-link--secondary" %}
+                        {% set linkTextClass = 'button-link__text' %}
+                    {%else %}
+                        {% set linkButtonClass = "hero__button-link button-link button-link--tertiary" %}
+                        {% set linkIconClass = "button-link__icon" %}
+                        {% set linkTextClass = 'button-link__text' %}
+                    {% endif %}
+                    {% include "partials/components/atoms/button-link.njk" %}
+
+                {% endfor %}
+            </div>
+        </div>
+
+        <picture class="hero__picture">
+            <source srcset="/img/hero-bg-mobile-2x.webp" media="(max-width: 440px)" type="image/webp">
+            <source srcset="/img/hero-bg-tablet-2x.webp" media="(max-width: 1024px)" type="image/webp">
+            <img
+                class="hero__image"
+                src="/img/hero-bg-2x.webp"
+                alt=""
+                loading="lazy"
+                decoding="async"
+                width="624"
+                height="544">
+        </picture>
+    </div>
+</section>

@@ -1,0 +1,39 @@
+<aside class="sidebar">
+    <div class="sidebar__wrapper">
+        <h4 class="sidebar__categories-title">{{ titleCat }}</h4>
+        <ul class="sidebar__categories">
+
+            {% for item in sidebarCategories %}
+
+                <li class="sidebar__categories-item">
+                    {{ item.name }}
+                    {% if item.subitems %}
+                        <ul class="sidebar__categories-sublist">
+                            {% for sub in item.subitems %}
+
+                                <li class="sidebar__categories-subitem">
+                                    {{ sub }}
+                                </li>
+
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="sidebar__wrapper">
+        <h4 class="sidebar__latest-articles-title">{{ titleLat}}</h4>
+        <ul class="sidebar__latest-articles">
+
+            {% for item in sidebarLatest %}
+
+                <li class="sidebar__latest-articles-item">
+                    <span class="sidebar__latest-articles-text">{{ item.name }}</span>
+                    <span class="sidebar__latest-article-date">{{ item.date }}</span>
+                </li>
+
+            {% endfor %}
+        </ul>
+    </div>
+</aside>

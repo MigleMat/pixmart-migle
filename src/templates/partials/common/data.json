@@ -1,0 +1,183 @@
+{
+    "logo": {
+        "link": "/index.html"
+    },
+    "headerLabel": "Search",
+    "headerFormBtn": "Search",
+    "burgerNav": [
+        {
+            "link": "#",
+            "label": "About"
+        },
+        {
+            "link": "/catalog.html",
+            "label": "Products"
+        },
+        {
+            "link": "#",
+            "label": "Creators"
+        },
+        {
+            "link": "/blog.html",
+            "label": "Blog"
+        },
+        {
+            "link": "/contacts.html",
+            "label": "Contact"
+        }
+    ],
+    "navItems": [
+        {
+            "link": "#",
+            "label": "About"
+        },
+        {
+            "link": "/catalog.html",
+            "label": "Products"
+        },
+        {
+            "link": "#",
+            "label": "Creators"
+        },
+        {
+            "link": "/blog.html",
+            "label": "Blog"
+        },
+        {
+            "link": "/contacts.html",
+            "label": "Contact"
+        }
+    ],
+    "headerBtn": {
+        "link": "#",
+        "iconId": "cart"
+    },
+    "headerError": "This field is required.",
+    "headerSuccess": "Field validation is successful.",
+    "burgerBtn": {
+        "iconId": "menu"
+    },
+    "burgerSearchBtn": {
+        "iconId": "search"
+    },
+    "footerDesc": "Your premium digital assets solution with high quality and comprehensive range of products and services.",
+    "navSections": [
+        {
+            "title": "Company",
+            "links": [
+                {
+                    "label": "Homepage v1",
+                    "link": "#"
+                },
+                {
+                    "label": "Homepage v2",
+                    "link": "#"
+                },
+                {
+                    "label": "Homepage v3",
+                    "link": "#"
+                },
+                {
+                    "label": "About us",
+                    "link": "#"
+                },
+                {
+                    "label": "About us",
+                    "link": "#"
+                },
+                {
+                    "label": "Blog Articles",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "title": "Products",
+            "links": [
+                {
+                    "label": "Website",
+                    "link": "#"
+                },
+                {
+                    "label": "Mobile App",
+                    "link": "#"
+                },
+                {
+                    "label": "Social Media Feeds",
+                    "link": "#"
+                },
+                {
+                    "label": "Presentation",
+                    "link": "#"
+                },
+                {
+                    "label": "Product Mockups",
+                    "link": "#"
+                },
+                {
+                    "label": "Illustrations",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "title": "Account",
+            "links": [
+                {
+                    "label": "Your Cart",
+                    "link": "#"
+                },
+                {
+                    "label": "Check Out",
+                    "link": "#"
+                },
+                {
+                    "label": "Refund Policy",
+                    "link": "#"
+                },
+                {
+                    "label": "Company Policy",
+                    "link": "#"
+                },
+                {
+                    "label": "Send A Message",
+                    "link": "#"
+                },
+                {
+                    "label": "Customer Support",
+                    "link": "#"
+                }
+            ]
+        }
+    ],
+    "footerSocials": [
+        {
+            "link": "#",
+            "iconId": "twitter"
+        },
+        {
+            "link": "#",
+            "iconId": "facebook"
+        },
+        {
+            "link": "#",
+            "iconId": "telegram"
+        }
+    ],
+    "newsletterLabel": "<span class=\"footer__breakline\">Subscribe to </span>Design Newsletter",
+    "newsletterBtn": "Subscribe",
+    "footerError": "This field is required.",
+    "footerSuccess": "Field validation is successful.",
+    "footerLegal": [
+        {
+            "link": "Privacy Policy"
+        },
+        {
+            "link": "Terms and Condition"
+        },
+        {
+            "link": "Site Map"
+        }
+    ],
+    "footerCredits": "Copyright © 2024 Pixmart. All rights reserved."
+}

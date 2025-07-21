@@ -1,0 +1,135 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.sidebar {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 40px;
+  }
+
+  &__categories-title,
+  &__latest-articles-title {
+    margin: 0;
+    padding-top: 37px;
+    @include mixins.font(
+      var.$font-size-h4,
+      var.$font-weight-bold,
+      var.$line-height-h4
+    );
+    border-top: 2px solid var.$color-primary;
+  }
+
+  &__latest-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__categories,
+  &__latest-articles {
+    list-style-type: none;
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__categories-item {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    color: var.$color-secondary;
+    padding-left: 16px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      color: var.$color-bg-baseIcon;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 11px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var.$color-icon;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__categories-sublist {
+    list-style-type: none;
+  }
+
+  &__categories-subitem {
+    position: relative;
+    font-weight: var.$font-weight-large;
+    color: var.$color-primary;
+    padding-left: 16px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 11px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var.$color-icon;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__latest-articles-text {
+    @include mixins.font(
+      var.$font-size-h5,
+      var.$font-weight-bold,
+      var.$line-height-medium
+    );
+  }
+
+  &__latest-article-date {
+    color: var.$color-secondary;
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+
+    &:hover {
+      color: var.$color-bg-baseIcon;
+    }
+  }
+
+  &__latest-articles-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -24px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var.$color-primary2-op;
+    }
+
+    &:first-child::before {
+      display: none;
+    }
+  }
+}

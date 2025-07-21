@@ -1,0 +1,38 @@
+<div class="category-card">
+
+    <ul class="category-card__first-column-list">
+        {% for item in firstColumn %}
+
+            <li class="category-card__first-column-list-item">
+                <svg class="category-card__icon" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#{{ item.icon }}"></use>
+                </svg>
+                <span class="category-card__title">{{ item.title }}</span>
+                <div class="category-card__desc">
+                    <span class="category-card__first-world">{{ item.first }}</span>
+                    <span class="category-card__sec-world">{{ item.sec }}</span>
+                </div>
+            </li>
+
+        {% endfor %}
+        <li class="category-card__first-column-list-item category-card__spacer category-card__spacer--down"></li>
+    </ul>
+
+    <ul class="category-card__second-column-list">
+        <li class="category-card__second-column-list-item category-card__spacer category-card__spacer--up"></li>
+        {% for item in secondColumn %}
+
+            <li class="category-card__first-column-list-item{% if item.title == 'App Icons' %} category-card__first-column-list-item--highlighted{% endif %}">
+                <svg class="category-card__icon{% if item.title == 'App Icons' %} category-card__icon--highlighted{% endif %}" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#{{ item.icon }}"></use>
+                </svg>
+                <span class="category-card__title{% if item.title == 'App Icons' %} category-card__title--highlighted{% endif %}">{{ item.title }}</span>
+                <div class="category-card__desc">
+                    <span class="category-card__first-world{% if item.title == 'App Icons' %} category-card__first-world--highlighted{% endif %}">{{ item.first}}</span>
+                    <span class="category-card__sec-world{% if item.title == 'App Icons' %} category-card__sec-world--highlighted{% endif %}">{{ item.sec }}</span>
+                </div>
+            </li>
+
+        {% endfor %}
+    </ul>
+</div>

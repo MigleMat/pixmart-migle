@@ -1,0 +1,132 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__icon {
+    color: var.$color-primary-invert;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__title {
+    @include mixins.font(
+      var.$font-size-h3,
+      var.$font-weight-bold,
+      var.$line-height-h3
+    );
+
+    &--highlighted {
+      color: var.$color-primary-invert;
+    }
+  }
+
+  &__price,
+  &__first-word,
+  &__sec-word {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+  }
+
+  &__price {
+    color: var.$color-icon;
+    font-weight: var.$font-weight-medium;
+  }
+
+  &__first-word,
+  &__sec-word {
+    color: var.$color-secondary2;
+  }
+
+  &__sec-word {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background: var.$color-secondary2;
+      transform: translateY(10px);
+      left: -10px;
+    }
+  }
+
+  &__badge {
+    background-color: var.$color-icon;
+    padding: 16px;
+    position: absolute;
+    left: 249px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  &__btn {
+    @include mixins.button-reset;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__image {
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: 20%;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    align-items: center;
+  }
+
+  &__description {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__photo-content {
+    position: relative;
+
+    &--hover .product-card__overlay {
+      opacity: 1;
+    }
+  }
+
+  &__button-link {
+    width: 273px;
+    display: block;
+    text-align: center;
+  }
+
+  &__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    content: "";
+    background-color: rgba(231, 238, 247, 0.66);
+    border-radius: 20px;
+    z-index: 1;
+    opacity: 0;
+    inset: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  &:hover .product-card__overlay {
+    opacity: 1;
+  }
+}

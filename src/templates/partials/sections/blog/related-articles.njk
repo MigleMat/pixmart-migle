@@ -1,0 +1,47 @@
+<section class="blog">
+    <div class="blog__related-articles related-articles layout-container">
+        <div class="related-articles__header">
+            <h2 class="related-articles__heading">{{ articlesHeader }}</h2>
+            <a class="related-articles__link" href="#">
+                <span class="related-articles__text">{{ articlesText }}</span>
+                <svg class="related-articles__icon">
+                    <use xlink:href="/img/sprite.svg#chevron"></use>
+                </svg>
+            </a>
+        </div>
+
+        <ul class="related-articles__list">
+            {% for blog in relatedArticlesCards %}
+
+                <li class="related-articles__list-item{% if blog.title == 'Creative blog'%} related-articles__list-item--wide{% endif %}">
+                    <article class="related-articles__card">
+                        <div class="related-articles__media">
+                            <picture class="related-articles__picture">
+                                <source 
+                                    srcset="/img/{{ blog.base1x }}.webp 1x, /img/{{ blog.base2x }}.webp 2x" 
+                                    type="image/webp">
+                                <source 
+                                    srcset="/img/{{ blog.base1x }}.avif 1x, /img/{{ blog.base2x }}.avif 2x" 
+                                    type="image/avif">
+                                <img 
+                                    src="/img/{{ blog.base1x }}.jpg" 
+                                    srcset="/img/{{ blog.base1x }}.jpg 1x, /img/{{ blog.base2x }}.jpg 2x" 
+                                    alt="{{ blog.alt }}"
+                                    class="related-articles__image"
+                                    height="272"
+                                    width="741">
+                            </picture>
+                            <span class="related-articles__tag">{{ blog.tag }}</span>
+                        </div>
+
+                        <div class="related-articles__content">
+                            <h3 class="related-articles__title">{{ blog.title }}</h3>
+                            <time class="related-articles__date" datetime="{{ blog.date }}">{{ blog.formattedDate }}</time>
+                        </div>
+                    </article>
+                </li>
+
+            {% endfor %}
+        </ul>
+    </div>
+</section>

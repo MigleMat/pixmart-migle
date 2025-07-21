@@ -1,0 +1,74 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.category-highlight {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  &__header {
+    @include mixins.flex(
+      $justify: center,
+      $align: flex-start,
+      $direction: column,
+      $gap: 16px
+    );
+  }
+
+  &__subtitle {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    color: var.$color-subtitle;
+  }
+
+  &__title {
+    @include mixins.font(
+      var.$font-size-h2,
+      var.$font-weight-bold,
+      var.$line-height-h2
+    );
+    letter-spacing: var.$spacing-minus;
+    color: var.$color-primary2;
+  }
+
+  &__break-line {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-xl,
+      var.$font-weight-small,
+      var.$line-height-h5
+    );
+    color: var.$color-primary2-op;
+  }
+
+  &__cards {
+    max-width: 608px;
+    width: 100%;
+  }
+}
+
+@include mixins.mobile-big {
+  .category-highlight {
+    &__container {
+      flex-direction: column-reverse;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<div class="catalog-card">
+    {% if product.soldOut %}
+        <div class="catalog-card__overlay"></div>
+    {% endif %}
+    <div class="catalog-card__media">
+        <span class="catalog-card__label label{% if product.label == 'NEW' %} label--accent{% elif product.label == 'POPULAR' %} label--primary{% endif %}">
+            {{ product.label }}
+        </span>
+        <picture class="catalog-card__picture">
+            <source 
+                srcset="/img/{{ product.base1x }}.webp 1x, /img/{{ product.base2x }}.webp 2x" 
+                type="image/webp"
+            >
+            <source 
+                srcset="/img/{{ product.base1x }}.avif 1x, /img/{{ product.base2x }}.avif 2x" 
+                type="image/avif"
+            >
+            <img 
+                src="/img/{{ product.base1x }}.jpg" 
+                srcset="/img/{{ product.base1x }}.jpg 1x, /img/{{ product.base2x }}.jpg 2x" 
+                width="325"
+                height="272" 
+                alt="{{ product.alt }}"
+                class="catalog-card__image"
+            >
+        </picture>
+    </div>
+    <div class="catalog-card__content">
+        <h3 class="catalog-card__title">
+            {{ product.title }}
+        </h3>
+        <p class="catalog-card__description">
+            {{ product.desc }}
+        </p>
+        <div class="catalog-card__footer">
+            <p class="catalog-card__price">{{ product.price }}</p>
+
+            {% if not product.soldOut %}
+                <ul class="catalog-card__buttons-list">
+
+                    {% for btn in catalogCardgBtns %}
+                        <li class="catalog-card__buttons-item">
+
+                            {% set actionIconClass = 'button-action__icon' %}
+                            {% set actionButtonClass = 'catalog-card__button-action button-action' %}
+                            {% if btn.iconId == 'cart' %}
+                                {% set actionButtonClass = actionButtonClass + ' button-action--secondary' %}
+                            {% endif %}
+
+                            {% include "partials/components/atoms/button-action.njk" %}
+                        </li>
+                    {% endfor %}
+
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+</div>

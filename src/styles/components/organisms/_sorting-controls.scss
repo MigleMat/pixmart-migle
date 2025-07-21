@@ -1,0 +1,165 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.sorting-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__categories-dropdown {
+    position: relative;
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 19px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  &__dropdown {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-large,
+      var.$line-height-body
+    );
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    padding: 7px 20px;
+    max-width: 156px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var.$color-separator-bold;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__options {
+    background-color: var.$color-primary-invert;
+    color: var.$color-primary;
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+
+  &__categories-dropdown:focus-within .sorting-controls__arrow {
+    transform: translateY(-50%) rotate(-90deg);
+  }
+
+  &__result-count {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+  }
+
+  &__buttons-list {
+    list-style-type: none;
+  }
+
+  &__tags {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__tag {
+    @include mixins.button-reset;
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-md,
+      var.$font-weight-large,
+      var.$line-height-base
+    );
+    border: 1px solid var.$color-separator-bold;
+    border-radius: 8px;
+    padding: 5px 11px;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  &__text {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-md,
+      var.$font-weight-large,
+      var.$line-height-small
+    );
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__group {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  &__buttons-list {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__filter-button-action {
+    display: none;
+  }
+}
+
+@include mixins.tablet {
+  .sorting-controls {
+    &__filter-button-action {
+      display: inline-flex;
+      width: 40px;
+      height: 40px;
+    }
+
+    &__header-wrapper {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .sorting-controls {
+    &__header {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__dropdown {
+      min-width: 360px;
+      width: 100%;
+    }
+
+    &__group {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

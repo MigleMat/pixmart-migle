@@ -1,0 +1,56 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.catalog-banner {
+  &__container {
+    background-color: var.$color-bg-base;
+    background-image: url("/img/catalog-bg-2x.webp");
+    height: 288px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-block: 64px 80px;
+    padding-left: 80px;
+  }
+
+  &__title {
+    @include mixins.font(
+      var.$font-size-h1,
+      var.$font-weight-bold,
+      var.$line-height-h1
+    );
+    letter-spacing: var.$spacing-minus;
+  }
+
+  &__highlight {
+    color: var.$color-icon;
+  }
+
+  &__breakline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@include mixins.mobile {
+  .catalog-banner {
+    &__container {
+      padding-block: 64px 16px;
+      padding-left: 16px;
+      height: 256px;
+      background-position: 15% 0%;
+    }
+
+    &__title {
+      @include mixins.font(
+        var.$font-size-h2,
+        var.$font-weight-bold,
+        var.$line-height-h2
+      );
+    }
+  }
+}

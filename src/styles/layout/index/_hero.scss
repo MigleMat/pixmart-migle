@@ -1,0 +1,101 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.hero {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 47px;
+
+    background: linear-gradient(
+      to right,
+      rgba(240 246 253) 0%,
+      rgba(255 255 255) 100%
+    );
+    @include mixins.desktop {
+      padding-block: 120px 58px;
+    }
+    @include mixins.tablet {
+      flex-direction: column-reverse;
+      gap: 36px;
+      padding-block: 32px 64px;
+    }
+  }
+
+  &__content {
+    max-width: 740px;
+    padding-inline-end: 15px;
+    @include mixins.flex(
+      $justify: flex-start,
+      $align: flex-start,
+      $direction: column,
+      $gap: 32px
+    );
+
+    @include mixins.mobile {
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 624px;
+    height: auto;
+    display: block;
+
+    @include mixins.tablet {
+      max-width: 444px;
+    }
+
+    @include mixins.mobile {
+      max-width: 408px;
+    }
+  }
+
+  &__picture {
+    flex-shrink: 1;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  &__title {
+    letter-spacing: var.$spacing-minus;
+    @include mixins.font(
+      var.$font-size-h1,
+      var.$font-weight-bold,
+      var.$line-height-h1
+    );
+  }
+
+  &__line-one,
+  &__line-two {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__highlight {
+    color: var.$color-icon;
+  }
+
+  &__description {
+    margin-block: 0;
+    color: var.$color-secondary;
+
+    @include mixins.font(
+      var.$font-size-h5,
+      var.$font-weight-medium,
+      var.$line-height-h5
+    );
+  }
+
+  &__actions {
+    display: flex;
+    gap: 24px;
+
+    @include mixins.mobile {
+      align-items: center;
+    }
+  }
+}

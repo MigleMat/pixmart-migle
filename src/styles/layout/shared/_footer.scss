@@ -1,0 +1,354 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.footer {
+  &__container-wrapper {
+    padding-top: 64px;
+    padding-bottom: 135px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  &__description {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+  }
+
+  &__nav-column {
+    flex: 1;
+  }
+
+  &__heading {
+    margin-bottom: 16px;
+
+    @include mixins.font(
+      var.$font-size-h5,
+      var.$font-weight-bold,
+      var.$line-height-medium
+    );
+  }
+
+  &__socials-list {
+    list-style-type: none;
+    display: flex;
+    gap: 8px;
+  }
+
+  &__button-link {
+    width: 64px;
+    height: 64px;
+    padding: 20px;
+
+    &:hover {
+      background-color: var.$color-disabled-bg;
+    }
+
+    &:focus {
+      border: 4px solid var.$color-focus;
+      background-color: var.$color-disabled-bg;
+      padding: 18px;
+    }
+
+    &:active {
+      background-color: var.$color-disabled-bg;
+      border: 2px solid var.$color-separator-bold;
+      padding: 20px;
+    }
+
+    &:disabled {
+      color: var.$color-disabled;
+      background-color: var.$color-button-disabled;
+    }
+  }
+
+  &__socials-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__newsletter-form {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__newsletter-label {
+    padding-right: 20px;
+    @include mixins.font(
+      var.$font-size-h4,
+      var.$font-weight-bold,
+      var.$line-height-h4
+    );
+  }
+
+  &__newsletter-input {
+    min-width: 240px;
+    @include mixins.button-reset;
+    border: 1px solid rgb(29 54 83 / 0.17);
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &::placeholder {
+      color: rgb(42 53 65 / 0.7);
+      font-family: var.$font-family-secondary;
+      @include mixins.font(
+        var.$font-size-l,
+        var.$font-weight-small,
+        var.$line-height-body
+      );
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:hover {
+      outline: 2px solid var.$color-hover;
+      border-radius: 8px;
+    }
+
+    &:focus {
+      outline: 3px solid var.$color-hover;
+      border-radius: 8px;
+    }
+
+    &:user-invalid {
+      outline: 1px solid var.$color-danger;
+    }
+
+    &:valid {
+      outline: 1px solid var.$color-separator-bold;
+    }
+
+    &:disabled {
+      background-color: var.$color-disabled-bg;
+      cursor: not-allowed;
+    }
+  }
+  &__newsletter-success {
+    position: absolute;
+    transform: translateY(65px);
+    display: none;
+    color: var.$color-success;
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-sm,
+      var.$font-weight-small,
+      var.$line-height-caption
+    );
+  }
+
+  &__newsletter-input:valid ~ &__newsletter-success {
+    display: block;
+  }
+
+  &__newsletter-error {
+    position: absolute;
+    transform: translateY(65px);
+    display: none;
+    font-family: var.$font-family-secondary;
+    color: var.$color-danger;
+    @include mixins.font(
+      var.$font-size-sm,
+      var.$font-weight-small,
+      var.$line-height-caption
+    );
+  }
+
+  &__newsletter-input:user-invalid + &__newsletter-error {
+    display: block;
+  }
+
+  &__newsletter-button {
+    @include mixins.button-reset;
+    color: var.$color-primary-white;
+    background-color: var.$color-icon;
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-large,
+      var.$line-height-body
+    );
+    padding: 20px 40px;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: var.$color-hover;
+    }
+
+    &:focus {
+      border: 4px solid var.$color-focus;
+      background-color: var.$color-button-focus;
+      padding: 16px 36px;
+    }
+
+    &:active {
+      background-color: var.$color-button-active;
+    }
+  }
+
+  &__breakline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__copyright-wrapper {
+    background-color: var.$color-bg-base-invert;
+  }
+
+  &__copyright {
+    color: var.$color-secondary2-invert;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 80px;
+  }
+
+  &__legal-list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__credits {
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+  }
+
+  &__legal-list-item {
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      right: -8px;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 16px;
+      background-color: var.$color-secondary2-invert;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+  &__legal-link {
+    &:hover {
+      color: var.$color-disabled-invert;
+    }
+  }
+
+  &__intro {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__branding {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav-wrapper {
+    display: flex;
+    gap: 64px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 32px;
+  }
+
+  &__newsletter-controls {
+    display: flex;
+    gap: 8px;
+  }
+}
+@include mixins.tablet {
+  .footer {
+    &__intro {
+      gap: 10px;
+    }
+
+    &__branding {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__actions {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__newsletter-form {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__copyright {
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+      align-items: flex-start;
+      gap: 32px;
+      padding: 24px 16px;
+    }
+  }
+}
+
+@include mixins.mobile-big {
+  .footer {
+    &__nav-wrapper {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__container-wrapper {
+      padding-block: 32px;
+      gap: 62px;
+      margin-bottom: 24px;
+    }
+
+    &__branding {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__intro {
+      max-width: 408px;
+      width: 100%;
+      gap: 10px;
+    }
+
+    &__actions {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__newsletter-form {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__newsletter-controls {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+    }
+  }
+}

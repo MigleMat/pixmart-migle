@@ -1,0 +1,108 @@
+@use "../base/variables" as var;
+@use "../base/mixins" as mixins;
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-block: 24px;
+  }
+  &__branding {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    @include mixins.tablet {
+      gap: 16px;
+    }
+  }
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 1 288px;
+    @include mixins.mobile-big {
+      flex: 0 0 auto;
+    }
+  }
+  &__search {
+    flex: 0 1 288px;
+    @include mixins.mobile-big {
+      display: none;
+    }
+  }
+  &__mobile-nav {
+    display: none;
+  }
+  &__mobile-nav-list {
+    list-style: none;
+    @include mixins.flex(flex-start, flex-start, column, var.$spacing-xs);
+    gap: 8px;
+  }
+  &__mobile-nav-link {
+    display: block;
+    font-family: var.$font-family-secondary;
+    border: 4px solid transparent;
+    padding: 18px 32px;
+    @include mixins.font(
+      var.$font-size-xl,
+      var.$font-weight-large,
+      var.$line-height-h5
+    );
+    &:hover {
+      color: var.$color-hover;
+    }
+    &:focus {
+      color: var.$color-bg-base-invert;
+      border: 4px solid var.$color-focus;
+      border-radius: 8px;
+      padding: 18px 32px;
+    }
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  &__search-button {
+    display: none;
+    @include mixins.mobile {
+      display: inline-flex;
+    }
+  }
+  &__burger-menu {
+    display: none;
+    @include mixins.tablet {
+      display: inline-flex;
+    }
+  }
+}
+@include mixins.tablet {
+  .header {
+    &__nav {
+      display: none;
+    }
+    &__mobile-nav {
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 88px;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(
+        to right,
+        rgb(240 246 253) 0%,
+        rgb(255 255 255) 100%
+      );
+      padding: 16px;
+      z-index: var.$base;
+      transition: transform 0.3s ease;
+      transform: translateX(-100%);
+      &--open {
+        height: 100vh;
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+        z-index: 5;
+      }
+    }
+  }
+}

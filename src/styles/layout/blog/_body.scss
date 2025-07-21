@@ -1,0 +1,55 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.blog {
+  &__picture {
+    display: flex;
+    width: 100%;
+  }
+
+  &__image {
+    display: block;
+    object-fit: cover;
+    object-position: 20% 5%;
+    border-radius: 20px;
+    margin: 0 auto;
+    height: 420px;
+    width: 1360px;
+  }
+
+  &__spacer {
+    height: 120px;
+    background-color: var.$color-bg-base;
+
+    @include mixins.mobile {
+      height: 64px;
+    }
+  }
+}
+
+@include mixins.desktop {
+  .blog {
+    &__image {
+      height: 300px;
+      width: 980px;
+    }
+  }
+}
+
+@include mixins.tablet {
+  .blog {
+    &__image {
+      height: 215px;
+      width: 700px;
+    }
+  }
+}
+
+@include mixins.mobile-big {
+  .blog {
+    &__image {
+      height: 127px;
+      width: 400px;
+    }
+  }
+}

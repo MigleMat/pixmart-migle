@@ -1,0 +1,24 @@
+<section class="category-highlight">
+    <div class="category-highlight__container layout-container">
+        <div class="category-highlight__cards">
+
+            {% include "partials/components/molecules/category-card.njk" %}
+
+        </div>
+
+        <div class="category-highlight__content">
+            <div class="category-highlight__header">
+                <p class="category-highlight__subtitle">{{ categoriesHeader.subtitle }}</p>
+                <h2 class="category-highlight__title">{{ categoriesHeader.title | safe }}</h2>
+                <p class="category-highlight__description">{{ categoriesHeader.desc }}</p>
+            </div>
+
+            <div class="category-highlight__footer">
+                {% set linkButtonClass = "category-highlight__button-link button-link button-link--secondary" %}
+                {% set linkTextClass = 'button-link__text' %}
+                {% set btn = categoriesButton %}
+                {% include "partials/components/atoms/button-link.njk" %}
+            </div>
+        </div>
+    </div>
+</section>

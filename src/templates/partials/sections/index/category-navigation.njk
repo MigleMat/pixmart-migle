@@ -1,0 +1,18 @@
+<section class="category-navigation">
+    <div class="category-navigation__container layout-container">
+        <ul class="category-navigation__list">
+            {% for category in productCategories %}
+                <li class="category-navigation__list-item">
+                    <a class="category-navigation__link" href="#">
+                        <div class="category-navigation__icon-box">
+                            <svg class="category-navigation__icon" aria-hidden="true" focusable="false">
+                                <use xlink:href="/img/sprite.svg#{{ category.icon }}"></use>
+                            </svg>
+                        </div>
+                        <span class="category-navigation__label">{{ category.label }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

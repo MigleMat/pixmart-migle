@@ -1,0 +1,232 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.contacts {
+  &__container {
+    background: linear-gradient(
+      to bottom,
+      var.$color-bg-alternative3,
+      var.$color-bg-base
+    );
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+    padding-top: 64px;
+    padding-bottom: 116px;
+  }
+
+  &__subtitle {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    color: var.$color-icon;
+  }
+
+  &__title {
+    @include mixins.font(
+      var.$font-size-h1,
+      var.$font-weight-bold,
+      var.$line-height-h1
+    );
+    letter-spacing: var.$spacing-minus;
+  }
+
+  &__description {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-xl,
+      var.$font-weight-small,
+      var.$line-height-h5
+    );
+    color: var.$color-secondary;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__list-item {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-xl,
+      var.$font-weight-large,
+      var.$line-height-h5
+    );
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    color: var.$color-icon;
+  }
+
+  &__map {
+    max-width: 618px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  &__address-info {
+    display: inline-block;
+    background-color: var.$color-bg-base;
+    padding: 12px 16px;
+    border-radius: 10px;
+  }
+
+  &__name {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-bold,
+      var.$line-height-body
+    );
+  }
+
+  &__address {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    color: var.$color-secondary;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__break-line {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button-link {
+    font-family: var.$font-family-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-large,
+      var.$line-height-body
+    );
+
+    padding: 20px;
+    width: fit-content;
+    border: none;
+    margin-bottom: 32px;
+
+    &:hover {
+      background-color: var.$color-hover;
+    }
+
+    &:focus {
+      border: 4px solid var.$color-focus;
+      background-color: var.$color-button-focus;
+      padding: 16px;
+    }
+
+    &:active {
+      background-color: var.$color-button-active;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
+  }
+
+  &__location {
+    position: relative;
+  }
+
+  &__address-info {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+
+    @include mixins.mobile {
+      bottom: 16px;
+      right: 216px;
+    }
+
+    @include mixins.mobile {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+
+  &__address-info {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+
+  &__address-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    &:hover {
+      color: var.$color-button-focus;
+    }
+  }
+}
+
+@include mixins.tablet {
+  .contacts {
+    &__map {
+      width: 100%;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .contacts {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-bottom: 128px;
+    }
+
+    &__map {
+      width: 100%;
+    }
+  }
+
+  @include mixins.mobile {
+    .contacts {
+      &__container {
+        padding-bottom: 94px;
+      }
+    }
+  }
+}

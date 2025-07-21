@@ -1,0 +1,150 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.membership-card {
+  position: relative;
+  background-color: var.$color-bg-base;
+  box-shadow: 0 4px 40px var.$color-shadow;
+  padding: 32px;
+  border-radius: 20px;
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+
+  &:hover {
+    border: 2px solid var.$color-icon;
+    transform: translateY(-32px);
+    transition: transform 0.4s ease;
+  }
+
+  &--highlighted {
+    border: 2px solid var.$color-icon;
+    transform: translateY(-32px);
+    padding-top: 50px;
+  }
+
+  &__tag {
+    position: absolute;
+    background-color: var.$color-icon;
+    color: var.$color-bg-base;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 7px 24px;
+    top: -2px;
+    right: -2px;
+
+    @include mixins.font(
+      var.$font-size-h5,
+      var.$font-weight-bold,
+      var.$line-height-medium
+    );
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__label {
+    margin: 0;
+
+    @include mixins.font(
+      var.$font-size-h5,
+      var.$font-weight-bold,
+      var.$line-height-medium
+    );
+  }
+
+  &__price {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  &__value {
+    letter-spacing: var.$spacing-minus;
+
+    @include mixins.font(
+      var.$font-size-h2,
+      var.$font-weight-bold,
+      var.$line-height-h2
+    );
+  }
+
+  &__unit {
+    font-family: var.$font-family-secondary;
+    letter-spacing: var.$spacing-minus;
+    color: var.$color-primary;
+
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+  }
+
+  &__list {
+    border-top: 1px solid var.$color-line;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-block: 40px;
+  }
+
+  &__list-item {
+    font-family: var.$font-family-secondary;
+
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+  }
+
+  &__button-link {
+    padding-block: 16px;
+    display: block;
+    border: 2px solid var.$color-line;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    color: var.$color-icon;
+  }
+
+  &__list-entry {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+@include mixins.tablet {
+  .membership-card {
+    min-width: 304px;
+    width: 100%;
+    &--highlighted {
+      padding-top: 56px;
+    }
+  }
+}
+@include mixins.tablet {
+  .membership-card {
+    min-width: 408px;
+    padding: 32px;
+
+    &--highlighted {
+      transform: translate(0);
+      margin-bottom: 32px;
+    }
+  }
+}

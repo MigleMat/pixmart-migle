@@ -1,0 +1,287 @@
+{
+  "hero": {
+    "title": "<span class=\"hero__line-one\">Craft Your</span><span class=\"hero__line-two\">Success with</span>Our <span class=\"hero__highlight\">Digital</span> Assets",
+    "text": "From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources."
+  },
+  "heroButtons": [
+    {
+      "link": "#",
+      "text": "Shop Now"
+    },
+    {
+      "link": "#",
+      "iconId": "play",
+      "text": "Watch About Us"
+    }
+  ],
+  "productCategories": [
+    {
+      "icon": "ui-kits",
+      "label": "UI Kits"
+    },
+    {
+      "icon": "social-media",
+      "label": "Social Media"
+    },
+    {
+      "icon": "presentation",
+      "label": "Presentation"
+    },
+    {
+      "icon": "fonts",
+      "label": "Fonts"
+    },
+    {
+      "icon": "illustration",
+      "label": "Iliustrations"
+    }
+  ],
+  "firstColumn": [
+    {
+      "icon": "ui-kits",
+      "title": "Templates",
+      "first": "For all needs",
+      "sec": "Modern"
+    },
+    {
+      "icon": "presentation",
+      "title": "Slides",
+      "first": "Pitch-ready",
+      "sec": "Creative"
+    }
+  ],
+  "secondColumn": [
+    {
+      "icon": "social-media",
+      "title": "App Icons",
+      "first": "High-quality",
+      "sec": "Elegant"
+    },
+    {
+      "icon": "illustration",
+      "title": "Design Tools",
+      "first": "Easy to use",
+      "sec": "Unique"
+    }
+  ],
+  "categoriesHeader": {
+    "subtitle": "CATEGORIES",
+    "title": "<span class=\"category-highlight__break-line\">Discover Assets for</span> Every Projects",
+    "desc": "From fonts and icons to mockups and templates, our comprehensive categories ensure that you find exactly what you need to your projects."
+  },
+  "categoriesButton": {
+    "link": "#",
+    "text": "Shop Now"
+  },
+  "productHeader": {
+    "subtitle": "TRENDING",
+    "title": "Popular Products"
+  },
+  "productCarouselButtons": [
+    {
+      "link": "#",
+      "iconId": "chevron",
+      "modifier": "prev"
+    },
+    {
+      "link": "#",
+      "iconId": "chevron",
+      "modifier": "next"
+    }
+  ],
+  "overlayButton": {
+    "link": "#",
+    "text": "Go to product"
+  },
+  "productCards": [
+    {
+      "base1x": "travel-hero-1x",
+      "base2x": "travel-hero-2x",
+      "alt": "Travel site template with testimonials",
+      "title": "Travel Hero",
+      "hasBadge": true,
+      "price": "€29.99",
+      "first": "Adventure",
+      "sec": "Journey"
+    },
+    {
+      "base1x": "healthcare-1x",
+      "base2x": "healthcare-2x",
+      "alt": "Medical landing page design",
+      "title": "Healthcare Pro",
+      "hasBadge": true,
+      "price": "€15.99",
+      "first": "Medical",
+      "sec": "Wellness"
+    },
+    {
+      "base1x": "foodish-delight-1x",
+      "base2x": "foodish-delight-2x",
+      "alt": "Catering website with food visuals",
+      "title": "Foodish Delight",
+      "price": "€31.99",
+      "first": "Catering",
+      "sec": "Food"
+    },
+    {
+      "base1x": "real-estate-1x",
+      "base2x": "real-estate-2x",
+      "alt": "Real estate site layout",
+      "title": "Real Estate",
+      "price": "€40.99",
+      "first": "Modern",
+      "sec": "Homes"
+    }
+  ],
+  "pricingHeader": {
+    "subtitle": "PRICING PLAN",
+    "title": "Choose The Perfect Plan for Creative Potential"
+  },
+  "memberships": [
+    {
+      "membershipHeader": {
+        "label": "Standard Membership",
+        "price": {
+          "amount": "€14.99",
+          "unit": "/ Month"
+        }
+      },
+      "membershipContent": [
+        {
+          "item": "Enhanced Resource Access"
+        },
+        {
+          "item": "Monthly Credits"
+        },
+        {
+          "item": "Priority Customer Support"
+        },
+        {
+          "item": "Community Features Access"
+        }
+      ],
+      "membershipButton": {
+        "link": "#",
+        "text": "Subscribe"
+      }
+    },
+    {
+      "membershipHeader": {
+        "tag": "BEST SELLER",
+        "label": "Plus Membership",
+        "modifier": "secondary",
+        "price": {
+          "amount": "€29.99",
+          "unit": "/ Month"
+        }
+      },
+      "membershipContent": [
+        {
+          "item": "All Standard Benefits"
+        },
+        {
+          "item": "Increased Monthly Credits"
+        },
+        {
+          "item": "Early Access to New Releases"
+        },
+        {
+          "item": "Member-Only Offers"
+        }
+      ],
+      "membershipButton": {
+        "link": "#",
+        "text": "Subscribe"
+      }
+    },
+    {
+      "membershipHeader": {
+        "label": "Pro Membership",
+        "price": {
+          "amount": "€49.99",
+          "unit": "/ Month"
+        }
+      },
+      "membershipContent": [
+        {
+          "item": "All Plus Benefits"
+        },
+        {
+          "item": "Unlimited Downloads"
+        },
+        {
+          "item": "Custom Licensing"
+        },
+        {
+          "item": "Direct Creator Collaboration"
+        }
+      ],
+      "membershipButton": {
+        "link": "#",
+        "text": "Subscribe"
+      }
+    }
+  ],
+  "faqHeader": {
+    "subtitle": "F.A.Q",
+    "title": "Answers to Your Questions",
+    "button": {
+      "text": "Ask Us A Question",
+      "link": "#ask"
+    }
+  },
+  "faqCard": [
+    {
+      "question": "Can I request a refund?",
+      "answer": "Please refer to our refund policy for eligibility and instructions.",
+      "open": false
+    },
+    {
+      "question": "How do I access my purchased products?",
+      "answer": "Accessing your purchased products is seamless and hassle-free on our digital design assets marketplace. Simply log in to your account, navigate to the 'My Purchases' section, and you'll find all your purchased products ready for download.",
+      "open": true
+    },
+    {
+      "question": "Are there any discounts for bulk purchases?",
+      "answer": "Yes, bulk purchase discounts are available for select plans and bundles.",
+      "open": false
+    },
+    {
+      "question": "What payment methods do you accept here?",
+      "answer": "We accept major credit cards, PayPal, and other regional payment options.",
+      "open": false
+    },
+    {
+      "question": "Can I sell my digital products on this marketplace?",
+      "answer": "Yes, you can apply to become a vendor through our contributor program.",
+      "open": false
+    }
+  ],
+  "blogHeader": {
+    "title": "Latest Expert",
+    "text": "Explore All Articles",
+    "iconId": "chevron"
+  },
+  "articleCards": [
+    {
+      "base1x": "creative-blog-1x",
+      "base2x": "creative-blog-2x",
+      "alt": "Futuristic blog thumbnails in dark layout",
+      "title": "Creative Blog",
+      "date": "2024-04-15",
+      "formattedDate": "15 APRIL 2024",
+      "width": "624",
+      "height": "702"
+    },
+    {
+      "base1x": "best-dishes-1x",
+      "base2x": "best-dishes-2x",
+      "alt": "Gourmet food homepage preview",
+      "title": "Best Dishes",
+      "date": "2024-05-05",
+      "formattedDate": "5 MAY 2024",
+      "width": "624",
+      "height": "702"
+    }
+  ]
+}

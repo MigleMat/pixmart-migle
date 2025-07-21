@@ -1,0 +1,9 @@
+<nav class="{{ navClass }}">
+    <ul class="{{ navListClass }}">
+        {% for navItem in navItems %}
+            <li class="nav__item">
+                <a class="{{ navLinkClass }}" href="{{navItem.link}}">{{ navItem.label }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

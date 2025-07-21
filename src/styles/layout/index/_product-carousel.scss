@@ -1,0 +1,81 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.product-carousel {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+  }
+
+  &__subtitle {
+    font-family: var.$font-family-secondary;
+    color: var.$color-subtitle;
+
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+  }
+
+  &__title {
+    @include mixins.font(
+      var.$font-size-h2,
+      var.$font-weight-bold,
+      var.$line-height-h2
+    );
+
+    letter-spacing: var.$spacing-minus;
+    color: var.$color-primary2;
+  }
+
+  &__header {
+    @include mixins.flex(
+      $justify: space-between,
+      $align: end,
+      $direction: row,
+      $gap: 16px
+    );
+  }
+
+  &__intro {
+    @include mixins.flex(
+      $justify: flex-start,
+      $align: stretch,
+      $direction: column,
+      $gap: 16px
+    );
+  }
+
+  &__nav {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+@include mixins.desktop {
+  .product-carousel {
+    &__list {
+      margin: 0;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      margin-bottom: -12px;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .product-carousel {
+    &__nav {
+      display: none;
+    }
+  }
+}

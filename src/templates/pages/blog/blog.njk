@@ -1,0 +1,17 @@
+{% extends "layouts/base.njk" %}
+
+{% set siteTitle = "PIXMart Blog – Tips, News & Customer Stories" %}
+{% set metaDescription = "Read the latest news, customer stories, and product tips on the PIXMart blog." %}
+
+{% block content %}
+    <main class="main">
+
+        {% include "partials/sections/blog/banner-blog.njk" %}
+
+        {% include "partials/sections/blog/body.njk" %}
+        {% set isBlogPage = true %}
+        {% include "partials/sections/blog/related-articles.njk" %}
+        <div class="blog__spacer"></div>
+
+    </main>
+{% endblock %}

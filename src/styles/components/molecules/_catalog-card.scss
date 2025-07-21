@@ -1,0 +1,94 @@
+@use "../../base/mixins" as mixins;
+@use "../../base/variables" as var;
+
+.catalog-card {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .catalog-card__price {
+      color: var.$color-button-focus;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255 255 255 / 0.5) 0%,
+      rgba(255 255 255 / 0.4) 100%
+    );
+    border-radius: 20px;
+    z-index: 1;
+    cursor: not-allowed;
+  }
+
+  &__buttons-item {
+    list-style-type: none;
+  }
+
+  &__image {
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  &__media {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 1;
+  }
+
+  &__title,
+  &__price {
+    @include mixins.font(
+      var.$font-size-h5,
+      var.$font-weight-bold,
+      var.$line-height-medium
+    );
+  }
+
+  &__description {
+    font-family: var.$font-family-secondary;
+    color: var.$color-secondary;
+    @include mixins.font(
+      var.$font-size-l,
+      var.$font-weight-small,
+      var.$line-height-body
+    );
+    margin-bottom: 12px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__buttons-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+@include mixins.mobile {
+  .catalog-card {
+    &__price {
+      margin-bottom: 12px;
+    }
+    &__description {
+      margin-bottom: 20px;
+    }
+  }
+}
