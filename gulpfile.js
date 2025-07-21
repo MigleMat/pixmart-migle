@@ -38,7 +38,7 @@ const paths = {
     svg: dev + "images/sprite/*.svg",
     views: dev + "templates/**/*.{json,njk,html}",
     pages: dev + "templates/pages/*/*.{njk,html}",
-    modernImages: dev + "images/static/**/*.{webp,avif}",
+    modernImages: dev + "images/static/**/*.{webp}",
     svgStatic: dev + "images/static/**/*.svg",
     images: dev + "images/static/**/*.{jpg,jpeg,png}",
     scripts: "src/scripts/**/*.js",
@@ -248,20 +248,9 @@ export const copyImages = () =>
             webpOptions: { lossless: true },
           },
           {
-            format: "avif",
-            rename: { suffix: "-2x" },
-            avifOptions: { lossless: true },
-          },
-          {
             format: "webp",
             rename: { suffix: "-1x" },
             webpOptions: { lossless: true },
-            width: (metadata) => Math.round(metadata.width * 0.5),
-          },
-          {
-            format: "avif",
-            rename: { suffix: "-1x" },
-            avifOptions: { lossless: true },
             width: (metadata) => Math.round(metadata.width * 0.5),
           },
           {
@@ -328,7 +317,6 @@ export const optimizeRasterImages = () =>
       sharpResponsive({
         formats: [
           { format: "webp", rename: { suffix: "-2x" } },
-          { format: "avif", rename: { suffix: "-2x" } },
           {
             width: (metadata) => Math.round(metadata.width * 0.5),
             format: "webp",
@@ -336,7 +324,6 @@ export const optimizeRasterImages = () =>
           },
           {
             width: (metadata) => Math.round(metadata.width * 0.5),
-            format: "avif",
             rename: { suffix: "-1x" },
           },
         ],
