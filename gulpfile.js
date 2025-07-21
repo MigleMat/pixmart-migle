@@ -38,7 +38,7 @@ const paths = {
     svg: dev + "images/sprite/*.svg",
     views: dev + "templates/**/*.{json,njk,html}",
     pages: dev + "templates/pages/*/*.{njk,html}",
-    modernImages: dev + "images/static/**/*.{webp, avif}",
+    modernImages: dev + "images/static/**/*.{jpg,jpeg,png,webp}",
     svgStatic: dev + "images/static/**/*.svg",
     images: dev + "images/static/**/*.{jpg,jpeg,png}",
     scripts: "src/scripts/**/*.js",
@@ -248,20 +248,9 @@ export const copyImages = () =>
             webpOptions: { lossless: true },
           },
           {
-            format: "avif",
-            rename: { suffix: "-2x" },
-            avifOptions: { lossless: true },
-          },
-          {
             format: "webp",
             rename: { suffix: "-1x" },
             webpOptions: { lossless: true },
-            width: (metadata) => Math.round(metadata.width * 0.5),
-          },
-          {
-            format: "avif",
-            rename: { suffix: "-1x" },
-            avifOptions: { lossless: true },
             width: (metadata) => Math.round(metadata.width * 0.5),
           },
           {
@@ -327,17 +316,28 @@ export const optimizeRasterImages = () =>
     .pipe(
       sharpResponsive({
         formats: [
-          { format: "webp", rename: { suffix: "-2x" } },
-          { format: "avif", rename: { suffix: "-2x" } },
           {
-            width: (metadata) => Math.round(metadata.width * 0.5),
             format: "webp",
-            rename: { suffix: "-1x" },
+            rename: { suffix: "-2x" },
+            webpOptions: { lossless: true },
           },
           {
-            width: (metadata) => Math.round(metadata.width * 0.5),
-            format: "avif",
+            format: "webp",
             rename: { suffix: "-1x" },
+            webpOptions: { lossless: true },
+            width: (metadata) => Math.round(metadata.width * 0.5),
+          },
+          {
+            format: "jpeg",
+            rename: { suffix: "-1x" },
+            jpegOptions: { quality: 85 },
+            width: (metadata) => metadata.width,
+          },
+          {
+            format: "jpeg",
+            rename: { suffix: "-2x" },
+            jpegOptions: { quality: 90 },
+            width: (metadata) => metadata.width * 2,
           },
         ],
       })
